@@ -213,7 +213,7 @@ detail2017stomachs <- read_csv("R CSVs/2017_fullStomachData.csv",
                                                 Mass_Liver = col_number(), 
                                                 SL_Fish = col_number(), 
                                                 TL_Fish = col_number(), 
-                                                Year = col_number()))
+                                                Year = col_character()))
 
 
 detail2018stomachs <- read_csv("2018_StomachContents.csv")%>%
@@ -228,7 +228,7 @@ detail2018stomachs <- read_csv("2018_StomachContents.csv")%>%
                             Taxa=="Unidentified"~"Digested",
                             Taxa=="Copepod"~"Miscellaneous",
                             TRUE~Taxa),
-         Year=2018)%>%
+         Year="2018")%>%
   filter(grepl("SSM",FishID))%>%
   dplyr::select(Fish_ID,Year,Content=Taxa,Category,Count,Mass_g=TotalMass,Comments)%>%
   full_join(sculpStomachs[which(sculpStomachs$Year==2018),],by=c("Fish_ID","Year"))
@@ -242,7 +242,7 @@ detail2019stomachs <- read_csv("R CSVs/2019_fullStomachData.csv",
                                                 Mass_Liver = col_number(), 
                                                 SL_Fish = col_number(), 
                                                 TL_Fish = col_number(), 
-                                                Year = col_number()))
+                                                Year = col_character()))
 
 
 #Making the different categories for all the diets
@@ -265,8 +265,7 @@ detailAll<-bind_rows(dplyr::select(detail2017stomachs,Fish_ID,Year,Date,Content,
                      dplyr::select(detail2018stomachs,Fish_ID,Year,Date,Content,Category,Count,Mass=Mass_g.x),
                      dplyr::select(detail2019stomachs,Fish_ID,Year,Date,Content,Category,Count,Mass))%>%
   mutate(Content=tolower(Content),
-         Year=as.numeric(Year),
-         Category=ifelse(grepl("fish",Category,ignore.case=T),"Fish",Category))%>%
+         Category=ifelse(grepl("Fish",Category),"Fish",Category))%>%
   #filter(Category!="Empty")%>%
   full_join(sculpStomachs[,which(colnames(sculpStomachs)!="Date")])%>%
   mutate(Content=case_when(is.na(Content) & Diet_Mass_g>0~"Unidentified",
@@ -297,3 +296,60 @@ dietsWide_nEmpty<-filter(dietsWide,prey_Empty==0)%>%dplyr::select(-prey_Empty)
 dietsWide_final<-filter(dietsWide_nEmpty,prey_Unidentified==0)%>%dplyr::select(-prey_Unidentified)
 
 #write.csv(dietsWide_final,"Hammer_Hermann/dietSculpin_PAdietMat_final.csv",row.names=F)
+
+
+
+
+
+
+# Editing the full datasets (with Char) -----------------------------------
+
+rm(list=ls())
+setwd("../../Hammer_Hermann/Data/") #Nate's file structure
+setwd("") #Lars' file structure
+
+
+details<-read_csv("all_dietcontents_final.csv")%>%
+  mutate(Date=mdy(Date),
+         Year=as.character(Year),
+         GutFullness=as.factor(GutFullness),
+         Category=case_when(grepl("jelly",Content)~"Jellyfish",
+                            Content=="Sea Angel"~"Sea Angel",
+                            grepl("copepod",Content)|grepl("lice",Content)~"Copepod",
+                            grepl("flea",Content)~"Amphipod",
+                            Category=="Unidentified" & Species=="Arctic char"~"Digested",
+                            TRUE~Category))
+#write.csv(details,"all_dietcontents_final_v2.csv",row.names=F)
+summaries<-read_csv("all_dietsummaries_final.csv")%>%
+  mutate(Date=mdy(Date),
+         Year=as.character(Year),
+         GutFullness=as.factor(GutFullness))
+
+dietMat<-read_csv("all_diet_PAdietMat_final.csv")%>%
+  mutate(Date=mdy(Date),
+         Year=as.character(Year),
+         GutFullness=as.factor(GutFullness))
+dietMat2<-pivot_wider(details,id_cols=c("Fish_ID","Year","Date","Species","TL_mm","Mass_g","Diet_Mass_g",
+                                            "GutFullness","Sex","Liver_Mass_g","Gonad_Mass_g","Heart_Mass_g"),
+                        names_from="Category",names_prefix="prey_",
+                        values_from = "Category",values_fn=min)%>%
+  mutate_at(vars(matches("prey")),toPA)%>%
+  filter(prey_Empty==0)%>%dplyr::select(-prey_Empty)%>%
+  filter(prey_Unidentified==0)%>%dplyr::select(-prey_Unidentified)
+colnames(dietMat2)<-gsub(" ",".",colnames(dietMat2))
+
+
+
+#How many do we have for the major groups
+table(summaries$Species,summaries$Year)
+#How many do we have relative consumption for
+table(filter(summaries,!is.na(Diet_Mass_g)&!is.na(Mass_g))$Species,
+      filter(summaries,!is.na(Diet_Mass_g)&!is.na(Mass_g))$Year)
+
+
+
+
+
+
+
+
