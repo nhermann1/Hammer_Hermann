@@ -337,7 +337,7 @@ dietMat2<-pivot_wider(details,id_cols=c("Fish_ID","Year","Date","Species","TL_mm
   filter(prey_Empty==0)%>%dplyr::select(-prey_Empty)%>%
   filter(prey_Unidentified==0)%>%dplyr::select(-prey_Unidentified)
 colnames(dietMat2)<-gsub(" ",".",colnames(dietMat2))
-
+#write.csv(dietMat2,"all_diet_PAdietMat_final_v2.csv",row.names=F)
 
 
 #How many do we have for the major groups
@@ -352,4 +352,95 @@ table(filter(summaries,!is.na(Diet_Mass_g)&!is.na(Mass_g))$Species,
 
 
 
+# Actual data ---------------------------------------------------
+set.seed(42)
 
+
+library(tidyverse)
+library(ggplot2)
+library(reshape2)
+library(tidyr)
+library(dplyr)
+library(grid)
+library(RColorBrewer)
+library(readr)
+library(gridExtra)
+library(lubridate)
+library(reshape2)
+library(vegan)
+library(MuMIn)
+
+
+
+#Colorblind friendly palette
+cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+#To use, add command for scale_fill_manual(values=cbPalette)
+
+theme_set(theme_bw(base_size=25))
+
+'%notin%'<-Negate('%in%')
+
+details<-read_csv("Data/all_dietcontents_final_v2.csv")
+summaries<-read_csv("Data/all_dietsummaries_final.csv")
+dietMat<-read_csv("Data/all_diet_PAdietMat_final_v2.csv")
+
+
+
+
+# Analyses--Nate ----------------------------------------------------------
+
+#### Frequency of Occurrence
+
+#Cumulative across years
+SculpinFOO<-filter(dietMat,Species %in% c("Slimy","Fourhorn"))%>%
+  dplyr::select(matches("^prey"))%>%
+  colSums()/nrow(dietMat%>%filter(Species %in% c("Slimy","Fourhorn")))
+
+CharFOO<-filter(dietMat,Species=="Arctic char")%>%
+  dplyr::select(matches("^prey"))%>%
+  colSums()/nrow(dietMat%>%filter(Species=="Arctic char"))
+
+foo<-bind_rows(data.frame(foo=CharFOO,species="Arctic char",prey=gsub("prey_","",colnames(dplyr::select(dietMat,matches("^prey"))))),
+               data.frame(foo=SculpinFOO,species="Sculpin",prey=gsub("prey_","",colnames(dplyr::select(dietMat,matches("^prey"))))))%>%
+  mutate(prey=gsub("\\.","\n",prey))
+
+ggplot(foo,aes(prey,foo,fill=species))+
+  geom_col(position="dodge")
+
+#Separated by years
+presenceYears<-dietMat%>%
+  mutate(species=ifelse(Species=="Arctic char","Arctic char","Sculpin"))%>%
+  dplyr::select(species,Year,matches("^prey"))%>%
+  group_by(species,Year)%>%
+  summarise_each(funs=sum)
+totalYears<-dietMat%>%
+  mutate(species=ifelse(Species=="Arctic char","Arctic char","Sculpin"))%>%
+  group_by(species,Year)%>%
+  summarise(N=n())
+fooYears<-left_join(presenceYears,totalYears)%>%
+  pivot_longer(cols=matches("^prey"),names_to="prey",values_to="noo")%>%
+  ungroup()%>%
+  mutate(prey=gsub("^prey_","",prey),
+         prey=gsub("\\.([A-z])"," \\1",prey),
+         foo=noo/N,
+         Year=as.character(Year))
+
+#Emphasizing species differences
+ggplot(fooYears,aes(prey,foo,fill=Year))+
+  geom_col(position="dodge",color="black")+
+  scale_fill_viridis_d(name="Species")+
+  scale_y_continuous(name="Frequency of Occurrence",limits=c(0,1),expand=expansion(add=0))+
+  scale_x_discrete(name="Diet Item")+
+  theme(axis.text.x=element_text(angle=20,hjust=1,vjust=1.12),
+        axis.title.x=element_text(vjust=5))+
+  facet_wrap(~species,nrow=2)
+
+#Emphasizing inter-annual variation
+ggplot(fooYears,aes(prey,foo,fill=species))+
+  geom_col(position="dodge",color="black")+
+  scale_fill_viridis_d(name="Species")+
+  scale_y_continuous(name="Frequency of Occurrence",limits=c(0,1),expand=expansion(add=0))+
+  scale_x_discrete(name="Diet Item")+
+  theme(axis.text.x=element_text(angle=20,hjust=1,vjust=1.12),
+        axis.title.x=element_text(vjust=5))+
+  facet_wrap(~Year,nrow=3)
