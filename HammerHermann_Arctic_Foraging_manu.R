@@ -444,3 +444,210 @@ ggplot(fooYears,aes(prey,foo,fill=species))+
   theme(axis.text.x=element_text(angle=20,hjust=1,vjust=1.12),
         axis.title.x=element_text(vjust=5))+
   facet_wrap(~Year,nrow=3)
+
+
+
+#### NMDS
+
+library(vegan)
+library(RVAideMemoire)
+library(usedist)
+library(indicspecies)
+
+
+#Duplicating with ALL the counts
+allCount.Mat<-as.matrix(dplyr::select(dietMat,matches("^prey")))
+allEnv.Mat<-as.matrix(dplyr::select(dietMat,-matches("^prey")))
+
+#Percent zeroes--number of zeroes times dim of matrix
+(sum(allCount.Mat==0)/(nrow(allCount.Mat)*ncol(allCount.Mat)))*100
+#Definitely a sparse dataset then, typical of community data, need to try with an NMDS and not a PCA
+
+
+#Using the whole dataset--but can use the one without minor species (Jellyfish, Sea Angel)
+set.seed(42)
+
+#For the all diets NMDS
+original.dist<-vegdist(allCount.Mat)
+stress_values<-numeric(6)
+r2<-numeric(6)
+
+for (n in 1:6) {
+  nmds.resu <- metaMDS(allCount.Mat, k=n, distance = "bray", try=250, autotransform=F)
+  stress_values[n]<-nmds.resu$stress
+  nmds.scores<-vegan::scores(nmds.resu)
+  nmds.dist<-dist(nmds.scores)
+  r2[n]<-summary(lm(original.dist~nmds.dist))[[8]]
+}
+plot(stress_values, xlab="Number of axes", ylab="Stress",type="b")
+abline(h=0.2,col="red")
+
+View(stress_values) 
+
+#Go back and create the output for the 2 dimensions NMDS
+count_NMDS<-metaMDS(allCount.Mat, distance = "bray", k = 3, try=250, autotransform=F)
+r2<-summary(lm(original.dist~dist(vegan::scores(count_NMDS))))[[8]]
+actualStress<-count_NMDS$stress
+stressplot(count_NMDS) #This is the visual of stress, the divergence of observed and ordinated distance. It's random, that's good
+
+#Writing it out to use in PC-ORD for comparison and for the axes R2 values
+#temp<-cbind(allEnv.Mat[,1],allCount.Mat)
+#write.csv(temp,"/Users/nh1087/Documents/NMDS_Matrix.csv",row.names = F)
+
+
+
+#Print the species scores and sample scores
+NMDS_species<-as.data.frame(count_NMDS$species)
+NMDS_scores<-as.data.frame(count_NMDS$points)
+
+ggplot()+
+  geom_point(data=NMDS_scores,aes(MDS1,MDS2))+
+  geom_segment(data=NMDS_species,aes(x=0,xend=MDS1,y=0,yend=MDS2))+
+  geom_text(data=NMDS_species,aes(x=MDS1,y=MDS2,label=row.names(NMDS_species)))
+
+ggplot()+
+  geom_point(data=NMDS_scores,aes(MDS1,MDS3))+
+  geom_segment(data=NMDS_species,aes(x=0,xend=MDS1,y=0,yend=MDS3))+
+  geom_text(data=NMDS_species,aes(x=MDS1,y=MDS3,label=row.names(NMDS_species)))
+
+ggplot()+
+  geom_point(data=NMDS_scores,aes(MDS2,MDS3))+
+  geom_segment(data=NMDS_species,aes(x=0,xend=MDS2,y=0,yend=MDS3))+
+  geom_text(data=NMDS_species,aes(x=MDS2,y=MDS3,label=row.names(NMDS_species)))
+
+library(plot3D)
+
+points3D(NMDS_scores$MDS1,NMDS_scores$MDS2,NMDS_scores$MDS3,phi=30,theta=45,col="red")
+segments3D(x0=rep(0,nrow(NMDS_species)),y0=rep(0,nrow(NMDS_species)),z0=rep(0,nrow(NMDS_species)),
+             x1=NMDS_species$MDS1,y1=NMDS_species$MDS2,z1=NMDS_species$MDS3,add=T)
+
+
+
+
+# Ignore for now ----------------------------------------------------------
+
+
+
+#Creating the environmental character groupings in a df
+allEnv.DF<-as.data.frame(allEnv.Mat)%>%
+  mutate(Species=ifelse(grepl("horn",Species),"Fourhorn","Slimy"),
+         TL_Fish=as.numeric(as.character(TL_Fish)),
+         Mass_Fish=as.numeric(as.character(Mass_Fish)),
+         Size_Class=ifelse(Mass_Fish>=100,"Large", #28 individuals
+                           ifelse(Mass_Fish>=59.5 & Mass_Fish<100,"Medium", #28 Individuals
+                                  ifelse(Mass_Fish<34,"Extra-Small","Small"))), #26 and 28 individuals, respectively
+         Size_Class=ifelse(is.na(Size_Class),"Medium",Size_Class),
+         Size_Class=factor(Size_Class,levels=c("Extra-Small","Small","Medium","Large")),
+         fortnight=ifelse(as.numeric(yday(Date))<min(as.numeric(yday(Date)))+14,"Early",
+                          ifelse(as.numeric(yday(Date))>min(as.numeric(yday(Date)))+13 & 
+                                   as.numeric(yday(Date))<min(as.numeric(yday(Date)))+28,"Middle","Late")),
+         fortName=ifelse(fortnight=="Early","July 23-Aug 5",
+                         ifelse(fortnight=="Middle","Aug 6-Aug 19","Aug 20-Sept 6")),
+         fortName=factor(fortName,levels=c("July 23-Aug 5","Aug 6-Aug 19","Aug 20-Sept 6")),
+         Sex=ifelse(Sex%notin%c("M","F"),"Unk",Sex),
+         Year=as.character(year(Date)))
+#Not a very even split on the years and fortnights (only 1 2018 early sample)
+
+
+#PERMANOVA for the interaction of Year and fortnight 
+set.seed(42)
+adonis(original.dist~fortName+Year+Size_Class+Species+Sex+fortName:Year+Species:Year+Size_Class:Year:fortName,
+       data=allEnv.DF,permutations=10000,method="bray")
+
+#significant pairwise test of the time period
+pairwise.perm.manova(original.dist,allEnv.DF$fortnight,nperm=1000)
+
+fdisp<-betadisper(original.dist,allEnv.DF$fortnight)
+fdisp
+permutest(fdisp)
+
+library(usedist)
+dist_multi_centroids(original.dist,allEnv.DF$fortnight)
+
+#Similar for year
+pairwise.perm.manova(original.dist,allEnv.DF$fortnight,nperm=1000)
+
+ydisp<-betadisper(original.dist,allEnv.DF$Year)
+ydisp
+permutest(ydisp)
+dist_multi_centroids(original.dist,allEnv.DF$Year)
+
+#Not sure why this is here
+detections%>%group_by(Fish_ID)%>%summarise(mean=mean(n_distinct(Station.name)))%>%
+  ungroup()%>%summarise(se=sd(mean)/sqrt(79),mean=mean(mean))
+
+#Investigating the same in the size_class and threeway interaction
+pairwise.perm.manova(original.dist,allEnv.DF$Size_Class,nperm=1000)
+pairwise.perm.manova(original.dist,paste(allEnv.DF$fortnight,allEnv.DF$Year,allEnv.DF$Size_Class),nperm=1000)
+table(allEnv.DF$Year,allEnv.DF$Size_Class,allEnv.DF$fortName)
+
+
+ggplot(allEnv.DF)+
+  geom_bar(aes(fortName,fill=Size_Class),color="black",width=1)+
+  facet_wrap(~Year)+
+  scale_fill_viridis_d(begin=0.2,name="Size Class")+
+  scale_x_discrete(name="Time Period")+
+  scale_y_continuous(expand=expansion(add=c(0.5,4)),name="Frequency")+
+  theme(legend.position = c(0.8,0.8),legend.background = element_rect(color="black",size=1))
+
+
+
+
+library(indicspecies)
+
+
+#ISA to see what diet items might be associated with the different years that make them different from each other
+countYear_ISA = multipatt(as.data.frame(allCount.Mat), allEnv.DF$Year,
+                          func = "IndVal.g", duleg=TRUE, control = how(nperm=4999))
+
+#What species?
+summary(countYear_ISA) #2017 had amphipod and gammaracanthus IS, but 2018 had Onisimus
+countYear_ISA$str
+
+#Extract them, with the year they're significant for
+yIndSp<-dplyr::select(subset(countYear_ISA$sign, p.value<0.05),index,stat,p.value)
+yIndSp$Species<-rownames(yIndSp)
+yIndSp$time<-colnames(countYear_ISA$B)[yIndSp$index]
+
+
+
+
+#ISA to see what diet items might be associated with the different time periods
+countFort_ISA = multipatt(as.data.frame(allCount.Mat), allEnv.DF$fortName,
+                          func = "IndVal.g", duleg=TRUE, control = how(nperm=4999))
+
+#What species?
+summary(countFort_ISA) #Early has Amphipod and Gammaracanthus, Middle has Mysid, Late has Onisimus and Fish
+countFort_ISA$str
+
+#Extract them, with the year they're significant for
+fIndSp<-dplyr::select(subset(countFort_ISA$sign, p.value<0.05),index,stat,p.value)
+fIndSp$Species<-rownames(fIndSp)
+fIndSp$time<-colnames(countFort_ISA$B)[fIndSp$index]
+
+viridis::viridis(n=3,end=0.95,option="C")
+#Need new axes R2 scores (from PC-ORD)
+#Probably want to do the years on a plot and then a split 2017-2018 two panel plot (so 3 total)
+ggplot(data=NMDS_scores,aes(MDS1,MDS2))+
+  geom_polygon(data=NMDS_scores%>%group_by(time=allEnv.DF$Year)%>%slice(chull(MDS1,MDS2)),
+               aes(x=MDS1,y=MDS2,fill=time,color=time),alpha=0.1,lwd=1.5,show.legend = F)+
+  geom_point(size=8,aes(fill=allEnv.DF$Year,shape=allEnv.DF$fortName))+
+  xlab("Axis 1 (20.8%)")+ylab("Axis 2 (18.1%)")+
+  #stat_ellipse(data=allNMDS_DF,aes(color=paste(allEnv.DF$fortnight,allEnv.DF$Year)),
+  #            level=0.95,lwd=1.1,show.legend = F)+
+  geom_segment(data=NMDS_species, #all species
+               aes(x=0,y=0,xend=MDS1,yend=MDS2),color="grey50",lwd=1,alpha=0.5,show.legend = F)+ 
+  geom_segment(data=filter(NMDS_species,rownames(NMDS_species)%in%yIndSp$Species), #Just the indicator species
+               aes(x=0,y=0,xend=MDS1,yend=MDS2,color=yIndSp$time),lwd=1.1,show.legend = F)+ #Color coded to the group they're indicating
+  geom_label(data=filter(NMDS_species,rownames(NMDS_species)%in%yIndSp$Species), #Just the indicator species
+             aes(x=MDS1*1.1,y=MDS2*1.1,label=yIndSp$Species,color=yIndSp$time),size=8,show.legend = F)+ #Coded to the group they indicate
+  scale_color_viridis_d(begin=0.2,name="Year")+
+  scale_fill_viridis_d(begin=0.2,name="Year")+ #Same as 2017 and 2018 from above 
+  scale_shape_manual(values=c(21,22,24),name="Time Period")+
+  scale_x_continuous(limits=c(-1.35,1.85))+
+  geom_text(aes(x=1.7,y=-1.35,label=paste0("Stress = ",round(actualStress*100,digits=2)),hjust=1),size=10)+
+  #geom_text(aes(x=1.5,y=1.4,label=paste0("MRPP Year p = ",round(countYear_MRPP$Pvalue,digits=4)),hjust=1),size=9)+
+  theme(legend.position=c(0.1,0.25),legend.background=element_rect(color="black"),legend.margin=margin(4,8,5,8),
+        legend.text=element_text(size=20),legend.title=element_text(size=22))+
+  guides(fill=guide_legend(title.hjust=0,label.vjust=0,override.aes=list(shape=21)))
+
