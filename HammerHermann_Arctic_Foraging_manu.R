@@ -306,7 +306,7 @@ dietsWide_final<-filter(dietsWide_nEmpty,prey_Unidentified==0)%>%dplyr::select(-
 
 rm(list=ls())
 setwd("../../Hammer_Hermann/Data/") #Nate's file structure
-setwd("") #Lars' file structure
+setwd("/Users/larshammer/Hammer_Hermann/Data/") #Lars' file structure
 
 
 details<-read_csv("all_dietcontents_final.csv")%>%
@@ -354,6 +354,9 @@ table(filter(summaries,!is.na(Diet_Mass_g)&!is.na(Mass_g))$Species,
 
 # Actual data ---------------------------------------------------
 set.seed(42)
+
+setwd("../../Hammer_Hermann/Data/") #Nate's file structure
+setwd("/Users/larshammer/Hammer_Hermann/") #Lars' file structure
 
 library(tidyverse)
 library(ggplot2)
@@ -808,4 +811,8 @@ ggplot(data=NMDS_scores,aes(MDS1,MDS2))+
   theme(legend.position=c(0.1,0.25),legend.background=element_rect(color="black"),legend.margin=margin(4,8,5,8),
         legend.text=element_text(size=20),legend.title=element_text(size=22))+
   guides(fill=guide_legend(title.hjust=0,label.vjust=0,override.aes=list(shape=21)))
+
+
+# Analyses Lars -----------------------------------------------------------
+
 
