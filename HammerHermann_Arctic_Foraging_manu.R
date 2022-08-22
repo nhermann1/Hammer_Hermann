@@ -815,4 +815,64 @@ ggplot(data=NMDS_scores,aes(MDS1,MDS2))+
 
 # Analyses Lars -----------------------------------------------------------
 
+##prey accumulation curves using dietmat dataset
+
+sculppaa <- subset(dietMat, Species == 'Fourhorn' | Species == 'Slimy')
+charpaa <- subset(dietMat, Species == 'Arctic char')
+
+##needs to be dataframe for accumcomp to work
+sculpenv <- data.frame(sculppaa[,1:3])
+charenv <- data.frame(charpaa[,1:3])
+
+sculpcom <- data.frame(sculppaa[,13:31])
+charcom <- data.frame(charpaa[,13:31])
+
+##creation of data must be done separately as far as I know
+##sculpin
+Accum.sculp <- accumcomp(sculpcom, y=sculpenv, factor = 'Year',
+                     method ='exact', conditioned = F, plotit = F)
+Accum.sculp
+accum.longsculp <- accumcomp.long(Accum.sculp, ci = NA, label.freq = 5)
+head(accum.longsculp)
+
+##char
+Accum.char <- accumcomp(charcom, y=charenv, factor = 'Year',
+                         method ='exact', conditioned = F, plotit = F)
+Accum.char
+accum.longchar <- accumcomp.long(Accum.char, ci = NA, label.freq = 5)
+head(accum.longchar)
+
+accum.longchar$Species <- 'Arctic char' ##creating a column for species so we can bind together
+accum.longsculp$Species <- 'Sculpin'
+
+
+accum.long <- rbind(accum.longchar, accum.longsculp)
+
+##plot
+PAAplot <- ggplot(data = accum.long, aes(x = Sites, y = Richness,ymax = UPR, ymin = LWR))+
+  facet_wrap(~Species, ncol = 1)+
+  geom_line(aes(color = Grouping), size = 2)+
+  geom_point(data=subset(accum.long, labelit==TRUE),
+             aes(colour=Grouping),size = 5)+
+  scale_color_manual(values = c('black', 'grey50', 'grey80'))+
+  # geom_ribbon(aes(color=Grouping), alpha = 0.2, show.legend = F)+
+  labs(x = 'Number of Samples', y = 'Species Richness', color = 'Year')+theme_bw()
+
+tiff('Figures/PreyAccumulationCurve.tiff', width = 6.5, height = 5.5, res = 300, units = 'in')
+
+PAAplot
+
+dev.off()
+
+## relative consumption GLM work using summaries dataset
+
+##removing unneccesary columns and unusable data
+relcon <- summaries[,1:9]
+relcon <- subset(relcon, !is.na(Diet_Mass_g))
+relcon <- subset(relcon, !is.na(Mass_g))
+n_distinct(relcon$Fish_ID) ##127 useable fish for relcon analysis
+
+##relative consumption column
+relcon$relative_consumption <- (relcon$Diet_Mass_g/relcon$Mass_g)*100
+
 
