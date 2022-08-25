@@ -866,13 +866,37 @@ dev.off()
 
 ## relative consumption GLM work using summaries dataset
 
+library(car)
+library(MuMIn)
+library(lme4)
+library(lmerTest)
 ##removing unneccesary columns and unusable data
-relcon <- summaries[,1:9]
-relcon <- subset(relcon, !is.na(Diet_Mass_g))
-relcon <- subset(relcon, !is.na(Mass_g))
+relcon <- summaries[,1:9] ## unneccessary columns
+relcon <- subset(relcon, !is.na(Diet_Mass_g)) ## removing fish with unknown diet masses
+relcon <- subset(relcon, !is.na(Mass_g)) ## removing fish with unknown masses
 n_distinct(relcon$Fish_ID) ##127 useable fish for relcon analysis
 
 ##relative consumption column
 relcon$relative_consumption <- (relcon$Diet_Mass_g/relcon$Mass_g)*100
 
+relcon$Date_pos <- as.POSIXct(relcon$Date, format = '%m/%d/%y')
+relcon$month <- factor(month(relcon$Date_pos)) ##make sure month is a factor
+relcon$Year <- factor(relcon$Year) ## make sure year is a factor
+relcon$species2 <- factor(ifelse(relcon$Species == 'Slimy' | relcon$Species == 'Fourhorn', 'Sculpin', 'Arctic char'))
+
+
+relcon %>% 
+  group_by(species2, Year) %>% 
+  summarize(mean = mean(relative_consumption))
+
+relcon %>% group_by(species2) %>% 
+  summarize(min = min(relative_consumption), max = max(relative_consumption))
+
+bingelm1 <- glm(relative_consumption~species2 + Year + month + Mass_g, data = relcon, na.action = 'na.fail', family = 'gaussian')
+vif(bingelm1)
+dredge(bingelm1)
+
+ggplot(relcon)+
+  geom_point(aes(x = Mass_g, y = relative_consumption))+
+  facet_grid(~species2)
 
