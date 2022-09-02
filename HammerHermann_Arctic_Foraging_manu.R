@@ -858,7 +858,8 @@ PAAplot <- ggplot(data = accum.long, aes(x = Sites, y = Richness,ymax = UPR, ymi
   # geom_ribbon(aes(color=Grouping), alpha = 0.2, show.legend = F)+
   labs(x = 'Number of Samples', y = 'Species Richness', color = 'Year')+theme_bw()
 
-tiff('Figures/PreyAccumulationCurve.tiff', width = 6.5, height = 5.5, res = 300, units = 'in')
+##only do this once
+# tiff('Figures/PreyAccumulationCurve.tiff', width = 6.5, height = 5.5, res = 300, units = 'in')
 
 PAAplot
 
@@ -892,11 +893,35 @@ relcon %>%
 relcon %>% group_by(species2) %>% 
   summarize(min = min(relative_consumption), max = max(relative_consumption))
 
+##no vif problems with variables by themselves
 bingelm1 <- glm(relative_consumption~species2 + Year + month + Mass_g, data = relcon, na.action = 'na.fail', family = 'gaussian')
 vif(bingelm1)
 dredge(bingelm1)
 
+relconplot <- ggplot(relcon)+
+  geom_boxplot(aes(x = Year, y = relative_consumption), outlier.shape = NA)+
+  geom_point(aes(x = Year, y = relative_consumption), position = position_jitter(width = .2))+
+  facet_grid(~species2)+
+  labs(y = 'Relative Consumption (%)')
+
+##only do this once
+# tiff('Figures/RelativeConsumption_year.tiff', width = 6.5, height = 5.5, res = 300, units = 'in')
+
+relconplot
+
+dev.off()
+
+##looking at mass
 ggplot(relcon)+
-  geom_point(aes(x = Mass_g, y = relative_consumption))+
-  facet_grid(~species2)
+  geom_point(aes(x = Mass_g, y = relative_consumption), position = position_jitter(width = .2))+
+  facet_grid(~species2, scales = "free_x")+
+  labs(y = 'Relative Consumption (%)')
+
+##looking at month
+ggplot(relcon)+
+  geom_boxplot(aes(x = month, y = relative_consumption), outlier.shape = NA)+
+  geom_point(aes(x = month, y = relative_consumption), position = position_jitter(width = .2))+
+  facet_grid(~species2)+
+  labs(y = 'Relative Consumption (%)')
+
 
