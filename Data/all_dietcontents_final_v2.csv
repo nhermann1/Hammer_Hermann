@@ -1,694 +1,694 @@
-"Fish_ID","Year","Date","Content","Category","Count","Mass","Species","TL_mm","Mass_g","Sex","Diet_Mass_g","GutFullness","Liver_Mass_g","Gonad_Mass_g","Heart_Mass_g"
-"Char 08","2017",2017-07-25,"amphipods","Amphipod",2,NA,"Arctic char",40,500,"F",NA,"2",9.5,0.9,NA
-"Char 08","2017",2017-07-25,"gammaracanthus","Gammaracanthus sp.",1,NA,"Arctic char",40,500,"F",NA,"2",9.5,0.9,NA
-"Char 09","2017",2017-07-25,"amphipods","Amphipod",NA,NA,"Arctic char",65.2,2505,"M",NA,"2",44.3,NA,NA
-"Char 112","2017",2017-08-14,"krill","Krill",NA,NA,"Arctic char",29.5,237.2,"F",NA,"3",5.3,0.5,NA
-"Char 112","2017",2017-08-14,"amphipod","Amphipod",2,NA,"Arctic char",29.5,237.2,"F",NA,"3",5.3,0.5,NA
-"Char 116","2017",2017-08-14,"fish","Fish",NA,NA,"Arctic char",NA,NA,"F",NA,"2",34.5,25.6,NA
-"Char 116","2017",2017-08-14,"krill","Krill",5,NA,"Arctic char",NA,NA,"F",NA,"2",34.5,25.6,NA
-"Char 116","2017",2017-08-14,"gammarus sp.","Gammarus sp.",20,NA,"Arctic char",NA,NA,"F",NA,"2",34.5,25.6,NA
-"Char 116","2017",2017-08-14,"copepod","Copepod",100,NA,"Arctic char",NA,NA,"F",NA,"2",34.5,25.6,NA
-"Char 121","2017",2017-08-14,"fish","Fish",2,NA,"Arctic char",65.2,2700,"M",NA,"3",43.2,2.4,NA
-"Char 121","2017",2017-08-14,"onisimus sp.","Onisimus sp.",125,NA,"Arctic char",65.2,2700,"M",NA,"3",43.2,2.4,NA
-"Char 121","2017",2017-08-14,"sand fleas","Amphipod",240,NA,"Arctic char",65.2,2700,"M",NA,"3",43.2,2.4,NA
-"Char 121","2017",2017-08-14,"gammarus sp.","Gammarus sp.",1,NA,"Arctic char",65.2,2700,"M",NA,"3",43.2,2.4,NA
-"Char 123","2017",2017-08-14,"empty","Empty",NA,NA,"Arctic char",62,2000,"M",NA,"1",33.1,5.9,NA
-"Char 126","2017",2017-08-14,"sand lance","Sand lance",2,NA,"Arctic char",NA,3600,"M",NA,"4",81.5,4.7,NA
-"Char 126","2017",2017-08-14,"cod","Arctic cod",6,NA,"Arctic char",NA,3600,"M",NA,"4",81.5,4.7,NA
-"Char 126","2017",2017-08-14,"sand fleas","Amphipod",250,NA,"Arctic char",NA,3600,"M",NA,"4",81.5,4.7,NA
-"Char 129","2017",2017-08-14,"amphipod","Amphipod",1,NA,"Arctic char",38.5,550,"M",NA,"2",10.5,0.4,NA
-"Char 129","2017",2017-08-14,"digested","Digested",NA,NA,"Arctic char",38.5,550,"M",NA,"2",10.5,0.4,NA
-"Char 130","2017",2017-08-14,"empty","Empty",NA,NA,"Arctic char",16.5,32.7,"M",NA,"1",0.8,NA,NA
-"Char 132","2017",2017-08-14,"cod","Arctic cod",7,NA,"Arctic char",59,1300,"F",NA,"4",27,NA,NA
-"Char 132","2017",2017-08-14,"fish","Fish",5,NA,"Arctic char",59,1300,"F",NA,"4",27,NA,NA
-"Char 132","2017",2017-08-14,"sand fleas","Amphipod",10,NA,"Arctic char",59,1300,"F",NA,"4",27,NA,NA
-"Char 138","2017",2017-08-15,"krill","Krill",50,NA,"Arctic char",17,41.2,"I",NA,"3",0.8,NA,NA
-"Char 138","2017",2017-08-15,"fish","Fish",5,NA,"Arctic char",17,41.2,"I",NA,"3",0.8,NA,NA
-"Char 150","2017",2017-08-22,"cod","Arctic cod",73,NA,"Arctic char",79.5,4850,"F",NA,"2",166.5,56.2,NA
-"Char 150","2017",2017-08-22,"amphipod","Amphipod",3,NA,"Arctic char",79.5,4850,"F",NA,"2",166.5,56.2,NA
-"Char 154","2017",2017-09-01,"sand lance","Sand lance",1,NA,"Arctic char",81.3,5100,"M",NA,"1",72.2,9.7,NA
-"Char 154","2017",2017-09-01,"sea lice","Copepod",NA,NA,"Arctic char",81.3,5100,"M",NA,"1",72.2,9.7,NA
-"Char 154","2017",2017-09-01,"fish","Fish",19,NA,"Arctic char",81.3,5100,"M",NA,"1",72.2,9.7,NA
-"Char 156","2017",2017-09-04,"fish","Fish",NA,NA,"Arctic char",16,34.6,"M",NA,"3",0.5,0,NA
-"Char 156","2017",2017-09-04,"krill","Krill",NA,NA,"Arctic char",16,34.6,"M",NA,"3",0.5,0,NA
-"Char 54","2017",2017-08-07,"digested","Digested",NA,NA,"Arctic char",33.2,8.2,"I",NA,"2",NA,NA,NA
-"Char 54","2017",2017-08-07,"copepod","Copepod",4,NA,"Arctic char",33.2,8.2,"I",NA,"2",NA,NA,NA
-"Char 54","2017",2017-08-07,"fish fry","Fish",6,NA,"Arctic char",33.2,8.2,"I",NA,"2",NA,NA,NA
-"Char 54","2017",2017-08-07,"amphipod","Amphipod",2,NA,"Arctic char",33.2,8.2,"I",NA,"2",NA,NA,NA
-"Char 56","2017",2017-08-07,"amphipods","Amphipod",800,NA,"Arctic char",71,3400,"M",NA,"4",56.4,0.3,NA
-"Char 56","2017",2017-08-07,"cod","Arctic cod",3,NA,"Arctic char",71,3400,"M",NA,"4",56.4,0.3,NA
-"Char 56","2017",2017-08-07,"krill","Krill",3,NA,"Arctic char",71,3400,"M",NA,"4",56.4,0.3,NA
-"Char 58","2017",2017-08-08,"copepod","Copepod",NA,NA,"Arctic char",58,1550,"M",NA,NA,22.3,NA,NA
-"Char 58","2017",2017-08-08,"krill","Krill",NA,NA,"Arctic char",58,1550,"M",NA,NA,22.3,NA,NA
-"Char 60","2017",2017-08-09,"amphipod","Amphipod",300,NA,"Arctic char",61.5,2100,"F",NA,"4",44.1,16.2,NA
-"Char 60","2017",2017-08-09,"copepod","Copepod",300,NA,"Arctic char",61.5,2100,"F",NA,"4",44.1,16.2,NA
-"Char 61","2017",2017-08-09,"amphipod","Amphipod",200,NA,"Arctic char",57.5,1300,"M",NA,"3",15.6,NA,NA
-"Char 61","2017",2017-08-09,"copepod","Copepod",200,NA,"Arctic char",57.5,1300,"M",NA,"3",15.6,NA,NA
-"Char 62","2017",2017-08-09,"amphipod","Amphipod",150,NA,"Arctic char",54.5,1300,"M",NA,"3",27.6,2.1,NA
-"Char 62","2017",2017-08-09,"copepod","Copepod",150,NA,"Arctic char",54.5,1300,"M",NA,"3",27.6,2.1,NA
-"Char 62","2017",2017-08-09,"cod","Arctic cod",1,NA,"Arctic char",54.5,1300,"M",NA,"3",27.6,2.1,NA
-"Char 63","2017",2017-08-09,"cod","Arctic cod",1,NA,"Arctic char",59.5,1800,"F",NA,"5",30.6,12,NA
-"Char 63","2017",2017-08-09,"amphipod","Amphipod",500,NA,"Arctic char",59.5,1800,"F",NA,"5",30.6,12,NA
-"Char 65","2017",2017-08-09,"amphipod","Amphipod",400,NA,"Arctic char",65.3,2900,"M",NA,"4",58.5,2,NA
-"Char 66","2017",2017-08-09,"cod","Arctic cod",1,NA,"Arctic char",53.7,1500,"F",NA,"2",24.8,7.2,NA
-"Char 68","2017",2017-08-09,"cod","Arctic cod",1,NA,"Arctic char",60,1900,"M",NA,"4",33.6,5.2,NA
-"Char 68","2017",2017-08-09,"amphipod","Amphipod",100,NA,"Arctic char",60,1900,"M",NA,"4",33.6,5.2,NA
-"Char 69","2017",2017-08-09,"amphipod","Amphipod",20,NA,"Arctic char",35.5,450,"M",NA,"1",9.7,NA,NA
-"Char 69","2017",2017-08-09,"copepod","Copepod",80,NA,"Arctic char",35.5,450,"M",NA,"1",9.7,NA,NA
-"Char 86","2017",2017-08-12,"copepod","Copepod",NA,2,"Arctic char",53.5,1450,"M",NA,"4",26.7,0.17,NA
-"Char 86","2017",2017-08-12,"amphipod","Amphipod",200,NA,"Arctic char",53.5,1450,"M",NA,"4",26.7,0.17,NA
-"Char 87","2017",2017-08-12,"copepod","Copepod",NA,9,"Arctic char",57,1600,"F",NA,"5",28.2,14.7,NA
-"Char 87","2017",2017-08-12,"amphipod","Amphipod",160,NA,"Arctic char",57,1600,"F",NA,"5",28.2,14.7,NA
-"Char 87","2017",2017-08-12,"krill","Krill",5,NA,"Arctic char",57,1600,"F",NA,"5",28.2,14.7,NA
-"Char 88","2017",2017-08-12,"copepod","Copepod",NA,2.5,"Arctic char",56.5,1650,"M",NA,"5",28.6,3.8,NA
-"Char 88","2017",2017-08-12,"amphipod","Amphipod",600,NA,"Arctic char",56.5,1650,"M",NA,"5",28.6,3.8,NA
-"Char 88","2017",2017-08-12,"krill","Krill",2,NA,"Arctic char",56.5,1650,"M",NA,"5",28.6,3.8,NA
-"Char 89","2017",2017-08-12,"copepod","Copepod",NA,4,"Arctic char",55,1625,"M",NA,"5",28.2,1.1,NA
-"Char 89","2017",2017-08-12,"fish","Fish",NA,NA,"Arctic char",55,1625,"M",NA,"5",28.2,1.1,NA
-"Char 89","2017",2017-08-12,"amphipod","Amphipod",740,NA,"Arctic char",55,1625,"M",NA,"5",28.2,1.1,NA
-"Char 90","2017",2017-08-12,"cod","Arctic cod",22,NA,"Arctic char",61,1850,"M",NA,"5",42.6,5.1,NA
-"Char 90","2017",2017-08-12,"sand fleas","Amphipod",6,NA,"Arctic char",61,1850,"M",NA,"5",42.6,5.1,NA
-"Char 90","2017",2017-08-12,"amphipod","Amphipod",580,NA,"Arctic char",61,1850,"M",NA,"5",42.6,5.1,NA
-"FH10","2017",2017-07-23,"gammarus or onisimus","Amphipod",NA,NA,"Fourhorn",6.6,17,"I",NA,"4",NA,NA,NA
-"FH105","2017",2017-08-07,"gammarus sp.","Gammarus sp.",20,NA,"Fourhorn",15.3,33.9,"M",NA,"2",0.5,0.5,NA
-"FH106","2017",2017-08-07,"amphipods","Amphipod",12,NA,"Fourhorn",14.7,25.5,"M",NA,"2",0.6,1.4,NA
-"FH106","2017",2017-08-07,"onisimus","Onisimus sp.",10,NA,"Fourhorn",14.7,25.5,"M",NA,"2",0.6,1.4,NA
-"FH106","2017",2017-08-07,"gammarus","Gammarus sp.",2,NA,"Fourhorn",14.7,25.5,"M",NA,"2",0.6,1.4,NA
-"FH11","2017",2017-07-23,"empty","Empty",NA,NA,"Fourhorn",27.2,225.7,"F",NA,"1",NA,NA,NA
-"FH12","2017",2017-07-23,"gammarus or onisimus","Amphipod",NA,NA,"Fourhorn",25.3,147.6,"M",NA,"3",NA,NA,NA
-"FH13","2017",2017-07-24,"gammarus or onisimus","Amphipod",40,NA,"Fourhorn",15.5,57.1,"F",NA,"5",NA,NA,NA
-"FH141","2017",2017-08-09,"amphipod","Amphipod",1,NA,"Fourhorn",17.5,48.4,"Unknown",NA,"3",0.7,0.8,NA
-"FH141","2017",2017-08-09,"krill","Krill",12,NA,"Fourhorn",17.5,48.4,"Unknown",NA,"3",0.7,0.8,NA
-"FH142","2017",2017-08-09,"amphipods","Amphipod",2,NA,"Fourhorn",25.5,150.2,"M",NA,"1",3.8,8.8,NA
-"FH143","2017",2017-08-09,"amphipod","Amphipod",1,NA,"Fourhorn",20,68.1,"M",NA,"2",2.4,1.6,NA
-"FH143","2017",2017-08-09,"krill","Krill",3,NA,"Fourhorn",20,68.1,"M",NA,"2",2.4,1.6,NA
-"FH143","2017",2017-08-09,"unidentified digesta","Digested",NA,NA,"Fourhorn",20,68.1,"M",NA,"2",2.4,1.6,NA
-"FH144","2017",2017-08-09,"copepods","Copepod",5,NA,"Fourhorn",20.5,69.2,"F",NA,"1",1.6,3.6,NA
-"FH145","2017",2017-08-09,"nothing","Empty",NA,NA,"Fourhorn",18,48,"M",NA,"1",1.5,0.9,NA
-"FH151","2017",2017-08-10,"krill","Krill",20,NA,"Fourhorn",18,50.1,"M",NA,"3",1.1,1.1,NA
-"FH151","2017",2017-08-10,"copepods","Copepod",2,NA,"Fourhorn",18,50.1,"M",NA,"3",1.1,1.1,NA
-"FH154","2017",2017-08-10,"krill","Krill",4,NA,"Fourhorn",18.8,59.7,"M",NA,"2",2.2,0.3,NA
-"FH154","2017",2017-08-10,"amphipods","Amphipod",5,NA,"Fourhorn",18.8,59.7,"M",NA,"2",2.2,0.3,NA
-"FH155","2017",2017-08-10,"krill","Krill",4,NA,"Fourhorn",26.5,231.6,"F",NA,"1",14.9,21.2,NA
-"FH156","2017",2017-08-10,"gammarids","Gammarus sp.",100,NA,"Fourhorn",27.2,280.8,"F",NA,"5",13.2,11.7,NA
-"FH156","2017",2017-08-10,"onisimus","Onisimus sp.",NA,NA,"Fourhorn",27.2,280.8,"F",NA,"5",13.2,11.7,NA
-"FH156","2017",2017-08-10,"krill","Krill",15,NA,"Fourhorn",27.2,280.8,"F",NA,"5",13.2,11.7,NA
-"FH156","2017",2017-08-10,"char meat (bait)","Fish",NA,NA,"Fourhorn",27.2,280.8,"F",NA,"5",13.2,11.7,NA
-"FH157","2017",2017-08-10,"red shrimp","Mysid",8,NA,"Fourhorn",28,235.5,"F",NA,"2",18.1,19.4,NA
-"FH18","2017",2017-07-24,"gammarus or onisimus","Amphipod",30,NA,"Fourhorn",21,100,"F",NA,"5",NA,NA,NA
-"FH180","2017",2017-08-13,"copepod","Copepod",2,NA,"Fourhorn",19.5,63.5,"M",NA,"3",1,4.9,NA
-"FH180","2017",2017-08-13,"krill","Krill",NA,NA,"Fourhorn",19.5,63.5,"M",NA,"3",1,4.9,NA
-"FH181","2017",2017-08-13,"unidentified digesta","Digested",NA,NA,"Fourhorn",17.2,40.8,"F",NA,"3",0.9,0.5,NA
-"FH181","2017",2017-08-13,"large amphipod","Amphipod",1,NA,"Fourhorn",17.2,40.8,"F",NA,"3",0.9,0.5,NA
-"FH19","2017",2017-07-24,"gammarus or onisimus","Amphipod",33,NA,"Fourhorn",22.2,117.2,"M",NA,"5",2.7,5.2,NA
-"FH19","2017",2017-07-24,"gammaracanthus sp.","Gammaracanthus sp.",3,NA,"Fourhorn",22.2,117.2,"M",NA,"5",2.7,5.2,NA
-"FH19","2017",2017-07-24,"krill","Krill",3,NA,"Fourhorn",22.2,117.2,"M",NA,"5",2.7,5.2,NA
-"FH19","2017",2017-07-24,"eusirus or apherusa","Amphipod",2,NA,"Fourhorn",22.2,117.2,"M",NA,"5",2.7,5.2,NA
-"FH197","2017",2017-08-16,"onisimus sp","Onisimus sp.",4,NA,"Fourhorn",26.2,217.5,"F",NA,"2",13.9,21.8,NA
-"FH197","2017",2017-08-16,"krill","Krill",5,NA,"Fourhorn",26.2,217.5,"F",NA,"2",13.9,21.8,NA
-"FH20","2017",2017-07-24,"krill","Krill",6,NA,"Fourhorn",22.2,99.8,"F",NA,"3",3.5,2,NA
-"FH20","2017",2017-07-24,"shrimp","Mysid",9,NA,"Fourhorn",22.2,99.8,"F",NA,"3",3.5,2,NA
-"FH20","2017",2017-07-24,"grit","Digested",NA,NA,"Fourhorn",22.2,99.8,"F",NA,"3",3.5,2,NA
-"FH20","2017",2017-07-24,"gammarus or onisimus","Amphipod",12,NA,"Fourhorn",22.2,99.8,"F",NA,"3",3.5,2,NA
-"FH21","2017",2017-07-24,"shrimp","Mysid",8,NA,"Fourhorn",16.5,46.2,"M",NA,"2",1.3,1.6,NA
-"FH21","2017",2017-07-24,"krill","Krill",4,NA,"Fourhorn",16.5,46.2,"M",NA,"2",1.3,1.6,NA
-"FH21","2017",2017-07-24,"gammarus or onisimus","Amphipod",2,NA,"Fourhorn",16.5,46.2,"M",NA,"2",1.3,1.6,NA
-"FH22","2017",2017-07-24,"gammarus or onisimus","Amphipod",8,NA,"Fourhorn",20.7,74.2,"F",NA,"2",3.1,2.3,NA
-"FH22","2017",2017-07-24,"krill","Krill",1,NA,"Fourhorn",20.7,74.2,"F",NA,"2",3.1,2.3,NA
-"FH22","2017",2017-07-24,"shrimp","Mysid",8,NA,"Fourhorn",20.7,74.2,"F",NA,"2",3.1,2.3,NA
-"FH221","2017",2017-08-17,"unidentified digesta","Digested",NA,NA,"Fourhorn",21.2,NA,"F",NA,"2",2.2,1.4,NA
-"FH221","2017",2017-08-17,"sea angel","Sea Angel",1,NA,"Fourhorn",21.2,NA,"F",NA,"2",2.2,1.4,NA
-"FH221","2017",2017-08-17,"krill","Krill",1,NA,"Fourhorn",21.2,NA,"F",NA,"2",2.2,1.4,NA
-"FH221","2017",2017-08-17,"mysid","Mysid",1,NA,"Fourhorn",21.2,NA,"F",NA,"2",2.2,1.4,NA
-"FH221","2017",2017-08-17,"red amphipod","Amphipod",3,NA,"Fourhorn",21.2,NA,"F",NA,"2",2.2,1.4,NA
-"FH222","2017",2017-08-17,"krill and mysids","Krill",NA,6.8,"Fourhorn",21.7,105.5,"F",NA,"4",4.7,6.6,NA
-"FH222","2017",2017-08-17,"cnidarian jelly","Jellyfish",1,NA,"Fourhorn",21.7,105.5,"F",NA,"4",4.7,6.6,NA
-"FH222","2017",2017-08-17,"red amphipods","Amphipod",5,NA,"Fourhorn",21.7,105.5,"F",NA,"4",4.7,6.6,NA
-"FH223","2017",2017-08-17,"leaves","Algae",2,NA,"Fourhorn",20.1,73.8,"F",NA,"3",2.3,1.6,NA
-"FH223","2017",2017-08-17,"onisimus litoralis","Onisimus sp.",1,NA,"Fourhorn",20.1,73.8,"F",NA,"3",2.3,1.6,NA
-"FH223","2017",2017-08-17,"red amphipods","Amphipod",20,NA,"Fourhorn",20.1,73.8,"F",NA,"3",2.3,1.6,NA
-"FH223","2017",2017-08-17,"gammarids","Gammarus sp.",30,NA,"Fourhorn",20.1,73.8,"F",NA,"3",2.3,1.6,NA
-"FH223","2017",2017-08-17,"gammaracanthus sp","Gammaracanthus sp.",1,NA,"Fourhorn",20.1,73.8,"F",NA,"3",2.3,1.6,NA
-"FH223","2017",2017-08-17,"mysid","Mysid",1,NA,"Fourhorn",20.1,73.8,"F",NA,"3",2.3,1.6,NA
-"FH224","2017",2017-08-17,"onisimus litoralis","Onisimus sp.",3,NA,"Fourhorn",17.9,49.9,"F",NA,"4",1.1,0.9,NA
-"FH224","2017",2017-08-17,"mysids","Mysid",50,NA,"Fourhorn",17.9,49.9,"F",NA,"4",1.1,0.9,NA
-"FH224","2017",2017-08-17,"krill","Krill",1,NA,"Fourhorn",17.9,49.9,"F",NA,"4",1.1,0.9,NA
-"FH224","2017",2017-08-17,"red amphipod","Amphipod",5,NA,"Fourhorn",17.9,49.9,"F",NA,"4",1.1,0.9,NA
-"FH224","2017",2017-08-17,"unidentified digesta","Digested",NA,NA,"Fourhorn",17.9,49.9,"F",NA,"4",1.1,0.9,NA
-"FH225","2017",2017-08-17,"krill","Krill",8,NA,"Fourhorn",14,23.6,"F",NA,"3",0.6,NA,NA
-"FH225","2017",2017-08-17,"mysid","Mysid",2,NA,"Fourhorn",14,23.6,"F",NA,"3",0.6,NA,NA
-"FH225","2017",2017-08-17,"red amphipod","Amphipod",3,NA,"Fourhorn",14,23.6,"F",NA,"3",0.6,NA,NA
-"FH232","2017",2017-08-18,"arctic cod","Fish",1,NA,"Fourhorn",28.1,278.4,"F",NA,"3",17.8,24.5,NA
-"FH232","2017",2017-08-18,"onisimus litoralis","Onisimus sp.",1,NA,"Fourhorn",28.1,278.4,"F",NA,"3",17.8,24.5,NA
-"FH232","2017",2017-08-18,"fish fry","Fish",2,NA,"Fourhorn",28.1,278.4,"F",NA,"3",17.8,24.5,NA
-"FH232","2017",2017-08-18,"unidentified digesta","Digested",NA,6.3,"Fourhorn",28.1,278.4,"F",NA,"3",17.8,24.5,NA
-"FH233","2017",2017-08-19,"red amphipods","Amphipod",3,NA,"Fourhorn",21.8,92.6,"M",NA,"2",1.3,5,NA
-"FH234","2017",2017-08-19,"onisimata litoralis","Onisimus sp.",4,NA,"Fourhorn",27.5,212.2,"F",NA,"2",10.5,15.4,NA
-"FH234","2017",2017-08-19,"red amphipods","Amphipod",6,NA,"Fourhorn",27.5,212.2,"F",NA,"2",10.5,15.4,NA
-"FH234","2017",2017-08-19,"fish eyes","Fish",9,NA,"Fourhorn",27.5,212.2,"F",NA,"2",10.5,15.4,NA
-"FH234","2017",2017-08-19,"copepod","Copepod",1,NA,"Fourhorn",27.5,212.2,"F",NA,"2",10.5,15.4,NA
-"FH234","2017",2017-08-19,"fish larvae","Fish",2,NA,"Fourhorn",27.5,212.2,"F",NA,"2",10.5,15.4,NA
-"FH235","2017",2017-08-19,"giant chironimid","Chironomid",1,NA,"Fourhorn",18.3,60.3,"M",NA,"4",0.8,2.6,NA
-"FH235","2017",2017-08-19,"onisimata litoralois","Onisimus sp.",2,NA,"Fourhorn",18.3,60.3,"M",NA,"4",0.8,2.6,NA
-"FH235","2017",2017-08-19,"mysids","Mysid",120,3.1,"Fourhorn",18.3,60.3,"M",NA,"4",0.8,2.6,NA
-"FH236","2017",2017-08-19,"onisimata litoralis","Onisimus sp.",8,NA,"Fourhorn",23.3,93.3,"M",NA,"3",1.9,4.4,NA
-"FH236","2017",2017-08-19,"chironomid","Chironomid",1,NA,"Fourhorn",23.3,93.3,"M",NA,"3",1.9,4.4,NA
-"FH236","2017",2017-08-19,"krill","Krill",6,NA,"Fourhorn",23.3,93.3,"M",NA,"3",1.9,4.4,NA
-"FH236","2017",2017-08-19,"red amphipod","Amphipod",1,NA,"Fourhorn",23.3,93.3,"M",NA,"3",1.9,4.4,NA
-"FH236","2017",2017-08-19,"gammarid","Gammarus sp.",1,NA,"Fourhorn",23.3,93.3,"M",NA,"3",1.9,4.4,NA
-"FH236","2017",2017-08-19,"mysid","Mysid",40,NA,"Fourhorn",23.3,93.3,"M",NA,"3",1.9,4.4,NA
-"FH237","2017",2017-08-19,"red amphipod","Amphipod",1,NA,"Fourhorn",24,103.9,"F",NA,"2",4.3,4.3,NA
-"FH237","2017",2017-08-19,"fish larvae","Fish",1,NA,"Fourhorn",24,103.9,"F",NA,"2",4.3,4.3,NA
-"FH237","2017",2017-08-19,"onisimata litoralis","Onisimus sp.",3,NA,"Fourhorn",24,103.9,"F",NA,"2",4.3,4.3,NA
-"FH24","2017",2017-07-25,"gammarus or onisimus","Amphipod",1,NA,"Fourhorn",13.9,22.3,"M",NA,"1",0.3,0.2,NA
-"FH24","2017",2017-07-25,"krill","Krill",1,NA,"Fourhorn",13.9,22.3,"M",NA,"1",0.3,0.2,NA
-"FH24","2017",2017-07-25,"shrimp","Mysid",3,NA,"Fourhorn",13.9,22.3,"M",NA,"1",0.3,0.2,NA
-"FH249","2017",2017-08-21,"onisimus litoralis","Onisimus sp.",7,NA,"Fourhorn",26.4,192.1,"F",NA,"3",15.4,18.9,NA
-"FH249","2017",2017-08-21,"copepod","Copepod",1,NA,"Fourhorn",26.4,192.1,"F",NA,"3",15.4,18.9,NA
-"FH251","2017",2017-08-21,"gammarid","Gammarus sp.",3,NA,"Fourhorn",14,26,"M",NA,"4",0.4,0.1,NA
-"FH251","2017",2017-08-21,"krill","Krill",2,NA,"Fourhorn",14,26,"M",NA,"4",0.4,0.1,NA
-"FH257","2017",2017-08-24,"gammarid","Gammarus sp.",2,NA,"Fourhorn",11.5,12,"M",NA,"4",0.6,0.8,NA
-"FH257","2017",2017-08-24,"sand lices","Copepod",3,NA,"Fourhorn",11.5,12,"M",NA,"4",0.6,0.8,NA
-"FH258","2017",2017-08-24,"fish larvae","Fish",3,NA,"Fourhorn",7,5,"F",NA,"5",0.5,NA,NA
-"FH258","2017",2017-08-24,"onisimata litoralois","Onisimus sp.",1,NA,"Fourhorn",7,5,"F",NA,"5",0.5,NA,NA
-"FH26","2017",2017-07-26,"gammarus or onisimus","Amphipod",40,NA,"Fourhorn",16.2,44.6,"M",NA,"3",1,0.4,NA
-"FH26","2017",2017-07-26,"krill","Krill",5,NA,"Fourhorn",16.2,44.6,"M",NA,"3",1,0.4,NA
-"FH264","2017",2017-08-24,"copepods","Copepod",10,NA,"Fourhorn",13,20,"M",NA,"3",0.7,0.1,NA
-"FH265","2017",2017-08-24,"copepods","Copepod",3,NA,"Fourhorn",12,15,"M",NA,"2",0.5,NA,NA
-"FH266","2017",2017-08-25,"red copepods","Copepod",6,NA,"Fourhorn",21.5,79,"M",NA,"3",1.6,1.9,NA
-"FH266","2017",2017-08-25,"copepods","Copepod",7,NA,"Fourhorn",21.5,79,"M",NA,"3",1.6,1.9,NA
-"FH266","2017",2017-08-25,"rock","Undigestible",1,NA,"Fourhorn",21.5,79,"M",NA,"3",1.6,1.9,NA
-"FH267","2017",2017-08-25,"check the book","Digested",NA,NA,"Fourhorn",16.4,31.7,"Unknown",NA,"5",0.5,0.4,NA
-"FH269","2017",2017-08-26,"krill","Krill",15,NA,"Fourhorn",17.4,57.3,NA,NA,"5",1.1,0.3,NA
-"FH27","2017",2017-07-26,"gammarus or onisimus","Amphipod",18,NA,"Fourhorn",27,218.6,"F",NA,"2",12.3,8.1,NA
-"FH27","2017",2017-07-26,"rock","Undigestible",1,NA,"Fourhorn",27,218.6,"F",NA,"2",12.3,8.1,NA
-"FH27","2017",2017-07-26,"leaves","Algae",NA,NA,"Fourhorn",27,218.6,"F",NA,"2",12.3,8.1,NA
-"FH278","2017",2017-08-29,"shrimps","Mysid",24,NA,"Fourhorn",30,400,"F",NA,"5",27.7,26.7,NA
-"FH278","2017",2017-08-29,"fish fry eyes","Fish",NA,NA,"Fourhorn",30,400,"F",NA,"5",27.7,26.7,NA
-"FH278","2017",2017-08-29,"krills","Krill",NA,NA,"Fourhorn",30,400,"F",NA,"5",27.7,26.7,NA
-"FH28","2017",2017-07-26,"gammarus or onisimus","Amphipod",30,NA,"Fourhorn",25.4,175,"F",NA,"3",9.5,9.6,NA
-"FH28","2017",2017-07-26,"krill","Krill",1,NA,"Fourhorn",25.4,175,"F",NA,"3",9.5,9.6,NA
-"FH28","2017",2017-07-26,"gammaracanthus sp.","Gammaracanthus sp.",3,NA,"Fourhorn",25.4,175,"F",NA,"3",9.5,9.6,NA
-"FH315","2017",2017-09-03,"krills","Krill",400,NA,"Fourhorn",18.2,64.6,"F",NA,"5",1.6,0.9,NA
-"FH315","2017",2017-09-03,"fish frye","Fish",1,NA,"Fourhorn",18.2,64.6,"F",NA,"5",1.6,0.9,NA
-"FH315","2017",2017-09-03,"amphipods","Amphipod",2,NA,"Fourhorn",18.2,64.6,"F",NA,"5",1.6,0.9,NA
-"FH6","2017",2017-07-23,"gammarus or onisimus","Amphipod",NA,NA,"Fourhorn",22,93,"M",NA,"5",NA,NA,NA
-"FH7","2017",2017-07-23,"gammarus or onisimus","Amphipod",NA,NA,"Fourhorn",19,69,"F",NA,"5",NA,NA,NA
-"FH7","2017",2017-07-23,"eusirus or apherusa","Amphipod",NA,NA,"Fourhorn",19,69,"F",NA,"5",NA,NA,NA
-"FH78","2017",2017-08-02,"krill","Krill",2,NA,"Fourhorn",23.3,114.4,"F",NA,"2",5.7,3.6,NA
-"FH78","2017",2017-08-02,"gammarus or onisimus","Amphipod",3,NA,"Fourhorn",23.3,114.4,"F",NA,"2",5.7,3.6,NA
-"FH78","2017",2017-08-02,"large chironomid larvae","Chironomid",3,NA,"Fourhorn",23.3,114.4,"F",NA,"2",5.7,3.6,NA
-"FH79","2017",2017-08-02,"gammarus or onisimus","Amphipod",11,NA,"Fourhorn",24,84.8,"F",NA,"3",3.4,3,NA
-"FH79","2017",2017-08-02,"krill","Krill",10,NA,"Fourhorn",24,84.8,"F",NA,"3",3.4,3,NA
-"FH79","2017",2017-08-02,"large chironomid larvae","Chironomid",1,NA,"Fourhorn",24,84.8,"F",NA,"3",3.4,3,NA
-"FH8","2017",2017-07-23,"gammarus or onisimus","Amphipod",NA,NA,"Fourhorn",16.5,43,"M",NA,"4",NA,NA,NA
-"FH8","2017",2017-07-23,"digested","Digested",NA,NA,"Fourhorn",16.5,43,"M",NA,"4",NA,NA,NA
-"FH80","2017",2017-08-02,"amphipods","Amphipod",NA,NA,"Fourhorn",17.9,27.9,"M",NA,"2",0.6,0.1,NA
-"FH80","2017",2017-08-02,"grit","Digested",NA,NA,"Fourhorn",17.9,27.9,"M",NA,"2",0.6,0.1,NA
-"FH81","2017",2017-08-02,"krill","Krill",37,NA,"Fourhorn",18.8,33.7,"M",NA,"3",0.6,1.4,NA
-"FH82","2017",2017-08-03,"jellyfish","Jellyfish",6,NA,"Fourhorn",29,277.2,"F",NA,"3",17.3,23,NA
-"FH82","2017",2017-08-03,"gammarus or onisimus","Amphipod",42,NA,"Fourhorn",29,277.2,"F",NA,"3",17.3,23,NA
-"FH83","2017",2017-08-03,"amphipod","Amphipod",NA,NA,"Fourhorn",26.5,184,"F",NA,"3",10,12.2,NA
-"FH84","2017",2017-08-03,"amphipod","Amphipod",3,NA,"Fourhorn",25.5,155.2,"M",NA,"2",3.5,8.5,NA
-"FH85","2017",2017-08-03,"krill","Krill",1,NA,"Fourhorn",21,76.9,"M",NA,"3",2.4,2.7,NA
-"FH85","2017",2017-08-03,"amphipod","Amphipod",13,NA,"Fourhorn",21,76.9,"M",NA,"3",2.4,2.7,NA
-"FH86","2017",2017-08-03,"amphipod","Amphipod",5,NA,"Fourhorn",22,84.8,"M",NA,"2",2.4,2.4,NA
-"FH87","2017",2017-08-03,"krill","Krill",1,NA,"Fourhorn",14.5,23,"M",NA,"2",0.5,0.7,NA
-"FH87","2017",2017-08-03,"amphipod","Amphipod",2,NA,"Fourhorn",14.5,23,"M",NA,"2",0.5,0.7,NA
-"FH88","2017",2017-08-03,"krill","Krill",1,NA,"Fourhorn",14.5,24.6,"M",NA,"2",0.7,0.3,NA
-"FH88","2017",2017-08-03,"gammarus or onisimus","Amphipod",2,NA,"Fourhorn",14.5,24.6,"M",NA,"2",0.7,0.3,NA
-"FH88","2017",2017-08-03,"parasites","Undigestible",NA,NA,"Fourhorn",14.5,24.6,"M",NA,"2",0.7,0.3,NA
-"FH9","2017",2017-07-23,"too small","Empty",NA,NA,"Fourhorn",6.2,14,"I",NA,"1",NA,NA,NA
-"FH93","2017",2017-08-05,"gammarus or onisimus","Amphipod",1,NA,"Fourhorn",9.4,5.9,NA,NA,"3",0.2,NA,NA
-"S1","2017",2017-07-24,"gammaracanthus sp.","Gammaracanthus sp.",1,NA,"Slimy",14.2,42.4,"M",NA,"5",1.4,0.5,NA
-"S1","2017",2017-07-24,"amphipods","Amphipod",13,NA,"Slimy",14.2,42.4,"M",NA,"5",1.4,0.5,NA
-"S1","2017",2017-07-24,"onisimus/apherusa/eusirus","Amphipod",12,NA,"Slimy",14.2,42.4,"M",NA,"5",1.4,0.5,NA
-"S1","2017",2017-07-24,"krill","Krill",5,NA,"Slimy",14.2,42.4,"M",NA,"5",1.4,0.5,NA
-"S12","2017",2017-07-26,"gammarus/onisimus","Amphipod",20,NA,"Slimy",15.2,52.1,"M",NA,"3",2,1.1,NA
-"S12","2017",2017-07-26,"krill","Krill",2,NA,"Slimy",15.2,52.1,"M",NA,"3",2,1.1,NA
-"S12","2017",2017-07-26,"gammaracanthus sp.","Gammaracanthus sp.",3,NA,"Slimy",15.2,52.1,"M",NA,"3",2,1.1,NA
-"S13","2017",2017-07-26,"gammarus/onisimus","Amphipod",35,NA,"Slimy",16,59.2,"F",NA,"4",2.7,1.9,NA
-"S13","2017",2017-07-26,"krill","Krill",1,NA,"Slimy",16,59.2,"F",NA,"4",2.7,1.9,NA
-"S13","2017",2017-07-26,"gammaracanthus sp.","Gammaracanthus sp.",1,NA,"Slimy",16,59.2,"F",NA,"4",2.7,1.9,NA
-"S2","2017",2017-07-24,"onisimus","Onisimus sp.",9,NA,"Slimy",13.2,33.3,"F",NA,"4",1.4,0.5,NA
-"S2","2017",2017-07-24,"gammarus","Gammarus sp.",31,NA,"Slimy",13.2,33.3,"F",NA,"4",1.4,0.5,NA
-"S2","2017",2017-07-24,"gammaracanthus sp.","Gammaracanthus sp.",1,NA,"Slimy",13.2,33.3,"F",NA,"4",1.4,0.5,NA
-"S22","2017",2017-08-02,"gammarus/onisimus","Amphipod",3,NA,"Slimy",14,18.3,"F",NA,"4",0.6,0.3,NA
-"S22","2017",2017-08-02,"grit","Digested",NA,NA,"Slimy",14,18.3,"F",NA,"4",0.6,0.3,NA
-"S23","2017",2017-08-02,"krill","Krill",3,NA,"Slimy",11.4,6.7,"M",NA,"3",0.3,NA,NA
-"S23","2017",2017-08-02,"gammarus/onisimus","Amphipod",3,NA,"Slimy",11.4,6.7,"M",NA,"3",0.3,NA,NA
-"S23","2017",2017-08-02,"grit","Digested",NA,NA,"Slimy",11.4,6.7,"M",NA,"3",0.3,NA,NA
-"S24","2017",2017-08-03,"gammarus/onisimus","Amphipod",16,NA,"Slimy",17.7,69.7,"F",NA,"3",3.5,2.3,NA
-"S24","2017",2017-08-03,"many parasites in gut","Undigestible",NA,NA,"Slimy",17.7,69.7,"F",NA,"3",3.5,2.3,NA
-"S25","2017",2017-08-03,"gammaracanthus sp.","Gammaracanthus sp.",1,NA,"Slimy",17.7,73.7,"F",NA,"4",3.8,3.7,NA
-"S25","2017",2017-08-03,"amphipods","Amphipod",11,NA,"Slimy",17.7,73.7,"F",NA,"4",3.8,3.7,NA
-"S26","2017",2017-08-03,"gammarus/onisimus","Amphipod",1,NA,"Slimy",16,59.7,"F",NA,"1",3.3,1.9,NA
-"S27","2017",2017-08-03,"gammaracanthus sp.","Gammaracanthus sp.",1,NA,"Slimy",17.7,80,"F",NA,"3",3.6,3.1,NA
-"S27","2017",2017-08-03,"gammarus/onisimus","Amphipod",2,NA,"Slimy",17.7,80,"F",NA,"3",3.6,3.1,NA
-"S27","2017",2017-08-03,"digested","Digested",NA,NA,"Slimy",17.7,80,"F",NA,"3",3.6,3.1,NA
-"S28","2017",2017-08-03,"jelly fish","Jellyfish",1,NA,"Slimy",18,73.4,"F",NA,"3",3,3.8,NA
-"S28","2017",2017-08-03,"amphipods","Amphipod",4,NA,"Slimy",18,73.4,"F",NA,"3",3,3.8,NA
-"S28","2017",2017-08-03,"gammaracanthus sp.","Gammaracanthus sp.",1,NA,"Slimy",18,73.4,"F",NA,"3",3,3.8,NA
-"S28","2017",2017-08-03,"parasites in gut","Undigestible",NA,NA,"Slimy",18,73.4,"F",NA,"3",3,3.8,NA
-"S29","2017",2017-08-03,"amphipod","Amphipod",7,NA,"Slimy",17.6,72.2,"F",NA,"4",3.5,2.2,NA
-"S29","2017",2017-08-03,"gammaracanthus sp.","Gammaracanthus sp.",1,NA,"Slimy",17.6,72.2,"F",NA,"4",3.5,2.2,NA
-"S29","2017",2017-08-03,"krill","Krill",3,NA,"Slimy",17.6,72.2,"F",NA,"4",3.5,2.2,NA
-"S29","2017",2017-08-03,"parasites in gut","Undigestible",NA,NA,"Slimy",17.6,72.2,"F",NA,"4",3.5,2.2,NA
-"S3","2017",2017-07-24,"onisimus","Onisimus sp.",3,NA,"Slimy",4.2,0.8,"I",NA,"3",NA,NA,NA
-"S30","2017",2017-08-03,"krill","Krill",5,NA,"Slimy",15.4,49.3,"F",NA,"4",2.3,1.3,NA
-"S30","2017",2017-08-03,"grit","Digested",NA,NA,"Slimy",15.4,49.3,"F",NA,"4",2.3,1.3,NA
-"S30","2017",2017-08-03,"gammarus/onisimus","Amphipod",5,NA,"Slimy",15.4,49.3,"F",NA,"4",2.3,1.3,NA
-"S31","2017",2017-08-03,"gammarus/onisimus","Amphipod",3,NA,"Slimy",15.6,45.4,"F",NA,"4",1.9,1.3,NA
-"S31","2017",2017-08-03,"giant chironomid","Chironomid",3,NA,"Slimy",15.6,45.4,"F",NA,"4",1.9,1.3,NA
-"S32","2017",2017-08-06,"krill","Krill",10,NA,"Fourhorn",17.9,78.6,"M",NA,"5",4.2,0.1,NA
-"S32","2017",2017-08-06,"amphipods","Amphipod",20,NA,"Fourhorn",17.9,78.6,"M",NA,"5",4.2,0.1,NA
-"S32","2017",2017-08-06,"gammaracanthus sp.","Gammaracanthus sp.",1,NA,"Fourhorn",17.9,78.6,"M",NA,"5",4.2,0.1,NA
-"S32","2017",2017-08-06,"onisimus or eusirus","Amphipod",10,NA,"Fourhorn",17.9,78.6,"M",NA,"5",4.2,0.1,NA
-"S33","2017",2017-08-06,"copepods","Copepod",10,NA,"Fourhorn",16,50.5,"M",NA,"5",1.5,NA,NA
-"S33","2017",2017-08-06,"krill","Krill",10,NA,"Fourhorn",16,50.5,"M",NA,"5",1.5,NA,NA
-"S33","2017",2017-08-06,"onisimus or eusirus","Amphipod",15,NA,"Fourhorn",16,50.5,"M",NA,"5",1.5,NA,NA
-"S33","2017",2017-08-06,"gammarus","Gammarus sp.",15,NA,"Fourhorn",16,50.5,"M",NA,"5",1.5,NA,NA
-"S34","2017",2017-08-09,"unidentified digesta","Digested",NA,NA,"Slimy",17,62.5,"M",NA,"4",3.1,1.7,NA
-"S37","2017",2017-08-10,"krill","Krill",25,NA,"Slimy",14.5,34.2,"M",NA,"4",1,0.6,NA
-"S37","2017",2017-08-10,"red shrimp","Mysid",3,NA,"Slimy",14.5,34.2,"M",NA,"4",1,0.6,NA
-"S38","2017",2017-08-12,"sea lice","Copepod",2,NA,"Slimy",12.5,21.8,"M",NA,"3",0.7,NA,NA
-"S38","2017",2017-08-12,"chironomid","Chironomid",1,NA,"Slimy",12.5,21.8,"M",NA,"3",0.7,NA,NA
-"S38","2017",2017-08-12,"copepods","Copepod",13,NA,"Slimy",12.5,21.8,"M",NA,"3",0.7,NA,NA
-"S38","2017",2017-08-12,"onisimus sp.","Onisimus sp.",2,NA,"Slimy",12.5,21.8,"M",NA,"3",0.7,NA,NA
-"S38","2017",2017-08-12,"gammarids","Gammarus sp.",2,NA,"Slimy",12.5,21.8,"M",NA,"3",0.7,NA,NA
-"S39","2017",2017-08-12,"caprellid amphipod","Amphipod",1,NA,"Slimy",15.2,39.8,"M",NA,"3",0.9,0.2,NA
-"S39","2017",2017-08-12,"copepod","Copepod",1,NA,"Slimy",15.2,39.8,"M",NA,"3",0.9,0.2,NA
-"S39","2017",2017-08-12,"fish eyes","Fish",NA,NA,"Slimy",15.2,39.8,"M",NA,"3",0.9,0.2,NA
-"S39","2017",2017-08-12,"nematode parasite","Undigestible",1,NA,"Slimy",15.2,39.8,"M",NA,"3",0.9,0.2,NA
-"S4","2017",2017-08-25,"gammaracanthus sp.","Gammaracanthus sp.",3,NA,"Slimy",15.8,55.5,"F",NA,"3",1.9,1.9,NA
-"S4","2017",2017-08-25,"gammarus","Gammarus sp.",23,NA,"Slimy",15.8,55.5,"F",NA,"3",1.9,1.9,NA
-"S40","2017",2017-08-12,"gammaracanthus sp.","Gammaracanthus sp.",1,NA,"Slimy",14.4,35.2,"F",NA,"3",0.8,0.7,NA
-"S40","2017",2017-08-12,"giant chironomid","Chironomid",1,NA,"Slimy",14.4,35.2,"F",NA,"3",0.8,0.7,NA
-"S40","2017",2017-08-12,"sea lice","Copepod",19,NA,"Slimy",14.4,35.2,"F",NA,"3",0.8,0.7,NA
-"S41","2017",2017-08-12,"krill","Krill",5,NA,"Slimy",14.8,43,"F",NA,"4",1.3,0.9,NA
-"S41","2017",2017-08-12,"sea lice","Copepod",7,NA,"Slimy",14.8,43,"F",NA,"4",1.3,0.9,NA
-"S42","2017",2017-08-12,"krill","Krill",23,NA,"Slimy",12.9,27.7,"M",NA,"3",0.5,0.7,NA
-"S43","2017",2017-08-13,"gammaracanthus sp.","Gammaracanthus sp.",1,NA,"Slimy",12,18.5,"M",NA,"4",0.3,NA,NA
-"S43","2017",2017-08-13,"gammarids","Gammarus sp.",3,NA,"Slimy",12,18.5,"M",NA,"4",0.3,NA,NA
-"S44","2017",2017-08-13,"onisimus so.","Onisimus sp.",2,NA,"Slimy",9.8,11.9,"M",NA,"2",0.4,0.1,NA
-"S46","2017",2017-08-13,"krill","Krill",28,NA,"Slimy",11.2,20.6,"M",NA,"5",0.4,0.2,NA
-"S46","2017",2017-08-13,"fish larvae","Fish",9,NA,"Slimy",11.2,20.6,"M",NA,"5",0.4,0.2,NA
-"S46","2017",2017-08-13,"amphipod","Amphipod",1,NA,"Slimy",11.2,20.6,"M",NA,"5",0.4,0.2,NA
-"S47","2017",2017-08-13,"gammarid","Gammarus sp.",2,NA,"Slimy",15.9,65.8,"F",NA,"5",2.7,1.7,NA
-"S47","2017",2017-08-13,"krill","Krill",180,NA,"Slimy",15.9,65.8,"F",NA,"5",2.7,1.7,NA
-"S47","2017",2017-08-13,"sea fleas","Amphipod",6,NA,"Slimy",15.9,65.8,"F",NA,"5",2.7,1.7,NA
-"S47","2017",2017-08-13,"sea angel","Sea Angel",1,NA,"Slimy",15.9,65.8,"F",NA,"5",2.7,1.7,NA
-"S47","2017",2017-08-13,"onisimus litoralis","Onisimus sp.",NA,NA,"Slimy",15.9,65.8,"F",NA,"5",2.7,1.7,NA
-"S48","2017",2017-08-13,"sea flea","Amphipod",1,NA,"Slimy",22.1,126.3,"F",NA,"2",2.3,2.2,NA
-"S48","2017",2017-08-13,"krill","Krill",14,NA,"Slimy",22.1,126.3,"F",NA,"2",2.3,2.2,NA
-"S48","2017",2017-08-13,"sea angel","Sea Angel",1,NA,"Slimy",22.1,126.3,"F",NA,"2",2.3,2.2,NA
-"S48","2017",2017-08-13,"fish larvae","Fish",5,NA,"Slimy",22.1,126.3,"F",NA,"2",2.3,2.2,NA
-"S48","2017",2017-08-13,"piece plastic","Undigestible",1,NA,"Slimy",22.1,126.3,"F",NA,"2",2.3,2.2,NA
-"S49","2017",2017-08-14,"gammarids","Gammarus sp.",90,NA,"Slimy",17.5,68.5,"F",NA,"5",2.7,1.9,NA
-"S5","2017",2017-08-25,"gammarus/onisimus","Amphipod",40,NA,"Slimy",14.5,43.7,"M",NA,"4",1.1,0.4,NA
-"S5","2017",2017-08-25,"gammaracanthus sp.","Gammaracanthus sp.",3,NA,"Slimy",14.5,43.7,"M",NA,"4",1.1,0.4,NA
-"S5","2017",2017-08-25,"eusirus or apherusa","Amphipod",1,NA,"Slimy",14.5,43.7,"M",NA,"4",1.1,0.4,NA
-"S50","2017",2017-08-15,"gammarids","Gammarus sp.",50,NA,"Slimy",17.4,78.7,"F",NA,"5",2.4,2,NA
-"S50","2017",2017-08-15,"sand fleas","Amphipod",3,NA,"Slimy",17.4,78.7,"F",NA,"5",2.4,2,NA
-"S50","2017",2017-08-15,"krill","Krill",4,NA,"Slimy",17.4,78.7,"F",NA,"5",2.4,2,NA
-"S50","2017",2017-08-15,"sea angel","Sea Angel",1,NA,"Slimy",17.4,78.7,"F",NA,"5",2.4,2,NA
-"S50","2017",2017-08-15,"fish fry","Fish",57,NA,"Slimy",17.4,78.7,"F",NA,"5",2.4,2,NA
-"S50","2017",2017-08-15,"char","Fish",NA,NA,"Slimy",17.4,78.7,"F",NA,"5",2.4,2,NA
-"S59","2017",2017-08-16,"gammarids","Gammarus sp.",NA,NA,"Slimy",14,37.7,"F",NA,"5",0.4,0.5,NA
-"S59","2017",2017-08-16,"onisimus sp","Onisimus sp.",NA,NA,"Slimy",14,37.7,"F",NA,"5",0.4,0.5,NA
-"S59","2017",2017-08-16,"krill","Krill",NA,NA,"Slimy",14,37.7,"F",NA,"5",0.4,0.5,NA
-"S59","2017",2017-08-16,"digested","Digested",NA,3.6,"Slimy",14,37.7,"F",NA,"5",0.4,0.5,NA
-"S6","2017",2017-08-25,"grit","Digested",1,NA,"Slimy",14.6,42,"F",NA,"2",1.3,0.9,NA
-"S6","2017",2017-08-25,"gammarus","Gammarus sp.",5,NA,"Slimy",14.6,42,"F",NA,"2",1.3,0.9,NA
-"S6","2017",2017-08-25,"digested","Digested",NA,NA,"Slimy",14.6,42,"F",NA,"2",1.3,0.9,NA
-"S62","2017",2017-08-17,"gammarids","Gammarus sp.",5,NA,"Slimy",12.9,30.2,"M",NA,"3",1.2,0.2,NA
-"S62","2017",2017-08-17,"red amphipod","Amphipod",3,NA,"Slimy",12.9,30.2,"M",NA,"3",1.2,0.2,NA
-"S62","2017",2017-08-17,"gammaracanthus sp","Gammaracanthus sp.",1,NA,"Slimy",12.9,30.2,"M",NA,"3",1.2,0.2,NA
-"S63","2017",2017-08-18,"unidentified amphipods","Amphipod",NA,NA,"Slimy",16.5,58.2,"M",NA,"5",0.8,0.1,NA
-"S63","2017",2017-08-18,"fish fry","Fish",36,NA,"Slimy",16.5,58.2,"M",NA,"5",0.8,0.1,NA
-"S64","2017",2017-08-18,"unidentified digesta","Digested",NA,NA,"Slimy",13.5,31.4,"M",NA,"4",0.7,0.1,NA
-"S64","2017",2017-08-18,"gammarid","Gammarus sp.",1,NA,"Slimy",13.5,31.4,"M",NA,"4",0.7,0.1,NA
-"S64","2017",2017-08-18,"fish fry","Fish",3,NA,"Slimy",13.5,31.4,"M",NA,"4",0.7,0.1,NA
-"S65","2017",2017-08-18,"copepods","Copepod",NA,0.2,"Slimy",14,29.8,"M",NA,"5",0.6,1,NA
-"S65","2017",2017-08-18,"fish fry","Fish",3,NA,"Slimy",14,29.8,"M",NA,"5",0.6,1,NA
-"S65","2017",2017-08-18,"amphipods","Amphipod",NA,0.9,"Slimy",14,29.8,"M",NA,"5",0.6,1,NA
-"S66","2017",2017-08-18,"gammarid","Gammarus sp.",1,NA,"Slimy",14.4,35.9,"F",NA,"4",1.6,0.8,NA
-"S66","2017",2017-08-18,"gammaracanthus","Gammaracanthus sp.",1,NA,"Slimy",14.4,35.9,"F",NA,"4",1.6,0.8,NA
-"S66","2017",2017-08-18,"amphipods","Amphipod",NA,NA,"Slimy",14.4,35.9,"F",NA,"4",1.6,0.8,NA
-"S66","2017",2017-08-18,"copepods","Copepod",NA,NA,"Slimy",14.4,35.9,"F",NA,"4",1.6,0.8,NA
-"S66","2017",2017-08-18,"fish fry","Fish",1,NA,"Slimy",14.4,35.9,"F",NA,"4",1.6,0.8,NA
-"S7","2017",2017-07-25,"gammarus","Gammarus sp.",14,NA,"Slimy",12.2,23.8,"M",NA,"3",0.9,0.1,NA
-"S7","2017",2017-07-25,"gammaracanthus sp.","Gammaracanthus sp.",1,NA,"Slimy",12.2,23.8,"M",NA,"3",0.9,0.1,NA
-"S74","2017",2017-08-21,"cnidarian jelly","Jellyfish",NA,NA,"Slimy",17.2,59.7,"M",NA,"2",1.1,1.6,NA
-"S74","2017",2017-08-21,"fish larvae","Fish",1,NA,"Slimy",17.2,59.7,"M",NA,"2",1.1,1.6,NA
-"S74","2017",2017-08-21,"mysid","Mysid",1,NA,"Slimy",17.2,59.7,"M",NA,"2",1.1,1.6,NA
-"S74","2017",2017-08-21,"unidentified digesta","Digested",NA,NA,"Slimy",17.2,59.7,"M",NA,"2",1.1,1.6,NA
-"S84","2017",2017-08-22,"krill","Krill",3,NA,"Slimy",15.5,52.8,"F",NA,"3",2.3,1.6,NA
-"S84","2017",2017-08-22,"sea angel","Sea Angel",2,NA,"Slimy",15.5,52.8,"F",NA,"3",2.3,1.6,NA
-"S84","2017",2017-08-22,"onisimata","Onisimus sp.",2,NA,"Slimy",15.5,52.8,"F",NA,"3",2.3,1.6,NA
-"S84","2017",2017-08-22,"fish bits","Fish",NA,NA,"Slimy",15.5,52.8,"F",NA,"3",2.3,1.6,NA
-"S85","2017",2017-08-22,"krill","Krill",1,NA,"Slimy",16,50.5,"F",NA,"1",1.7,1.1,NA
-"S85","2017",2017-08-22,"sea angel","Sea Angel",1,NA,"Slimy",16,50.5,"F",NA,"1",1.7,1.1,NA
-"S86","2017",2017-08-22,"fish larvae","Fish",20,NA,"Slimy",21.5,107.3,"F",NA,"4",2.1,1,NA
-"S86","2017",2017-08-22,"snails","Miscellaneous Invert",6,NA,"Slimy",21.5,107.3,"F",NA,"4",2.1,1,NA
-"S86","2017",2017-08-22,"isopod","Miscellaneous Invert",1,NA,"Slimy",21.5,107.3,"F",NA,"4",2.1,1,NA
-"S86","2017",2017-08-22,"preserved","Digested",NA,NA,"Slimy",21.5,107.3,"F",NA,"4",2.1,1,NA
-"S87","2017",2017-08-23,"larvae","Fish",1,NA,"Slimy",19.9,116.3,"F",NA,"4",6.5,8,NA
-"S87","2017",2017-08-23,"sand fleas","Amphipod",2,NA,"Slimy",19.9,116.3,"F",NA,"4",6.5,8,NA
-"S87","2017",2017-08-23,"lots of fish eyes","Fish",NA,NA,"Slimy",19.9,116.3,"F",NA,"4",6.5,8,NA
-"S87","2017",2017-08-23,"red amphipods","Amphipod",10,NA,"Slimy",19.9,116.3,"F",NA,"4",6.5,8,NA
-"S89","2017",2017-08-27,"krill","Krill",15,NA,"Slimy",13.5,35,"M",NA,"5",0.8,0.5,NA
-"S89","2017",2017-08-27,"copepod","Copepod",1,NA,"Slimy",13.5,35,"M",NA,"5",0.8,0.5,NA
-"S89","2017",2017-08-27,"fish larvae","Fish",18,NA,"Slimy",13.5,35,"M",NA,"5",0.8,0.5,NA
-"S89","2017",2017-08-27,"sea lice","Copepod",3,NA,"Slimy",13.5,35,"M",NA,"5",0.8,0.5,NA
-"S90","2017",2017-08-27,"krill","Krill",5,NA,"Slimy",14.5,43,"M",NA,"3",1.3,0.2,NA
-"S90","2017",2017-08-27,"copepods","Copepod",6,NA,"Slimy",14.5,43,"M",NA,"3",1.3,0.2,NA
-"S90","2017",2017-08-27,"sea lice","Copepod",1,NA,"Slimy",14.5,43,"M",NA,"3",1.3,0.2,NA
-"S90","2017",2017-08-27,"fish larvae","Fish",17,NA,"Slimy",14.5,43,"M",NA,"3",1.3,0.2,NA
-"SSM001","2018",2018-07-31,"Empty","Empty",NA,NA,"Slimy",16.9,50,"F",0,"1",0.9,0.8,NA
-"SSM002","2018",2018-07-31,"unidentified","Digested",NA,3.468,"Fourhorn",26.1,100,"F",3.468,"3",6.9,7.1,0.2
-"SSM003","2018",2018-07-31,"Empty","Empty",NA,NA,"Fourhorn",27.1,200,"F",0,"1",9.7,8.7,0.5
-"SSM004","2018",2018-07-31,"onisimus littoralis","Onisimus sp.",10,1.629,"Fourhorn",27.5,150,"F",5.187,"3",7.7,6.7,0.2
-"SSM004","2018",2018-07-31,"algae","Algae",NA,3.558,"Fourhorn",27.5,150,"F",5.187,"3",7.7,6.7,0.2
-"SSM005a","2018",2018-08-01,"gammarus","Gammarus sp.",1,0.041,"Slimy",22,70,"F",0.041,"2",2.1,2.7,NA
-"SSM005b","2018",2018-08-02,"onisimus littoralis","Onisimus sp.",1,0.019,"Fourhorn",24,130,"F",0.094,"2",2.6,4.4,0.3
-"SSM005b","2018",2018-08-02,"amphipod","Amphipod",NA,0.075,"Fourhorn",24,130,"F",0.094,"2",2.6,4.4,0.3
-"SSM006","2018",2018-08-03,"onisimus littoralis","Onisimus sp.",2,0.052,"Fourhorn",18.8,50,"F",0.751,"2",1.6,2.7,0
-"SSM006","2018",2018-08-03,"krill","Krill",1,0,"Fourhorn",18.8,50,"F",0.751,"2",1.6,2.7,0
-"SSM006","2018",2018-08-03,"amphipod","Amphipod",NA,0.699,"Fourhorn",18.8,50,"F",0.751,"2",1.6,2.7,0
-"SSM007","2018",2018-08-04,"onisimus littoralis","Onisimus sp.",5,0.213,"Fourhorn",25.6,220,"F",19.563,"5",11.6,9.7,0.4
-"SSM007","2018",2018-08-04,"onisimus sp.","Onisimus sp.",NA,18.914,"Fourhorn",25.6,220,"F",19.563,"5",11.6,9.7,0.4
-"SSM007","2018",2018-08-04,"amphipod","Amphipod",NA,0.436,"Fourhorn",25.6,220,"F",19.563,"5",11.6,9.7,0.4
-"SSM008","2018",2018-08-07,"Unidentified","Unidentified",NA,NA,"Fourhorn",24.4,150,"F",0.846,"2",7,6.4,0.3
-"SSM009","2018",2018-08-07,"unidentified","Digested",NA,1.105,"Fourhorn",21.2,110,"F",1.107,"3",7.3,5,0.2
-"SSM010","2018",2018-08-07,"Empty","Empty",NA,NA,"Slimy",12.2,12.8,"F",0,"1",0.3,0.1,0
-"SSM011","2018",2018-08-07,"Empty","Empty",NA,NA,"Fourhorn",14,31.3,"F",0,"1",0.7,0.9,0
-"SSM012","2018",2018-08-08,"unidentified","Digested",NA,0.54,"Slimy",NA,NA,"F",0.054,"2",1,0.4,0
-"SSM013","2018",2018-08-08,"unidentified","Digested",NA,0.471,"Fourhorn",30,35.1,"F",0.471,"3",0.7,1.1,0
-"SSM014","2018",2018-08-08,"krill pieces","Krill",1,0.152,"Fourhorn",28,51.3,"F",0.738,"2",5.5,4.3,0.4
-"SSM014","2018",2018-08-08,"unidentified","Digested",NA,0.031,"Fourhorn",28,51.3,"F",0.738,"2",5.5,4.3,0.4
-"SSM015","2018",2018-08-08,"Unidentified","Unidentified",NA,NA,"Fourhorn",26,100,"F",2.838,"3",4.8,4.6,0.3
-"SSM016","2018",2018-08-08,"unidentified","Digested",NA,0.165,"Fourhorn",19.4,29.9,"M",0.285,"2",0.4,0.4,0
-"SSM016","2018",2018-08-08,"copepod","Copepod",NA,0.13,"Fourhorn",19.4,29.9,"M",0.285,"2",0.4,0.4,0
-"SSM016","2018",2018-08-08,"unidentified","Digested",NA,2.833,"Fourhorn",19.4,29.9,"M",0.285,"2",0.4,0.4,0
-"SSM016","2018",2018-08-08,"unidentified","Digested",NA,0.005,"Fourhorn",19.4,29.9,"M",0.285,"2",0.4,0.4,0
-"SSM017","2018",2018-08-08,"unidentified","Digested",NA,2.336,"Fourhorn",25,100,"F",2.336,"3",3.4,4.1,0.4
-"SSM018","2018",2018-08-09,"unidentified","Digested",NA,1.475,"Fourhorn",25.6,167.6,"F",1.475,"2",8.3,9.3,0.3
-"SSM019","2018",2018-08-09,"krill","Krill",NA,1.822,"Fourhorn",14,23.1,"F",1.822,"3",0.9,0.2,0
-"SSM020","2018",2018-08-09,"unidentified","Digested",NA,0.306,"Fourhorn",16,47.7,"M",0.306,"2",0.6,1.3,0
-"SSM021","2018",2018-08-09,"krill","Krill",1,0.085,"Fourhorn",17,38.2,"F",1.813,"4",0.8,1,0
-"SSM021","2018",2018-08-09,"unidentified","Digested",NA,1.673,"Fourhorn",17,38.2,"F",1.813,"4",0.8,1,0
-"SSM022","2018",2018-08-09,"onisimus littoralis","Onisimus sp.",2,0.059,"Fourhorn",16.4,36.4,"M",2.58,"5",0.7,1.3,0
-"SSM022","2018",2018-08-09,"unidentified","Digested",NA,2.359,"Fourhorn",16.4,36.4,"M",2.58,"5",0.7,1.3,0
-"SSM023","2018",2018-08-09,"krill","Krill",2,0,"Fourhorn",14.8,25.6,"M",0.315,"3",0.3,0.1,0
-"SSM023","2018",2018-08-09,"unidentified","Digested",NA,0.315,"Fourhorn",14.8,25.6,"M",0.315,"3",0.3,0.1,0
-"SSM024a","2018",2018-08-09,"unidentified","Digested",NA,1.296,"Fourhorn",11.8,13.9,"M",1.296,"5",0.4,0.6,0
-"SSM024b","2018",2018-08-10,"sea angel","Sea Angel",1,0.053,"Fourhorn",24.8,92.8,"M",1.783,"3",4.2,4,0.4
-"SSM024b","2018",2018-08-10,"unidentified","Digested",NA,1.73,"Fourhorn",24.8,92.8,"M",1.783,"3",4.2,4,0.4
-"SSM025","2018",2018-08-10,"unidentified","Digested",NA,0.839,"Fourhorn",20.1,58.3,"M",0.84,"3",1.2,3.6,0.1
-"SSM026","2018",2018-08-10,"unidentified","Digested",NA,3.266,"Fourhorn",28.8,212.5,"F",3.267,"3",12.9,12.7,0.4
-"SSM027","2018",2018-08-10,"onisimus littoralis","Onisimus sp.",2,0.089,"Fourhorn",18,54.7,"F",2.98,"4",1.6,2.4,0
-"SSM027","2018",2018-08-10,"gammarus","Gammarus sp.",4,0.258,"Fourhorn",18,54.7,"F",2.98,"4",1.6,2.4,0
-"SSM027","2018",2018-08-10,"mysid shrimp","Mysid",2,0.046,"Fourhorn",18,54.7,"F",2.98,"4",1.6,2.4,0
-"SSM027","2018",2018-08-10,"unidentified","Digested",NA,2.587,"Fourhorn",18,54.7,"F",2.98,"4",1.6,2.4,0
-"SSM028","2018",2018-08-11,"Empty","Empty",NA,NA,"Fourhorn",5.5,2,"Unknown",0,"1",0,NA,0
-"SSM029","2018",2018-08-14,"Empty","Empty",NA,NA,"Fourhorn",26,172.7,"F",0,"1",11.1,10.6,0.6
-"SSM030","2018",2018-08-14,"onisimus littoralis","Onisimus sp.",1,0.024,"Fourhorn",16,32.5,"F",0.087,"2",0.8,0.5,0
-"SSM030","2018",2018-08-14,"amphipod","Amphipod",NA,0.063,"Fourhorn",16,32.5,"F",0.087,"2",0.8,0.5,0
-"SSM031","2018",2018-08-20,"larval fish","Fish",7,0.145,"Fourhorn",20.2,90.3,"M",5.507,"5",3.2,2.8,0.2
-"SSM031","2018",2018-08-20,"onisimus littoralis","Onisimus sp.",5,0.18,"Fourhorn",20.2,90.3,"M",5.507,"5",3.2,2.8,0.2
-"SSM031","2018",2018-08-20,"gammarus","Gammarus sp.",1,0.125,"Fourhorn",20.2,90.3,"M",5.507,"5",3.2,2.8,0.2
-"SSM031","2018",2018-08-20,"unidentified","Digested",NA,4.702,"Fourhorn",20.2,90.3,"M",5.507,"5",3.2,2.8,0.2
-"SSM032","2018",2018-08-20,"unidentified","Digested",NA,11.838,"Fourhorn",25.2,197.1,"M",12.521,"5",6.8,8.9,0.4
-"SSM032","2018",2018-08-20,"onisimus littoralis","Onisimus sp.",4,0.418,"Fourhorn",25.2,197.1,"M",12.521,"5",6.8,8.9,0.4
-"SSM032","2018",2018-08-20,"larval fish","Fish",1,0.151,"Fourhorn",25.2,197.1,"M",12.521,"5",6.8,8.9,0.4
-"SSM032","2018",2018-08-20,"krill","Krill",2,0.114,"Fourhorn",25.2,197.1,"M",12.521,"5",6.8,8.9,0.4
-"SSM033","2018",2018-08-20,"krill","Krill",4,3.182,"Fourhorn",20.4,65.7,"F",4.391,"4",1.9,1.3,0.1
-"SSM033","2018",2018-08-20,"larval fish","Fish",7,0.275,"Fourhorn",20.4,65.7,"F",4.391,"4",1.9,1.3,0.1
-"SSM033","2018",2018-08-20,"amphipod","Amphipod",NA,0.934,"Fourhorn",20.4,65.7,"F",4.391,"4",1.9,1.3,0.1
-"SSM034","2018",2018-08-20,"gammarus","Gammarus sp.",1,0.115,"Fourhorn",25.9,177.8,"M",4.514,"4",8.4,8.2,0.6
-"SSM034","2018",2018-08-20,"larval fish","Fish",1,0.012,"Fourhorn",25.9,177.8,"M",4.514,"4",8.4,8.2,0.6
-"SSM034","2018",2018-08-20,"unidentified","Digested",NA,2.384,"Fourhorn",25.9,177.8,"M",4.514,"4",8.4,8.2,0.6
-"SSM034","2018",2018-08-20,"unidentified","Digested",NA,1.813,"Fourhorn",25.9,177.8,"M",4.514,"4",8.4,8.2,0.6
-"SSM035","2018",2018-08-20,"onisimus littoralis","Onisimus sp.",4,0.116,"Fourhorn",19.5,66,"M",6.645,"5",2.2,2.1,0.1
-"SSM035","2018",2018-08-20,"krill","Krill",3,0.006,"Fourhorn",19.5,66,"M",6.645,"5",2.2,2.1,0.1
-"SSM035","2018",2018-08-20,"larval fish","Fish",5,0.274,"Fourhorn",19.5,66,"M",6.645,"5",2.2,2.1,0.1
-"SSM035","2018",2018-08-20,"amphipod","Amphipod",NA,0.49,"Fourhorn",19.5,66,"M",6.645,"5",2.2,2.1,0.1
-"SSM035","2018",2018-08-20,"unidentified","Digested",NA,5.401,"Fourhorn",19.5,66,"M",6.645,"5",2.2,2.1,0.1
-"SSM036","2018",2018-08-20,"krill","Krill",7,3.03,"Fourhorn",15.4,29.6,"F",3.117,"4",0.9,0.3,0
-"SSM036","2018",2018-08-20,"onisimus littoralis","Onisimus sp.",NA,0.087,"Fourhorn",15.4,29.6,"F",3.117,"4",0.9,0.3,0
-"SSM037","2018",2018-08-21,"onisimus littoralis","Onisimus sp.",5,0.36,"Fourhorn",26.2,181.5,"M",6.771,"4",3.9,3.2,0.6
-"SSM037","2018",2018-08-21,"larval fish","Fish",7,0.633,"Fourhorn",26.2,181.5,"M",6.771,"4",3.9,3.2,0.6
-"SSM037","2018",2018-08-21,"unidentified","Digested",NA,5.778,"Fourhorn",26.2,181.5,"M",6.771,"4",3.9,3.2,0.6
-"SSM038","2018",2018-08-21,"unidentified","Digested",NA,0.833,"Slimy",13.8,20.7,"M",0.833,"4",0.5,0.3,0
-"SSM039","2018",2018-08-21,"onisimus littoralis","Onisimus sp.",3,0.171,"Slimy",15.4,56.2,"F",2.751,"4",2.3,2.6,0
-"SSM039","2018",2018-08-21,"larval fish","Fish",1,0.031,"Slimy",15.4,56.2,"F",2.751,"4",2.3,2.6,0
-"SSM039","2018",2018-08-21,"unidentified","Digested",NA,2.549,"Slimy",15.4,56.2,"F",2.751,"4",2.3,2.6,0
-"SSM040","2018",2018-08-21,"krill","Krill",2,0.122,"Fourhorn",20.8,80.3,"F",1.937,"3",3.5,3.6,0
-"SSM040","2018",2018-08-21,"unidentified","Digested",NA,1.815,"Fourhorn",20.8,80.3,"F",1.937,"3",3.5,3.6,0
-"SSM041","2018",2018-08-26,"unidentified","Digested",NA,2.557,"Fourhorn",20.8,94.9,"M",4.041,"4",4.3,5.4,0.2
-"SSM041","2018",2018-08-26,"gammarus","Gammarus sp.",1,0.12,"Fourhorn",20.8,94.9,"M",4.041,"4",4.3,5.4,0.2
-"SSM041","2018",2018-08-26,"onisimus littoralis","Onisimus sp.",2,0.166,"Fourhorn",20.8,94.9,"M",4.041,"4",4.3,5.4,0.2
-"SSM041","2018",2018-08-26,"larval fish","Fish",5,0.177,"Fourhorn",20.8,94.9,"M",4.041,"4",4.3,5.4,0.2
-"SSM042","2018",2018-08-26,"Empty","Empty",NA,NA,"Fourhorn",22.2,104.4,"M",0,"1",3.3,5.5,0.2
-"SSM043","2018",2018-08-26,"krill","Krill",2,0.072,"Slimy",17.9,82.3,"F",0.325,"2",4.7,4.5,0
-"SSM043","2018",2018-08-26,"unidentified","Digested",NA,0.253,"Slimy",17.9,82.3,"F",0.325,"2",4.7,4.5,0
-"SSM044","2018",2018-08-26,"onisimus littoralis","Onisimus sp.",1,0.045,"Slimy",11.4,20.3,"F",0.19,"2",0.6,0.2,0
-"SSM044","2018",2018-08-26,"unidentified","Digested",NA,0.114,"Slimy",11.4,20.3,"F",0.19,"2",0.6,0.2,0
-"SSM045","2018",2018-08-26,"krill","Krill",1,0.084,"Fourhorn",27.1,224.4,"F",0.664,"2",16.2,21,0.6
-"SSM045","2018",2018-08-26,"unidentified","Digested",NA,0.587,"Fourhorn",27.1,224.4,"F",0.664,"2",16.2,21,0.6
-"SSM046","2018",2018-08-28,"onisimus littoralis","Onisimus sp.",3,0.147,"Fourhorn",27,237.5,"F",15.738,"5",15.7,16.6,1
-"SSM046","2018",2018-08-28,"large black amphipod","Amphipod",1,0.247,"Fourhorn",27,237.5,"F",15.738,"5",15.7,16.6,1
-"SSM046","2018",2018-08-28,"unidentified","Digested",NA,15.344,"Fourhorn",27,237.5,"F",15.738,"5",15.7,16.6,1
-"SSM047","2018",2018-08-30,"unidentified","Digested",1,0.121,"Fourhorn",25.9,163.2,"F",0.857,"2",11.5,16.4,0.3
-"SSM047","2018",2018-08-30,"unidentified","Digested",NA,0.736,"Fourhorn",25.9,163.2,"F",0.857,"2",11.5,16.4,0.3
-"SSM048","2018",2018-08-30,"unidentified","Digested",NA,0.965,"Fourhorn",24.5,126.8,"M",0.965,"2",4.7,4.4,0.2
-"SSM051","2018",2018-09-02,"Empty","Empty",NA,NA,"Fourhorn",22,102.5,"F",0,"1",6.9,10.4,0.2
-"SSM052","2018",2018-09-02,"unidentified","Digested",NA,0.345,"Fourhorn",18.8,47.5,"M",0.386,"2",1,2.9,0.1
-"SSM053","2018",2018-09-03,"onisimus littoralis","Onisimus sp.",2,0.14,"Fourhorn",23.8,133.4,"M",1.811,"3",7.6,7.3,0.2
-"SSM053","2018",2018-09-03,"gammarus","Gammarus sp.",1,0.038,"Fourhorn",23.8,133.4,"M",1.811,"3",7.6,7.3,0.2
-"SSM053","2018",2018-09-03,"unidentified","Digested",NA,1.478,"Fourhorn",23.8,133.4,"M",1.811,"3",7.6,7.3,0.2
-"SSM054","2018",2018-09-03,"amphipod","Amphipod",NA,0.892,"Fourhorn",18.7,57.3,"F",1.257,"3",1.9,1.3,0
-"SSM054","2018",2018-09-03,"gammarus","Gammarus sp.",3,0.189,"Fourhorn",18.7,57.3,"F",1.257,"3",1.9,1.3,0
-"SSM054","2018",2018-09-03,"onisimus littoralis","Onisimus sp.",3,0.177,"Fourhorn",18.7,57.3,"F",1.257,"3",1.9,1.3,0
-"SSM055","2018",2018-09-04,"onisimus bits","Onisimus sp.",15,0.737,"Fourhorn",28.2,282.2,"F",13.219,"4",18,25.9,0.7
-"SSM055","2018",2018-09-04,"unidentified","Digested",NA,12.482,"Fourhorn",28.2,282.2,"F",13.219,"4",18,25.9,0.7
-"SSM056","2018",2018-09-04,"onisimus littoralis","Onisimus sp.",5,0.183,"Fourhorn",25.8,196.2,"F",2.453,"3",11,14.7,0.4
-"SSM056","2018",2018-09-04,"unidentified","Digested",NA,2.27,"Fourhorn",25.8,196.2,"F",2.453,"3",11,14.7,0.4
-"SSM057","2018",2018-09-04,"larval fish","Fish",4,0.316,"Fourhorn",19,74.6,"F",4.28,"5",4.3,5.7,0.2
-"SSM057","2018",2018-09-04,"onisimus littoralis","Onisimus sp.",5,0.274,"Fourhorn",19,74.6,"F",4.28,"5",4.3,5.7,0.2
-"SSM057","2018",2018-09-04,"gammarus","Gammarus sp.",2,0.226,"Fourhorn",19,74.6,"F",4.28,"5",4.3,5.7,0.2
-"SSM057","2018",2018-09-04,"unidentified","Digested",NA,3.464,"Fourhorn",19,74.6,"F",4.28,"5",4.3,5.7,0.2
-"SSM058","2018",2018-09-06,"onisimus littoralis","Onisimus sp.",9,0.515,"Fourhorn",24.8,184.8,"F",4.402,"3",14.9,23.5,0.4
-"SSM058","2018",2018-09-06,"unidentified","Digested",NA,3.887,"Fourhorn",24.8,184.8,"F",4.402,"3",14.9,23.5,0.4
-"SSM059","2018",2018-09-06,"unidentified","Digested",NA,2.242,"Fourhorn",24.6,139.9,"F",2.486,"3",8.5,11.5,0.3
-"SSM059","2018",2018-09-06,"onisimus littoralis","Onisimus sp.",2,0.085,"Fourhorn",24.6,139.9,"F",2.486,"3",8.5,11.5,0.3
-"SSM059","2018",2018-09-06,"krill","Krill",2,0.1,"Fourhorn",24.6,139.9,"F",2.486,"3",8.5,11.5,0.3
-"SSM060","2019",2019-08-12,"amphipod","Amphipod",1,0.002,"Fourhorn",13.32,16.9,"M",0.1,NA,0.1,0.9,0
-"SSM060","2019",2019-08-12,"onisimus sp.","Onisimus sp.",1,0.016,"Fourhorn",13.32,16.9,"M",0.1,NA,0.1,0.9,0
-"SSM060","2019",2019-08-12,"krill","Krill",1,0.016,"Fourhorn",13.32,16.9,"M",0.1,NA,0.1,0.9,0
-"SSM061","2019",2019-08-13,"gammarus sp.","Gammarus sp.",1,0.024,"Fourhorn",14.63,23,"M",0.2,NA,0.3,0.2,0
-"SSM062","2019",2019-08-13,"gammarus sp.","Gammarus sp.",2,0.075,"Fourhorn",14.83,25.5,"M",0.8,NA,0.3,1.4,0
-"SSM062","2019",2019-08-13,"fish","Fish",4,0.272,"Fourhorn",14.83,25.5,"M",0.8,NA,0.3,1.4,0
-"SSM063","2019",2019-08-15,"empty","Empty",0,0,"Fourhorn",15.34,25.4,"M",0,NA,0.3,0.3,0
-"SSM064","2019",2019-08-15,"onisimus sp.","Onisimus sp.",2,0.006,"Fourhorn",16.6,29.4,"F",0.6,NA,0,0.5,0
-"SSM064","2019",2019-08-15,"amphipod","Amphipod",1,0.007,"Fourhorn",16.6,29.4,"F",0.6,NA,0,0.5,0
-"SSM064","2019",2019-08-15,"digested","Digested",NA,0.058,"Fourhorn",16.6,29.4,"F",0.6,NA,0,0.5,0
-"SSM065","2019",2019-08-16,"amphipod","Amphipod",1,0,"Fourhorn",16.4,29,"F",0.2,NA,0.3,0.6,0
-"SSM066","2019",2019-08-16,"krill","Krill",2,0.002,"Fourhorn",13.24,18.2,"F",1.4,NA,0.1,0.2,0
-"SSM066","2019",2019-08-16,"onisimus sp.","Onisimus sp.",1,0.003,"Fourhorn",13.24,18.2,"F",1.4,NA,0.1,0.2,0
-"SSM066","2019",2019-08-16,"sea angel","Sea Angel",7,0.413,"Fourhorn",13.24,18.2,"F",1.4,NA,0.1,0.2,0
-"SSM067","2019",2019-08-16,"digested","Digested",NA,0.002,"Fourhorn",15.2,26.2,"M",0,NA,0.4,1.4,0
-"SSM068","2019",2019-08-18,"fish","Fish",1,0.135,"Fourhorn",13.9,21.8,"F",1.4,NA,0.3,0.2,0
-"SSM068","2019",2019-08-18,"krill","Krill",1,0.02,"Fourhorn",13.9,21.8,"F",1.4,NA,0.3,0.2,0
-"SSM068","2019",2019-08-18,"gammarus sp.","Gammarus sp.",19,0.438,"Fourhorn",13.9,21.8,"F",1.4,NA,0.3,0.2,0
-"SSM069","2019",2019-08-18,"fish","Fish",3,0.205,"Fourhorn",15.02,27.5,"F",0.8,NA,0.3,0.3,0
-"SSM070","2019",2019-08-18,"digested","Digested",NA,0.001,"Fourhorn",13.42,17,"M",0.4,NA,0.3,0.5,0
-"SSM070","2019",2019-08-18,"amphipod","Amphipod",1,0.002,"Fourhorn",13.42,17,"M",0.4,NA,0.3,0.5,0
-"SSM070","2019",2019-08-18,"fish","Fish",1,0.103,"Fourhorn",13.42,17,"M",0.4,NA,0.3,0.5,0
-"SSM071","2019",2019-08-18,"gammarus sp.","Gammarus sp.",1,0.034,"Fourhorn",12.59,16.8,"F",1.4,NA,0.3,0.2,0
-"SSM071","2019",2019-08-18,"amphipod","Amphipod",1,0.023,"Fourhorn",12.59,16.8,"F",1.4,NA,0.3,0.2,0
-"SSM071","2019",2019-08-18,"fish","Fish",4,0.469,"Fourhorn",12.59,16.8,"F",1.4,NA,0.3,0.2,0
-"SSM072","2019",2019-08-18,"fish","Fish",3,0.374,"Fourhorn",14.55,22.4,"F",0.8,NA,0.2,0.2,0
-"SSM072","2019",2019-08-18,"amphipod","Amphipod",1,0.008,"Fourhorn",14.55,22.4,"F",0.8,NA,0.2,0.2,0
-"SSM073","2019",2019-08-19,"amphipod","Amphipod",1,0.003,"Fourhorn",14.98,27.1,"F",1.2,NA,0.2,0.3,0
-"SSM073","2019",2019-08-19,"gammarus sp.","Gammarus sp.",2,0.048,"Fourhorn",14.98,27.1,"F",1.2,NA,0.2,0.3,0
-"SSM073","2019",2019-08-19,"krill","Krill",2,0.058,"Fourhorn",14.98,27.1,"F",1.2,NA,0.2,0.3,0
-"SSM073","2019",2019-08-19,"fish","Fish",1,0.148,"Fourhorn",14.98,27.1,"F",1.2,NA,0.2,0.3,0
-"SSM073","2019",2019-08-19,"digested","Digested",NA,0.217,"Fourhorn",14.98,27.1,"F",1.2,NA,0.2,0.3,0
-"SSM074","2019",2019-08-19,"digested","Digested",NA,0.001,"Fourhorn",13.6,16.8,"F",0,NA,0.1,0.2,0
-"SSM075","2019",2019-08-19,"amphipod","Amphipod",1,0.005,"Fourhorn",13.04,16.1,"M",0.2,NA,0.2,0,0
-"SSM075","2019",2019-08-19,"digested","Digested",NA,0.005,"Fourhorn",13.04,16.1,"M",0.2,NA,0.2,0,0
-"SSM076","2019",2019-08-21,"krill","Krill",87,1.038,"Slimy",12.09,23.2,"M",2.3,NA,0.7,0,0
-"SSS001","2018",2018-07-20,"Copepod","Copepod",1305,74.944,"Arctic char",90,6000,NA,237.8,NA,NA,NA,NA
-"SSS001","2018",2018-07-20,"Gammarus","Gammarus sp.",103,3.387,"Arctic char",90,6000,NA,237.8,NA,NA,NA,NA
-"SSS002","2018",2018-07-23,"Unidentified","Digested",NA,2.834,"Arctic char",62,1800,NA,27.8,NA,NA,NA,NA
-"SSS003","2018",2018-07-26,"arctic cod","Arctic cod",1,48.11,"Arctic char",NA,NA,NA,97.9,NA,NA,NA,NA
-"SSS003","2018",2018-07-26,"amphipod","Amphipod",NA,36.917,"Arctic char",NA,NA,NA,97.9,NA,NA,NA,NA
-"SSS004","2018",2018-07-29,"Krill","Krill",1253,10.218,"Arctic char",67,2350,NA,61.3,"4",46,24.3,NA
-"SSS004","2018",2018-07-29,"Onisimus littoralis","Onisimus sp.",141,3.715,"Arctic char",67,2350,NA,61.3,"4",46,24.3,NA
-"SSS004","2018",2018-07-29,"Sandlance","Sand lance",2,1.251,"Arctic char",67,2350,NA,61.3,"4",46,24.3,NA
-"SSS005","2018",2018-07-30,"copepod","Copepod",NA,1.017,"Arctic char",73.2,2700,"M",20.6,"2",52.8,8.5,NA
-"SSS006","2018",2018-07-30,"Gammaracanthus","Gammaracanthus sp.",3,0.333,"Arctic char",86,4550,"M",178.2,"2",101.9,11.1,NA
-"SSS006","2018",2018-07-30,"Onisimus littoralis","Onisimus sp.",4,0.122,"Arctic char",86,4550,"M",178.2,"2",101.9,11.1,NA
-"SSS006","2018",2018-07-30,"Gammarus","Gammarus sp.",4,0.051,"Arctic char",86,4550,"M",178.2,"2",101.9,11.1,NA
-"SSS006","2018",2018-07-30,"Pink Bell","Jellyfish",1,0.07,"Arctic char",86,4550,"M",178.2,"2",101.9,11.1,NA
-"SSS006","2018",2018-07-30,"Unidentified","Digested",NA,0.774,"Arctic char",86,4550,"M",178.2,"2",101.9,11.1,NA
-"SSS007","2018",2018-07-30,"Onisimus littoralis","Onisimus sp.",32,0.875,"Arctic char",85,5600,"M",229.8,"2",115.6,9.6,10.7
-"SSS007","2018",2018-07-30,"Unidentified","Digested",NA,7.101,"Arctic char",85,5600,"M",229.8,"2",115.6,9.6,10.7
-"SSS008","2018",2018-07-30,"Copepod","Copepod",NA,1.945,"Arctic char",63.2,1750,"F",53,"2",32.1,15.6,2.5
-"SSS009","2018",2018-08-01,"Onisimus littoralis","Onisimus sp.",93,3.473,"Arctic char",72.4,2400,"M",55.7,"3",40.1,6.6,4
-"SSS009","2018",2018-08-01,"Unidentified","Digested",NA,5.704,"Arctic char",72.4,2400,"M",55.7,"3",40.1,6.6,4
-"SSS010","2018",2018-08-02,"Gammarus","Gammarus sp.",1,0.287,"Arctic char",65.4,2020,"M",79.8,"2",30.4,4.3,4.6
-"SSS010","2018",2018-08-02,"Krill","Krill",12,0.367,"Arctic char",65.4,2020,"M",79.8,"2",30.4,4.3,4.6
-"SSS010","2018",2018-08-02,"Onisimus littoralis","Onisimus sp.",22,0.666,"Arctic char",65.4,2020,"M",79.8,"2",30.4,4.3,4.6
-"SSS011","2018",2018-08-02,"Onisimus littoralis","Onisimus sp.",1,0.032,"Arctic char",66.8,1800,"F",13,"2",35,19.6,3.9
-"SSS011","2018",2018-08-02,"Larval Fish","Fish",8,0.028,"Arctic char",66.8,1800,"F",13,"2",35,19.6,3.9
-"SSS012","2018",2018-08-04,"Onisimus littoralis","Onisimus sp.",6,0.143,"Arctic char",67,NA,"M",15,"2",34.3,5.7,5.1
-"SSS012","2018",2018-08-04,"Onisimus sp.","Onisimus sp.",1,0.052,"Arctic char",67,NA,"M",15,"2",34.3,5.7,5.1
-"SSS012","2018",2018-08-04,"Krill","Krill",2,0.074,"Arctic char",67,NA,"M",15,"2",34.3,5.7,5.1
-"SSS013","2018",2018-08-04,"Onisimus littoralis","Onisimus sp.",1,0.014,"Arctic char",59,1940,"F",12.8,"2",40.7,11.4,4.1
-"SSS013","2018",2018-08-04,"Unidentified","Digested",NA,0.629,"Arctic char",59,1940,"F",12.8,"2",40.7,11.4,4.1
-"SSS014","2018",2018-08-04,"Krill","Krill",2,0.034,"Arctic char",63.2,2250,"F",27.1,"2",45.2,17.3,4.2
-"SSS014","2018",2018-08-04,"Onisimus littoralis","Onisimus sp.",6,0.16,"Arctic char",63.2,2250,"F",27.1,"2",45.2,17.3,4.2
-"SSS014","2018",2018-08-04,"Krill Paste","Krill",NA,5.342,"Arctic char",63.2,2250,"F",27.1,"2",45.2,17.3,4.2
-"SSS015","2018",2018-08-06,"Sandlance","Sand lance",3,6.021,"Arctic char",79,4000,"M",56.1,"3",65.6,10,NA
-"SSS015","2018",2018-08-06,"Gammarus","Gammarus sp.",1,0.121,"Arctic char",79,4000,"M",56.1,"3",65.6,10,NA
-"SSS015","2018",2018-08-06,"Larval Fish","Fish",3,0.048,"Arctic char",79,4000,"M",56.1,"3",65.6,10,NA
-"SSS015","2018",2018-08-06,"Onisimus littoralis","Onisimus sp.",2,0.041,"Arctic char",79,4000,"M",56.1,"3",65.6,10,NA
-"SSS016","2018",2018-08-06,"Onisimus littoralis","Onisimus sp.",3,0.057,"Arctic char",75,3720,"M",29.2,"2",51.8,7.5,5.5
-"SSS016","2018",2018-08-06,"Sea Angel","Sea Angel",8,1.538,"Arctic char",75,3720,"M",29.2,"2",51.8,7.5,5.5
-"SSS017A","2018",2018-08-06,"Krill","Krill",2,0.097,"Arctic char",90.8,5550,"M",45.9,"2",89.8,11.7,18
-"SSS017A","2018",2018-08-06,"Onisimus littoralis","Onisimus sp.",1,0,"Arctic char",90.8,5550,"M",45.9,"2",89.8,11.7,18
-"SSS017A","2018",2018-08-06,"Unidentified","Digested",NA,0.237,"Arctic char",90.8,5550,"M",45.9,"2",89.8,11.7,18
-"SSS017B","2018",2018-08-08,"Onisimus littoralis","Onisimus sp.",45,0.715,"Arctic char",76,3150,"F",33.6,"3",64.5,43.2,10
-"SSS017B","2018",2018-08-08,"Unidentified","Digested",NA,1.014,"Arctic char",76,3150,"F",33.6,"3",64.5,43.2,10
-"SSS017B","2018",2018-08-08,"Gammaracanthus","Gammaracanthus sp.",1,0.148,"Arctic char",76,3150,"F",33.6,"3",64.5,43.2,10
-"SSS018","2018",2018-08-08,"Krill","Krill",1,0.006,"Arctic char",41.4,620,"F",14.2,"3",11,1.1,1
-"SSS018","2018",2018-08-08,"Copepod","Copepod",NA,3.909,"Arctic char",41.4,620,"F",14.2,"3",11,1.1,1
-"SSS018","2018",2018-08-08,"Unidentified","Digested",NA,0.663,"Arctic char",41.4,620,"F",14.2,"3",11,1.1,1
-"SSS018","2018",2018-08-08,"Larval Fish","Fish",NA,0.372,"Arctic char",41.4,620,"F",14.2,"3",11,1.1,1
-"SSS019","2018",2018-08-14,"Gammarus","Gammarus sp.",2,0.122,"Arctic char",82,4350,"F",52.8,"2",80.6,45.6,9.9
-"SSS019","2018",2018-08-14,"Onisimus littoralis","Onisimus sp.",7,0.103,"Arctic char",82,4350,"F",52.8,"2",80.6,45.6,9.9
-"SSS019","2018",2018-08-14,"Digested material","Digested",NA,1,"Arctic char",82,4350,"F",52.8,"2",80.6,45.6,9.9
-"SSS020","2018",2018-08-19,"Onisimus littoralis","Onisimus sp.",1122,62.181,"Arctic char",83,6600,"M",136.1,"5",145.3,11.2,12.2
-"SSS020","2018",2018-08-19,"Larval Fish","Fish",12,1.672,"Arctic char",83,6600,"M",136.1,"5",145.3,11.2,12.2
-"SSS022","2018",2018-08-28,"Sandlance","Sand lance",8,19.37,"Arctic char",77.6,3900,"M",141.5,"4",82.9,52.6,18.3
-"SSS053","2019",2019-08-14,"Themisto","Themisto sp.",NA,5.191,"Arctic char",42.4,700,"M",22.6,NA,14.6,1,1.5
-"SSS23","2019",2019-08-08,"Themisto","Themisto sp.",312,21.876,"Arctic char",64,2350,"F",62,NA,51.1,14.3,3.5
-"SSS23","2019",2019-08-08,"Copepod","Copepod",52,0.357,"Arctic char",64,2350,"F",62,NA,51.1,14.3,3.5
-"SSS23","2019",2019-08-08,"Onisimus","Onisimus sp.",8,0.127,"Arctic char",64,2350,"F",62,NA,51.1,14.3,3.5
-"SSS23","2019",2019-08-08,"Krill","Krill",15,0.054,"Arctic char",64,2350,"F",62,NA,51.1,14.3,3.5
-"SSS23","2019",2019-08-08,"Fish","Fish",28,2.743,"Arctic char",64,2350,"F",62,NA,51.1,14.3,3.5
-"SSS24","2019",2019-08-08,"Sculpin","Fish",1,0.782,"Arctic char",66.2,3400,"M",106.9,NA,77.7,2.9,4.7
-"SSS24","2019",2019-08-08,"Fish","Fish",80,6.556,"Arctic char",66.2,3400,"M",106.9,NA,77.7,2.9,4.7
-"SSS24","2019",2019-08-08,"Onisimus","Onisimus sp.",4,0.087,"Arctic char",66.2,3400,"M",106.9,NA,77.7,2.9,4.7
-"SSS24","2019",2019-08-08,"Themisto","Themisto sp.",389,28.742,"Arctic char",66.2,3400,"M",106.9,NA,77.7,2.9,4.7
-"SSS24","2019",2019-08-08,"Copepod","Copepod",16,0.09,"Arctic char",66.2,3400,"M",106.9,NA,77.7,2.9,4.7
-"SSS25","2019",2019-08-08,"Onisimus","Onisimus sp.",4,0.115,"Arctic char",61.8,2700,"F",86.2,NA,57.2,20.7,3.8
-"SSS25","2019",2019-08-08,"Themisto","Themisto sp.",265,24.151,"Arctic char",61.8,2700,"F",86.2,NA,57.2,20.7,3.8
-"SSS25","2019",2019-08-08,"Copepod","Copepod",17,0.144,"Arctic char",61.8,2700,"F",86.2,NA,57.2,20.7,3.8
-"SSS25","2019",2019-08-08,"Fish","Fish",56,4.477,"Arctic char",61.8,2700,"F",86.2,NA,57.2,20.7,3.8
-"SSS26","2019",2019-08-08,"Fish","Fish",4,2.718,"Arctic char",68,3100,"M",84.1,NA,65.1,7.2,5.3
-"SSS26","2019",2019-08-08,"Onisimus","Onisimus sp.",2,0.077,"Arctic char",68,3100,"M",84.1,NA,65.1,7.2,5.3
-"SSS26","2019",2019-08-08,"Themisto","Themisto sp.",17,0.722,"Arctic char",68,3100,"M",84.1,NA,65.1,7.2,5.3
-"SSS27","2019",2019-08-10,"Fish","Fish",NA,5.073,"Arctic char",65.4,2950,"M",150,NA,63.1,1.1,5.4
-"SSS27","2019",2019-08-10,"Themisto","Themisto sp.",1241,83.623,"Arctic char",65.4,2950,"M",150,NA,63.1,1.1,5.4
-"SSS27","2019",2019-08-10,"Copepod","Copepod",40,0.746,"Arctic char",65.4,2950,"M",150,NA,63.1,1.1,5.4
-"SSS28","2019",2019-08-10,"Fish","Fish",38,1.772,"Arctic char",67,3200,"F",160.6,NA,83.8,30.5,7.3
-"SSS28","2019",2019-08-10,"Onisimus","Onisimus sp.",4,0.092,"Arctic char",67,3200,"F",160.6,NA,83.8,30.5,7.3
-"SSS28","2019",2019-08-10,"Copepod","Copepod",9,0.113,"Arctic char",67,3200,"F",160.6,NA,83.8,30.5,7.3
-"SSS28","2019",2019-08-10,"Themisto","Themisto sp.",1397,93.578,"Arctic char",67,3200,"F",160.6,NA,83.8,30.5,7.3
-"SSS29","2019",2019-08-10,"Themisto","Themisto sp.",1888,139.31,"Arctic char",67.2,3800,"F",243.8,NA,107,28.5,7.2
-"SSS29","2019",2019-08-10,"Onisimus","Onisimus sp.",1,0.016,"Arctic char",67.2,3800,"F",243.8,NA,107,28.5,7.2
-"SSS29","2019",2019-08-10,"Copepod","Copepod",3,0.027,"Arctic char",67.2,3800,"F",243.8,NA,107,28.5,7.2
-"SSS29","2019",2019-08-10,"Fish","Fish",7,0.242,"Arctic char",67.2,3800,"F",243.8,NA,107,28.5,7.2
-"SSS30","2019",2019-08-10,"Themisto","Themisto sp.",1358,97.78,"Arctic char",64.6,2850,"F",158.7,NA,57.5,18.5,4.3
-"SSS30","2019",2019-08-10,"Fish","Fish",2,0.037,"Arctic char",64.6,2850,"F",158.7,NA,57.5,18.5,4.3
-"SSS30","2019",2019-08-10,"Onisimus","Onisimus sp.",2,0.047,"Arctic char",64.6,2850,"F",158.7,NA,57.5,18.5,4.3
-"SSS30","2019",2019-08-10,"Copepod","Copepod",2,0.003,"Arctic char",64.6,2850,"F",158.7,NA,57.5,18.5,4.3
-"SSS30","2019",2019-08-10,"Unidentified","Digested",1,0.109,"Arctic char",64.6,2850,"F",158.7,NA,57.5,18.5,4.3
-"SSS31","2019",2019-08-10,"Krill","Krill",2,0.329,"Arctic char",64,2950,"M",171.1,NA,56.8,6.3,6.2
-"SSS31","2019",2019-08-10,"Copepod","Copepod",2,0.021,"Arctic char",64,2950,"M",171.1,NA,56.8,6.3,6.2
-"SSS31","2019",2019-08-10,"Arctic Cod","Arctic cod",1,1.47,"Arctic char",64,2950,"M",171.1,NA,56.8,6.3,6.2
-"SSS31","2019",2019-08-10,"Themisto","Themisto sp.",1448,104.989,"Arctic char",64,2950,"M",171.1,NA,56.8,6.3,6.2
-"SSS32","2019",2019-08-10,"Themisto","Themisto sp.",1510,110.149,"Arctic char",62.8,2800,"M",174.6,NA,59.9,1.8,4.8
-"SSS32","2019",2019-08-10,"Copepod","Copepod",1,0.007,"Arctic char",62.8,2800,"M",174.6,NA,59.9,1.8,4.8
-"SSS32","2019",2019-08-10,"Onisimus","Onisimus sp.",3,0.074,"Arctic char",62.8,2800,"M",174.6,NA,59.9,1.8,4.8
-"SSS33","2019",2019-08-10,"Themisto","Themisto sp.",1523,81.132,"Arctic char",61.2,2500,"M",136.4,NA,51.1,2.3,4
-"SSS33","2019",2019-08-10,"Onisimus","Onisimus sp.",5,0.15,"Arctic char",61.2,2500,"M",136.4,NA,51.1,2.3,4
-"SSS33","2019",2019-08-10,"Copepod","Copepod",10,0.057,"Arctic char",61.2,2500,"M",136.4,NA,51.1,2.3,4
-"SSS33","2019",2019-08-10,"Fish","Fish",24,0.548,"Arctic char",61.2,2500,"M",136.4,NA,51.1,2.3,4
-"SSS34","2019",2019-08-10,"Fish","Fish",9,0.376,"Arctic char",71,3650,"M",98.1,NA,67.8,3.7,7.3
-"SSS34","2019",2019-08-10,"Onisimus","Onisimus sp.",1,0.02,"Arctic char",71,3650,"M",98.1,NA,67.8,3.7,7.3
-"SSS34","2019",2019-08-10,"Krill","Krill",1,0.073,"Arctic char",71,3650,"M",98.1,NA,67.8,3.7,7.3
-"SSS34","2019",2019-08-10,"Themisto","Themisto sp.",580,41.351,"Arctic char",71,3650,"M",98.1,NA,67.8,3.7,7.3
-"SSS35","2019",2019-08-11,"Themisto","Themisto sp.",173,11.931,"Arctic char",66.4,3250,"F",59.1,NA,67.4,34.5,6.6
-"SSS35","2019",2019-08-11,"Fish","Fish",2,0.028,"Arctic char",66.4,3250,"F",59.1,NA,67.4,34.5,6.6
-"SSS35","2019",2019-08-11,"Copepod","Copepod",13,0.15,"Arctic char",66.4,3250,"F",59.1,NA,67.4,34.5,6.6
-"SSS36","2019",2019-08-11,"Themisto","Themisto sp.",NA,10.071,"Arctic char",79.2,5100,"F",80.4,NA,114.5,58.5,9.8
-"SSS36","2019",2019-08-11,"Unidentified","Digested",1,0.136,"Arctic char",79.2,5100,"F",80.4,NA,114.5,58.5,9.8
-"SSS36","2019",2019-08-11,"Eggs","Miscellaneous",3,0.015,"Arctic char",79.2,5100,"F",80.4,NA,114.5,58.5,9.8
-"SSS37","2019",2019-08-11,"Themisto","Themisto sp.",680,46.147,"Arctic char",71.4,4450,"M",112.7,NA,95.6,4.1,9
-"SSS37","2019",2019-08-11,"Fish","Fish",12,2.796,"Arctic char",71.4,4450,"M",112.7,NA,95.6,4.1,9
-"SSS38","2019",2019-08-11,"Themisto","Themisto sp.",695,58.862,"Arctic char",64.4,2700,"M",100.7,NA,50.6,1.8,4
-"SSS38","2019",2019-08-11,"Fish","Fish",1,0.039,"Arctic char",64.4,2700,"M",100.7,NA,50.6,1.8,4
-"SSS38","2019",2019-08-11,"Onisimus","Onisimus sp.",1,0.096,"Arctic char",64.4,2700,"M",100.7,NA,50.6,1.8,4
-"SSS39","2019",2019-08-11,"Fish","Fish",201,7.257,"Arctic char",44.6,900,"J",51.2,NA,18.9,0.2,2
-"SSS39","2019",2019-08-11,"Themisto","Themisto sp.",195,14.276,"Arctic char",44.6,900,"J",51.2,NA,18.9,0.2,2
-"SSS39","2019",2019-08-11,"Copepod","Copepod",10,0.132,"Arctic char",44.6,900,"J",51.2,NA,18.9,0.2,2
-"SSS39","2019",2019-08-11,"Onisimus","Onisimus sp.",2,0.092,"Arctic char",44.6,900,"J",51.2,NA,18.9,0.2,2
-"SSS39","2019",2019-08-11,"Krill","Krill",19,0.387,"Arctic char",44.6,900,"J",51.2,NA,18.9,0.2,2
-"SSS40","2019",2019-08-11,"Themisto","Themisto sp.",958,105.455,"Arctic char",70,3300,"F",170.3,NA,84.8,21.7,6.7
-"SSS40","2019",2019-08-11,"Onisimus","Onisimus sp.",2,0.059,"Arctic char",70,3300,"F",170.3,NA,84.8,21.7,6.7
-"SSS40","2019",2019-08-11,"Sea Angel","Sea Angel",2,0.11,"Arctic char",70,3300,"F",170.3,NA,84.8,21.7,6.7
-"SSS40","2019",2019-08-11,"Copepod","Copepod",4,0.035,"Arctic char",70,3300,"F",170.3,NA,84.8,21.7,6.7
-"SSS40","2019",2019-08-11,"Fish","Fish",38,1.278,"Arctic char",70,3300,"F",170.3,NA,84.8,21.7,6.7
-"SSS41","2019",2019-08-12,"Arctic Cod","Arctic cod",2,3.504,"Arctic char",73,3850,"F",159,NA,90.9,16.8,7.8
-"SSS41","2019",2019-08-12,"Onisimus","Onisimus sp.",7,0.365,"Arctic char",73,3850,"F",159,NA,90.9,16.8,7.8
-"SSS41","2019",2019-08-12,"Themisto","Themisto sp.",8,0.645,"Arctic char",73,3850,"F",159,NA,90.9,16.8,7.8
-"SSS41","2019",2019-08-12,"Fish","Fish",365,57.072,"Arctic char",73,3850,"F",159,NA,90.9,16.8,7.8
-"SSS42","2019",2019-08-12,"Fish","Fish",748,42.825,"Arctic char",64.6,3250,"F",121.4,NA,83.2,18.7,6.2
-"SSS42","2019",2019-08-12,"Arctic Cod","Arctic cod",1,1.144,"Arctic char",64.6,3250,"F",121.4,NA,83.2,18.7,6.2
-"SSS42","2019",2019-08-12,"Themisto","Themisto sp.",4,0.277,"Arctic char",64.6,3250,"F",121.4,NA,83.2,18.7,6.2
-"SSS42","2019",2019-08-12,"Onisimus","Onisimus sp.",2,0.162,"Arctic char",64.6,3250,"F",121.4,NA,83.2,18.7,6.2
-"SSS42","2019",2019-08-12,"Krill","Krill",12,0.924,"Arctic char",64.6,3250,"F",121.4,NA,83.2,18.7,6.2
-"SSS43","2019",2019-08-13,"Arctic Cod","Arctic cod",1,11.16,"Arctic char",75.2,4300,"M",114,NA,75.5,6.6,3
-"SSS43","2019",2019-08-13,"Ocean Pout","Fish",2,27.847,"Arctic char",75.2,4300,"M",114,NA,75.5,6.6,3
-"SSS43","2019",2019-08-13,"Krill","Krill",NA,5.938,"Arctic char",75.2,4300,"M",114,NA,75.5,6.6,3
-"SSS44","2019",2019-08-13,"Arctic Cod","Arctic cod",3,5.117,"Arctic char",48.6,1300,"M",58.4,NA,23.6,0.4,2.5
-"SSS44","2019",2019-08-13,"Krill","Krill",5,0.357,"Arctic char",48.6,1300,"M",58.4,NA,23.6,0.4,2.5
-"SSS44","2019",2019-08-13,"Onisimus","Onisimus sp.",2,0.082,"Arctic char",48.6,1300,"M",58.4,NA,23.6,0.4,2.5
-"SSS44","2019",2019-08-13,"Themisto","Themisto sp.",11,0.905,"Arctic char",48.6,1300,"M",58.4,NA,23.6,0.4,2.5
-"SSS45","2019",2019-08-13,"Fish","Fish",25,4.455,"Arctic char",72.8,4050,"M",106,NA,101.5,2,7.1
-"SSS45","2019",2019-08-13,"Themisto","Themisto sp.",171,13.357,"Arctic char",72.8,4050,"M",106,NA,101.5,2,7.1
-"SSS45","2019",2019-08-13,"Onisimus","Onisimus sp.",4,0.102,"Arctic char",72.8,4050,"M",106,NA,101.5,2,7.1
-"SSS45","2019",2019-08-13,"Copepod","Copepod",1,0.025,"Arctic char",72.8,4050,"M",106,NA,101.5,2,7.1
-"SSS45","2019",2019-08-13,"Krill","Krill",4,0.14,"Arctic char",72.8,4050,"M",106,NA,101.5,2,7.1
-"SSS46","2019",2019-08-13,"Arctic Cod","Arctic cod",2,2.999,"Arctic char",63,2650,"F",97.2,NA,70.1,19,7.5
-"SSS46","2019",2019-08-13,"Fish","Fish",210,19.034,"Arctic char",63,2650,"F",97.2,NA,70.1,19,7.5
-"SSS46","2019",2019-08-13,"Themisto","Themisto sp.",3,0.362,"Arctic char",63,2650,"F",97.2,NA,70.1,19,7.5
-"SSS46","2019",2019-08-13,"Krill","Krill",4,0.422,"Arctic char",63,2650,"F",97.2,NA,70.1,19,7.5
-"SSS47","2019",2019-08-13,"Empty","Empty",NA,NA,"Arctic char",66,2750,"F",36.9,NA,89.3,23.4,5.6
-"SSS48","2019",2019-08-13,"Fish","Fish",7,1.846,"Arctic char",80.2,4950,"M",77.1,NA,126.4,7.3,9.3
-"SSS48","2019",2019-08-13,"Themisto","Themisto sp.",10,0.655,"Arctic char",80.2,4950,"M",77.1,NA,126.4,7.3,9.3
-"SSS49","2019",2019-08-13,"Onisimus","Onisimus sp.",3,0.111,"Arctic char",68.6,3400,"F",146,NA,97,34,6.3
-"SSS49","2019",2019-08-13,"Krill","Krill",2,0.102,"Arctic char",68.6,3400,"F",146,NA,97,34,6.3
-"SSS49","2019",2019-08-13,"Fish","Fish",10,0.914,"Arctic char",68.6,3400,"F",146,NA,97,34,6.3
-"SSS49","2019",2019-08-13,"Themisto","Themisto sp.",757,64.723,"Arctic char",68.6,3400,"F",146,NA,97,34,6.3
-"SSS50","2019",2019-08-13,"Arctic Cod","Arctic cod",1,2.945,"Arctic char",46,1050,"F?",41.6,NA,23.1,NA,1.4
-"SSS50","2019",2019-08-13,"Fish","Fish",32,1.182,"Arctic char",46,1050,"F?",41.6,NA,23.1,NA,1.4
-"SSS50","2019",2019-08-13,"Onisimus","Onisimus sp.",4,0.182,"Arctic char",46,1050,"F?",41.6,NA,23.1,NA,1.4
-"SSS51","2019",2019-08-13,"Fish","Fish",5,0.415,"Arctic char",61.2,2550,"M",112.1,NA,51,1.9,4.1
-"SSS51","2019",2019-08-13,"Onisimus","Onisimus sp.",4,0.07,"Arctic char",61.2,2550,"M",112.1,NA,51,1.9,4.1
-"SSS51","2019",2019-08-13,"Themisto","Themisto sp.",877,73.629,"Arctic char",61.2,2550,"M",112.1,NA,51,1.9,4.1
-"SSS52","2019",2019-08-14,"Copepod","Copepod",4,0.04,"Arctic char",50.6,1350,"J",55.8,NA,21.4,NA,1
-"SSS52","2019",2019-08-14,"Fish","Fish",10,0.759,"Arctic char",50.6,1350,"J",55.8,NA,21.4,NA,1
-"SSS52","2019",2019-08-14,"Themisto","Themisto sp.",420,39.434,"Arctic char",50.6,1350,"J",55.8,NA,21.4,NA,1
-"TCH01","2017",2017-07-19,"digested","Digested",NA,NA,"Arctic char",72,3000,"F",NA,NA,NA,NA,NA
-"TCH02","2017",2017-07-19,"amphipods","Amphipod",NA,NA,"Arctic char",64,2100,"F",NA,NA,NA,NA,NA
-"TCH03","2017",2017-07-19,"digested","Digested",NA,NA,"Arctic char",70,2700,"M",NA,NA,NA,NA,NA
-"TCH04","2017",2017-07-19,"digested","Digested",NA,NA,"Arctic char",80,5600,"M",NA,"5",NA,NA,NA
-"TCH05","2017",2017-07-19,"digested","Digested",NA,NA,"Arctic char",54,1400,"F",NA,NA,NA,NA,NA
-"TCH06","2017",2017-07-19,"digested","Digested",NA,NA,"Arctic char",69,2700,"M",NA,"2",NA,NA,NA
-"TCH07","2017",2017-07-19,"amphipods","Amphipod",NA,NA,"Arctic char",68,3100,"M",NA,"5",NA,NA,NA
+Fish_ID,Year,Date,Content,Category,Count,Mass,Species,TL_mm,Mass_g,Sex,Diet_Mass_g,GutFullness,Liver_Mass_g,Gonad_Mass_g,Heart_Mass_g
+Char 08,2017,7/25/17,amphipods,Amphipod,2,NA,Arctic char,40,500,F,NA,2,9.5,0.9,NA
+Char 08,2017,7/25/17,gammaracanthus,Gammaracanthus sp.,1,NA,Arctic char,40,500,F,NA,2,9.5,0.9,NA
+Char 09,2017,7/25/17,amphipods,Amphipod,NA,NA,Arctic char,65.2,2505,M,NA,2,44.3,NA,NA
+Char 112,2017,8/14/17,krill,Krill,NA,NA,Arctic char,29.5,237.2,F,NA,3,5.3,0.5,NA
+Char 112,2017,8/14/17,amphipod,Amphipod,2,NA,Arctic char,29.5,237.2,F,NA,3,5.3,0.5,NA
+Char 116,2017,8/14/17,fish,Fish,NA,NA,Arctic char,NA,NA,F,NA,2,34.5,25.6,NA
+Char 116,2017,8/14/17,krill,Krill,5,NA,Arctic char,NA,NA,F,NA,2,34.5,25.6,NA
+Char 116,2017,8/14/17,gammarus sp.,Gammarus sp.,20,NA,Arctic char,NA,NA,F,NA,2,34.5,25.6,NA
+Char 116,2017,8/14/17,copepod,Copepod,100,NA,Arctic char,NA,NA,F,NA,2,34.5,25.6,NA
+Char 121,2017,8/14/17,fish,Fish,2,NA,Arctic char,65.2,2700,M,NA,3,43.2,2.4,NA
+Char 121,2017,8/14/17,onisimus sp.,Onisimus sp.,125,NA,Arctic char,65.2,2700,M,NA,3,43.2,2.4,NA
+Char 121,2017,8/14/17,sand fleas,Amphipod,240,NA,Arctic char,65.2,2700,M,NA,3,43.2,2.4,NA
+Char 121,2017,8/14/17,gammarus sp.,Gammarus sp.,1,NA,Arctic char,65.2,2700,M,NA,3,43.2,2.4,NA
+Char 123,2017,8/14/17,empty,Empty,NA,NA,Arctic char,62,2000,M,NA,1,33.1,5.9,NA
+Char 126,2017,8/14/17,sand lance,Sand lance,2,NA,Arctic char,NA,3600,M,NA,4,81.5,4.7,NA
+Char 126,2017,8/14/17,cod,Arctic cod,6,NA,Arctic char,NA,3600,M,NA,4,81.5,4.7,NA
+Char 126,2017,8/14/17,sand fleas,Amphipod,250,NA,Arctic char,NA,3600,M,NA,4,81.5,4.7,NA
+Char 129,2017,8/14/17,amphipod,Amphipod,1,NA,Arctic char,38.5,550,M,NA,2,10.5,0.4,NA
+Char 129,2017,8/14/17,digested,Digested,NA,NA,Arctic char,38.5,550,M,NA,2,10.5,0.4,NA
+Char 130,2017,8/14/17,empty,Empty,NA,NA,Arctic char,16.5,32.7,M,NA,1,0.8,NA,NA
+Char 132,2017,8/14/17,cod,Arctic cod,7,NA,Arctic char,59,1300,F,NA,4,27,NA,NA
+Char 132,2017,8/14/17,fish,Fish,5,NA,Arctic char,59,1300,F,NA,4,27,NA,NA
+Char 132,2017,8/14/17,sand fleas,Amphipod,10,NA,Arctic char,59,1300,F,NA,4,27,NA,NA
+Char 138,2017,8/15/17,krill,Krill,50,NA,Arctic char,17,41.2,I,NA,3,0.8,NA,NA
+Char 138,2017,8/15/17,fish,Fish,5,NA,Arctic char,17,41.2,I,NA,3,0.8,NA,NA
+Char 150,2017,8/22/17,cod,Arctic cod,73,NA,Arctic char,79.5,4850,F,NA,2,166.5,56.2,NA
+Char 150,2017,8/22/17,amphipod,Amphipod,3,NA,Arctic char,79.5,4850,F,NA,2,166.5,56.2,NA
+Char 154,2017,9/1/17,sand lance,Sand lance,1,NA,Arctic char,81.3,5100,M,NA,1,72.2,9.7,NA
+Char 154,2017,9/1/17,sea lice,Copepod,NA,NA,Arctic char,81.3,5100,M,NA,1,72.2,9.7,NA
+Char 154,2017,9/1/17,fish,Fish,19,NA,Arctic char,81.3,5100,M,NA,1,72.2,9.7,NA
+Char 156,2017,9/4/17,fish,Fish,NA,NA,Arctic char,16,34.6,M,NA,3,0.5,0,NA
+Char 156,2017,9/4/17,krill,Krill,NA,NA,Arctic char,16,34.6,M,NA,3,0.5,0,NA
+Char 54,2017,8/7/17,digested,Digested,NA,NA,Arctic char,33.2,8.2,I,NA,2,NA,NA,NA
+Char 54,2017,8/7/17,copepod,Copepod,4,NA,Arctic char,33.2,8.2,I,NA,2,NA,NA,NA
+Char 54,2017,8/7/17,fish fry,Fish,6,NA,Arctic char,33.2,8.2,I,NA,2,NA,NA,NA
+Char 54,2017,8/7/17,amphipod,Amphipod,2,NA,Arctic char,33.2,8.2,I,NA,2,NA,NA,NA
+Char 56,2017,8/7/17,amphipods,Amphipod,800,NA,Arctic char,71,3400,M,NA,4,56.4,0.3,NA
+Char 56,2017,8/7/17,cod,Arctic cod,3,NA,Arctic char,71,3400,M,NA,4,56.4,0.3,NA
+Char 56,2017,8/7/17,krill,Krill,3,NA,Arctic char,71,3400,M,NA,4,56.4,0.3,NA
+Char 58,2017,8/8/17,copepod,Copepod,NA,NA,Arctic char,58,1550,M,NA,NA,22.3,NA,NA
+Char 58,2017,8/8/17,krill,Krill,NA,NA,Arctic char,58,1550,M,NA,NA,22.3,NA,NA
+Char 60,2017,8/9/17,amphipod,Amphipod,300,NA,Arctic char,61.5,2100,F,NA,4,44.1,16.2,NA
+Char 60,2017,8/9/17,copepod,Copepod,300,NA,Arctic char,61.5,2100,F,NA,4,44.1,16.2,NA
+Char 61,2017,8/9/17,amphipod,Amphipod,200,NA,Arctic char,57.5,1300,M,NA,3,15.6,NA,NA
+Char 61,2017,8/9/17,copepod,Copepod,200,NA,Arctic char,57.5,1300,M,NA,3,15.6,NA,NA
+Char 62,2017,8/9/17,amphipod,Amphipod,150,NA,Arctic char,54.5,1300,M,NA,3,27.6,2.1,NA
+Char 62,2017,8/9/17,copepod,Copepod,150,NA,Arctic char,54.5,1300,M,NA,3,27.6,2.1,NA
+Char 62,2017,8/9/17,cod,Arctic cod,1,NA,Arctic char,54.5,1300,M,NA,3,27.6,2.1,NA
+Char 63,2017,8/9/17,cod,Arctic cod,1,NA,Arctic char,59.5,1800,F,NA,5,30.6,12,NA
+Char 63,2017,8/9/17,amphipod,Amphipod,500,NA,Arctic char,59.5,1800,F,NA,5,30.6,12,NA
+Char 65,2017,8/9/17,amphipod,Amphipod,400,NA,Arctic char,65.3,2900,M,NA,4,58.5,2,NA
+Char 66,2017,8/9/17,cod,Arctic cod,1,NA,Arctic char,53.7,1500,F,NA,2,24.8,7.2,NA
+Char 68,2017,8/9/17,cod,Arctic cod,1,NA,Arctic char,60,1900,M,NA,4,33.6,5.2,NA
+Char 68,2017,8/9/17,amphipod,Amphipod,100,NA,Arctic char,60,1900,M,NA,4,33.6,5.2,NA
+Char 69,2017,8/9/17,amphipod,Amphipod,20,NA,Arctic char,35.5,450,M,NA,1,9.7,NA,NA
+Char 69,2017,8/9/17,copepod,Copepod,80,NA,Arctic char,35.5,450,M,NA,1,9.7,NA,NA
+Char 86,2017,8/12/17,copepod,Copepod,NA,2,Arctic char,53.5,1450,M,NA,4,26.7,0.17,NA
+Char 86,2017,8/12/17,amphipod,Amphipod,200,NA,Arctic char,53.5,1450,M,NA,4,26.7,0.17,NA
+Char 87,2017,8/12/17,copepod,Copepod,NA,9,Arctic char,57,1600,F,NA,5,28.2,14.7,NA
+Char 87,2017,8/12/17,amphipod,Amphipod,160,NA,Arctic char,57,1600,F,NA,5,28.2,14.7,NA
+Char 87,2017,8/12/17,krill,Krill,5,NA,Arctic char,57,1600,F,NA,5,28.2,14.7,NA
+Char 88,2017,8/12/17,copepod,Copepod,NA,2.5,Arctic char,56.5,1650,M,NA,5,28.6,3.8,NA
+Char 88,2017,8/12/17,amphipod,Amphipod,600,NA,Arctic char,56.5,1650,M,NA,5,28.6,3.8,NA
+Char 88,2017,8/12/17,krill,Krill,2,NA,Arctic char,56.5,1650,M,NA,5,28.6,3.8,NA
+Char 89,2017,8/12/17,copepod,Copepod,NA,4,Arctic char,55,1625,M,NA,5,28.2,1.1,NA
+Char 89,2017,8/12/17,fish,Fish,NA,NA,Arctic char,55,1625,M,NA,5,28.2,1.1,NA
+Char 89,2017,8/12/17,amphipod,Amphipod,740,NA,Arctic char,55,1625,M,NA,5,28.2,1.1,NA
+Char 90,2017,8/12/17,cod,Arctic cod,22,NA,Arctic char,61,1850,M,NA,5,42.6,5.1,NA
+Char 90,2017,8/12/17,sand fleas,Amphipod,6,NA,Arctic char,61,1850,M,NA,5,42.6,5.1,NA
+Char 90,2017,8/12/17,amphipod,Amphipod,580,NA,Arctic char,61,1850,M,NA,5,42.6,5.1,NA
+FH10,2017,7/23/17,gammarus or onisimus,Amphipod,NA,NA,Fourhorn,6.6,17,I,NA,4,NA,NA,NA
+FH105,2017,8/7/17,gammarus sp.,Gammarus sp.,20,NA,Fourhorn,15.3,33.9,M,NA,2,0.5,0.5,NA
+FH106,2017,8/7/17,amphipods,Amphipod,12,NA,Fourhorn,14.7,25.5,M,NA,2,0.6,1.4,NA
+FH106,2017,8/7/17,onisimus,Onisimus sp.,10,NA,Fourhorn,14.7,25.5,M,NA,2,0.6,1.4,NA
+FH106,2017,8/7/17,gammarus,Gammarus sp.,2,NA,Fourhorn,14.7,25.5,M,NA,2,0.6,1.4,NA
+FH11,2017,7/23/17,empty,Empty,NA,NA,Fourhorn,27.2,225.7,F,NA,1,NA,NA,NA
+FH12,2017,7/23/17,gammarus or onisimus,Amphipod,NA,NA,Fourhorn,25.3,147.6,M,NA,3,NA,NA,NA
+FH13,2017,7/24/17,gammarus or onisimus,Amphipod,40,NA,Fourhorn,15.5,57.1,F,NA,5,NA,NA,NA
+FH141,2017,8/9/17,amphipod,Amphipod,1,NA,Fourhorn,17.5,48.4,Unknown,NA,3,0.7,0.8,NA
+FH141,2017,8/9/17,krill,Krill,12,NA,Fourhorn,17.5,48.4,Unknown,NA,3,0.7,0.8,NA
+FH142,2017,8/9/17,amphipods,Amphipod,2,NA,Fourhorn,25.5,150.2,M,NA,1,3.8,8.8,NA
+FH143,2017,8/9/17,amphipod,Amphipod,1,NA,Fourhorn,20,68.1,M,NA,2,2.4,1.6,NA
+FH143,2017,8/9/17,krill,Krill,3,NA,Fourhorn,20,68.1,M,NA,2,2.4,1.6,NA
+FH143,2017,8/9/17,unidentified digesta,Digested,NA,NA,Fourhorn,20,68.1,M,NA,2,2.4,1.6,NA
+FH144,2017,8/9/17,copepods,Copepod,5,NA,Fourhorn,20.5,69.2,F,NA,1,1.6,3.6,NA
+FH145,2017,8/9/17,nothing,Empty,NA,NA,Fourhorn,18,48,M,NA,1,1.5,0.9,NA
+FH151,2017,8/10/17,krill,Krill,20,NA,Fourhorn,18,50.1,M,NA,3,1.1,1.1,NA
+FH151,2017,8/10/17,copepods,Copepod,2,NA,Fourhorn,18,50.1,M,NA,3,1.1,1.1,NA
+FH154,2017,8/10/17,krill,Krill,4,NA,Fourhorn,18.8,59.7,M,NA,2,2.2,0.3,NA
+FH154,2017,8/10/17,amphipods,Amphipod,5,NA,Fourhorn,18.8,59.7,M,NA,2,2.2,0.3,NA
+FH155,2017,8/10/17,krill,Krill,4,NA,Fourhorn,26.5,231.6,F,NA,1,14.9,21.2,NA
+FH156,2017,8/10/17,gammarids,Gammarus sp.,100,NA,Fourhorn,27.2,280.8,F,NA,5,13.2,11.7,NA
+FH156,2017,8/10/17,onisimus,Onisimus sp.,NA,NA,Fourhorn,27.2,280.8,F,NA,5,13.2,11.7,NA
+FH156,2017,8/10/17,krill,Krill,15,NA,Fourhorn,27.2,280.8,F,NA,5,13.2,11.7,NA
+FH156,2017,8/10/17,char meat (bait),Fish,NA,NA,Fourhorn,27.2,280.8,F,NA,5,13.2,11.7,NA
+FH157,2017,8/10/17,red shrimp,Mysid,8,NA,Fourhorn,28,235.5,F,NA,2,18.1,19.4,NA
+FH18,2017,7/24/17,gammarus or onisimus,Amphipod,30,NA,Fourhorn,21,100,F,NA,5,NA,NA,NA
+FH180,2017,8/13/17,copepod,Copepod,2,NA,Fourhorn,19.5,63.5,M,NA,3,1,4.9,NA
+FH180,2017,8/13/17,krill,Krill,NA,NA,Fourhorn,19.5,63.5,M,NA,3,1,4.9,NA
+FH181,2017,8/13/17,unidentified digesta,Digested,NA,NA,Fourhorn,17.2,40.8,F,NA,3,0.9,0.5,NA
+FH181,2017,8/13/17,large amphipod,Amphipod,1,NA,Fourhorn,17.2,40.8,F,NA,3,0.9,0.5,NA
+FH19,2017,7/24/17,gammarus or onisimus,Amphipod,33,NA,Fourhorn,22.2,117.2,M,NA,5,2.7,5.2,NA
+FH19,2017,7/24/17,gammaracanthus sp.,Gammaracanthus sp.,3,NA,Fourhorn,22.2,117.2,M,NA,5,2.7,5.2,NA
+FH19,2017,7/24/17,krill,Krill,3,NA,Fourhorn,22.2,117.2,M,NA,5,2.7,5.2,NA
+FH19,2017,7/24/17,eusirus or apherusa,Amphipod,2,NA,Fourhorn,22.2,117.2,M,NA,5,2.7,5.2,NA
+FH197,2017,8/16/17,onisimus sp,Onisimus sp.,4,NA,Fourhorn,26.2,217.5,F,NA,2,13.9,21.8,NA
+FH197,2017,8/16/17,krill,Krill,5,NA,Fourhorn,26.2,217.5,F,NA,2,13.9,21.8,NA
+FH20,2017,7/24/17,krill,Krill,6,NA,Fourhorn,22.2,99.8,F,NA,3,3.5,2,NA
+FH20,2017,7/24/17,shrimp,Mysid,9,NA,Fourhorn,22.2,99.8,F,NA,3,3.5,2,NA
+FH20,2017,7/24/17,grit,Digested,NA,NA,Fourhorn,22.2,99.8,F,NA,3,3.5,2,NA
+FH20,2017,7/24/17,gammarus or onisimus,Amphipod,12,NA,Fourhorn,22.2,99.8,F,NA,3,3.5,2,NA
+FH21,2017,7/24/17,shrimp,Mysid,8,NA,Fourhorn,16.5,46.2,M,NA,2,1.3,1.6,NA
+FH21,2017,7/24/17,krill,Krill,4,NA,Fourhorn,16.5,46.2,M,NA,2,1.3,1.6,NA
+FH21,2017,7/24/17,gammarus or onisimus,Amphipod,2,NA,Fourhorn,16.5,46.2,M,NA,2,1.3,1.6,NA
+FH22,2017,7/24/17,gammarus or onisimus,Amphipod,8,NA,Fourhorn,20.7,74.2,F,NA,2,3.1,2.3,NA
+FH22,2017,7/24/17,krill,Krill,1,NA,Fourhorn,20.7,74.2,F,NA,2,3.1,2.3,NA
+FH22,2017,7/24/17,shrimp,Mysid,8,NA,Fourhorn,20.7,74.2,F,NA,2,3.1,2.3,NA
+FH221,2017,8/17/17,unidentified digesta,Digested,NA,NA,Fourhorn,21.2,NA,F,NA,2,2.2,1.4,NA
+FH221,2017,8/17/17,sea angel,Sea Angel,1,NA,Fourhorn,21.2,NA,F,NA,2,2.2,1.4,NA
+FH221,2017,8/17/17,krill,Krill,1,NA,Fourhorn,21.2,NA,F,NA,2,2.2,1.4,NA
+FH221,2017,8/17/17,mysid,Mysid,1,NA,Fourhorn,21.2,NA,F,NA,2,2.2,1.4,NA
+FH221,2017,8/17/17,red amphipod,Amphipod,3,NA,Fourhorn,21.2,NA,F,NA,2,2.2,1.4,NA
+FH222,2017,8/17/17,krill and mysids,Krill,NA,6.8,Fourhorn,21.7,105.5,F,NA,4,4.7,6.6,NA
+FH222,2017,8/17/17,cnidarian jelly,Jellyfish,1,NA,Fourhorn,21.7,105.5,F,NA,4,4.7,6.6,NA
+FH222,2017,8/17/17,red amphipods,Amphipod,5,NA,Fourhorn,21.7,105.5,F,NA,4,4.7,6.6,NA
+FH223,2017,8/17/17,leaves,Algae,2,NA,Fourhorn,20.1,73.8,F,NA,3,2.3,1.6,NA
+FH223,2017,8/17/17,onisimus litoralis,Onisimus sp.,1,NA,Fourhorn,20.1,73.8,F,NA,3,2.3,1.6,NA
+FH223,2017,8/17/17,red amphipods,Amphipod,20,NA,Fourhorn,20.1,73.8,F,NA,3,2.3,1.6,NA
+FH223,2017,8/17/17,gammarids,Gammarus sp.,30,NA,Fourhorn,20.1,73.8,F,NA,3,2.3,1.6,NA
+FH223,2017,8/17/17,gammaracanthus sp,Gammaracanthus sp.,1,NA,Fourhorn,20.1,73.8,F,NA,3,2.3,1.6,NA
+FH223,2017,8/17/17,mysid,Mysid,1,NA,Fourhorn,20.1,73.8,F,NA,3,2.3,1.6,NA
+FH224,2017,8/17/17,onisimus litoralis,Onisimus sp.,3,NA,Fourhorn,17.9,49.9,F,NA,4,1.1,0.9,NA
+FH224,2017,8/17/17,mysids,Mysid,50,NA,Fourhorn,17.9,49.9,F,NA,4,1.1,0.9,NA
+FH224,2017,8/17/17,krill,Krill,1,NA,Fourhorn,17.9,49.9,F,NA,4,1.1,0.9,NA
+FH224,2017,8/17/17,red amphipod,Amphipod,5,NA,Fourhorn,17.9,49.9,F,NA,4,1.1,0.9,NA
+FH224,2017,8/17/17,unidentified digesta,Digested,NA,NA,Fourhorn,17.9,49.9,F,NA,4,1.1,0.9,NA
+FH225,2017,8/17/17,krill,Krill,8,NA,Fourhorn,14,23.6,F,NA,3,0.6,NA,NA
+FH225,2017,8/17/17,mysid,Mysid,2,NA,Fourhorn,14,23.6,F,NA,3,0.6,NA,NA
+FH225,2017,8/17/17,red amphipod,Amphipod,3,NA,Fourhorn,14,23.6,F,NA,3,0.6,NA,NA
+FH232,2017,8/18/17,arctic cod,Fish,1,NA,Fourhorn,28.1,278.4,F,NA,3,17.8,24.5,NA
+FH232,2017,8/18/17,onisimus litoralis,Onisimus sp.,1,NA,Fourhorn,28.1,278.4,F,NA,3,17.8,24.5,NA
+FH232,2017,8/18/17,fish fry,Fish,2,NA,Fourhorn,28.1,278.4,F,NA,3,17.8,24.5,NA
+FH232,2017,8/18/17,unidentified digesta,Digested,NA,6.3,Fourhorn,28.1,278.4,F,NA,3,17.8,24.5,NA
+FH233,2017,8/19/17,red amphipods,Amphipod,3,NA,Fourhorn,21.8,92.6,M,NA,2,1.3,5,NA
+FH234,2017,8/19/17,onisimata litoralis,Onisimus sp.,4,NA,Fourhorn,27.5,212.2,F,NA,2,10.5,15.4,NA
+FH234,2017,8/19/17,red amphipods,Amphipod,6,NA,Fourhorn,27.5,212.2,F,NA,2,10.5,15.4,NA
+FH234,2017,8/19/17,fish eyes,Fish,9,NA,Fourhorn,27.5,212.2,F,NA,2,10.5,15.4,NA
+FH234,2017,8/19/17,copepod,Copepod,1,NA,Fourhorn,27.5,212.2,F,NA,2,10.5,15.4,NA
+FH234,2017,8/19/17,fish larvae,Fish,2,NA,Fourhorn,27.5,212.2,F,NA,2,10.5,15.4,NA
+FH235,2017,8/19/17,giant chironimid,Chironomid,1,NA,Fourhorn,18.3,60.3,M,NA,4,0.8,2.6,NA
+FH235,2017,8/19/17,onisimata litoralois,Onisimus sp.,2,NA,Fourhorn,18.3,60.3,M,NA,4,0.8,2.6,NA
+FH235,2017,8/19/17,mysids,Mysid,120,3.1,Fourhorn,18.3,60.3,M,NA,4,0.8,2.6,NA
+FH236,2017,8/19/17,onisimata litoralis,Onisimus sp.,8,NA,Fourhorn,23.3,93.3,M,NA,3,1.9,4.4,NA
+FH236,2017,8/19/17,chironomid,Chironomid,1,NA,Fourhorn,23.3,93.3,M,NA,3,1.9,4.4,NA
+FH236,2017,8/19/17,krill,Krill,6,NA,Fourhorn,23.3,93.3,M,NA,3,1.9,4.4,NA
+FH236,2017,8/19/17,red amphipod,Amphipod,1,NA,Fourhorn,23.3,93.3,M,NA,3,1.9,4.4,NA
+FH236,2017,8/19/17,gammarid,Gammarus sp.,1,NA,Fourhorn,23.3,93.3,M,NA,3,1.9,4.4,NA
+FH236,2017,8/19/17,mysid,Mysid,40,NA,Fourhorn,23.3,93.3,M,NA,3,1.9,4.4,NA
+FH237,2017,8/19/17,red amphipod,Amphipod,1,NA,Fourhorn,24,103.9,F,NA,2,4.3,4.3,NA
+FH237,2017,8/19/17,fish larvae,Fish,1,NA,Fourhorn,24,103.9,F,NA,2,4.3,4.3,NA
+FH237,2017,8/19/17,onisimata litoralis,Onisimus sp.,3,NA,Fourhorn,24,103.9,F,NA,2,4.3,4.3,NA
+FH24,2017,7/25/17,gammarus or onisimus,Amphipod,1,NA,Fourhorn,13.9,22.3,M,NA,1,0.3,0.2,NA
+FH24,2017,7/25/17,krill,Krill,1,NA,Fourhorn,13.9,22.3,M,NA,1,0.3,0.2,NA
+FH24,2017,7/25/17,shrimp,Mysid,3,NA,Fourhorn,13.9,22.3,M,NA,1,0.3,0.2,NA
+FH249,2017,8/21/17,onisimus litoralis,Onisimus sp.,7,NA,Fourhorn,26.4,192.1,F,NA,3,15.4,18.9,NA
+FH249,2017,8/21/17,copepod,Copepod,1,NA,Fourhorn,26.4,192.1,F,NA,3,15.4,18.9,NA
+FH251,2017,8/21/17,gammarid,Gammarus sp.,3,NA,Fourhorn,14,26,M,NA,4,0.4,0.1,NA
+FH251,2017,8/21/17,krill,Krill,2,NA,Fourhorn,14,26,M,NA,4,0.4,0.1,NA
+FH257,2017,8/24/17,gammarid,Gammarus sp.,2,NA,Fourhorn,11.5,12,M,NA,4,0.6,0.8,NA
+FH257,2017,8/24/17,sand lices,Copepod,3,NA,Fourhorn,11.5,12,M,NA,4,0.6,0.8,NA
+FH258,2017,8/24/17,fish larvae,Fish,3,NA,Fourhorn,7,5,F,NA,5,0.5,NA,NA
+FH258,2017,8/24/17,onisimata litoralois,Onisimus sp.,1,NA,Fourhorn,7,5,F,NA,5,0.5,NA,NA
+FH26,2017,7/26/17,gammarus or onisimus,Amphipod,40,NA,Fourhorn,16.2,44.6,M,NA,3,1,0.4,NA
+FH26,2017,7/26/17,krill,Krill,5,NA,Fourhorn,16.2,44.6,M,NA,3,1,0.4,NA
+FH264,2017,8/24/17,copepods,Copepod,10,NA,Fourhorn,13,20,M,NA,3,0.7,0.1,NA
+FH265,2017,8/24/17,copepods,Copepod,3,NA,Fourhorn,12,15,M,NA,2,0.5,NA,NA
+FH266,2017,8/25/17,red copepods,Copepod,6,NA,Fourhorn,21.5,79,M,NA,3,1.6,1.9,NA
+FH266,2017,8/25/17,copepods,Copepod,7,NA,Fourhorn,21.5,79,M,NA,3,1.6,1.9,NA
+FH266,2017,8/25/17,rock,Undigestible,1,NA,Fourhorn,21.5,79,M,NA,3,1.6,1.9,NA
+FH267,2017,8/25/17,check the book,Digested,NA,NA,Fourhorn,16.4,31.7,Unknown,NA,5,0.5,0.4,NA
+FH269,2017,8/26/17,krill,Krill,15,NA,Fourhorn,17.4,57.3,NA,NA,5,1.1,0.3,NA
+FH27,2017,7/26/17,gammarus or onisimus,Amphipod,18,NA,Fourhorn,27,218.6,F,NA,2,12.3,8.1,NA
+FH27,2017,7/26/17,rock,Undigestible,1,NA,Fourhorn,27,218.6,F,NA,2,12.3,8.1,NA
+FH27,2017,7/26/17,leaves,Algae,NA,NA,Fourhorn,27,218.6,F,NA,2,12.3,8.1,NA
+FH278,2017,8/29/17,shrimps,Mysid,24,NA,Fourhorn,30,400,F,NA,5,27.7,26.7,NA
+FH278,2017,8/29/17,fish fry eyes,Fish,NA,NA,Fourhorn,30,400,F,NA,5,27.7,26.7,NA
+FH278,2017,8/29/17,krills,Krill,NA,NA,Fourhorn,30,400,F,NA,5,27.7,26.7,NA
+FH28,2017,7/26/17,gammarus or onisimus,Amphipod,30,NA,Fourhorn,25.4,175,F,NA,3,9.5,9.6,NA
+FH28,2017,7/26/17,krill,Krill,1,NA,Fourhorn,25.4,175,F,NA,3,9.5,9.6,NA
+FH28,2017,7/26/17,gammaracanthus sp.,Gammaracanthus sp.,3,NA,Fourhorn,25.4,175,F,NA,3,9.5,9.6,NA
+FH315,2017,9/3/17,krills,Krill,400,NA,Fourhorn,18.2,64.6,F,NA,5,1.6,0.9,NA
+FH315,2017,9/3/17,fish frye,Fish,1,NA,Fourhorn,18.2,64.6,F,NA,5,1.6,0.9,NA
+FH315,2017,9/3/17,amphipods,Amphipod,2,NA,Fourhorn,18.2,64.6,F,NA,5,1.6,0.9,NA
+FH6,2017,7/23/17,gammarus or onisimus,Amphipod,NA,NA,Fourhorn,22,93,M,NA,5,NA,NA,NA
+FH7,2017,7/23/17,gammarus or onisimus,Amphipod,NA,NA,Fourhorn,19,69,F,NA,5,NA,NA,NA
+FH7,2017,7/23/17,eusirus or apherusa,Amphipod,NA,NA,Fourhorn,19,69,F,NA,5,NA,NA,NA
+FH78,2017,8/2/17,krill,Krill,2,NA,Fourhorn,23.3,114.4,F,NA,2,5.7,3.6,NA
+FH78,2017,8/2/17,gammarus or onisimus,Amphipod,3,NA,Fourhorn,23.3,114.4,F,NA,2,5.7,3.6,NA
+FH78,2017,8/2/17,large chironomid larvae,Chironomid,3,NA,Fourhorn,23.3,114.4,F,NA,2,5.7,3.6,NA
+FH79,2017,8/2/17,gammarus or onisimus,Amphipod,11,NA,Fourhorn,24,84.8,F,NA,3,3.4,3,NA
+FH79,2017,8/2/17,krill,Krill,10,NA,Fourhorn,24,84.8,F,NA,3,3.4,3,NA
+FH79,2017,8/2/17,large chironomid larvae,Chironomid,1,NA,Fourhorn,24,84.8,F,NA,3,3.4,3,NA
+FH8,2017,7/23/17,gammarus or onisimus,Amphipod,NA,NA,Fourhorn,16.5,43,M,NA,4,NA,NA,NA
+FH8,2017,7/23/17,digested,Digested,NA,NA,Fourhorn,16.5,43,M,NA,4,NA,NA,NA
+FH80,2017,8/2/17,amphipods,Amphipod,NA,NA,Fourhorn,17.9,27.9,M,NA,2,0.6,0.1,NA
+FH80,2017,8/2/17,grit,Digested,NA,NA,Fourhorn,17.9,27.9,M,NA,2,0.6,0.1,NA
+FH81,2017,8/2/17,krill,Krill,37,NA,Fourhorn,18.8,33.7,M,NA,3,0.6,1.4,NA
+FH82,2017,8/3/17,jellyfish,Jellyfish,6,NA,Fourhorn,29,277.2,F,NA,3,17.3,23,NA
+FH82,2017,8/3/17,gammarus or onisimus,Amphipod,42,NA,Fourhorn,29,277.2,F,NA,3,17.3,23,NA
+FH83,2017,8/3/17,amphipod,Amphipod,NA,NA,Fourhorn,26.5,184,F,NA,3,10,12.2,NA
+FH84,2017,8/3/17,amphipod,Amphipod,3,NA,Fourhorn,25.5,155.2,M,NA,2,3.5,8.5,NA
+FH85,2017,8/3/17,krill,Krill,1,NA,Fourhorn,21,76.9,M,NA,3,2.4,2.7,NA
+FH85,2017,8/3/17,amphipod,Amphipod,13,NA,Fourhorn,21,76.9,M,NA,3,2.4,2.7,NA
+FH86,2017,8/3/17,amphipod,Amphipod,5,NA,Fourhorn,22,84.8,M,NA,2,2.4,2.4,NA
+FH87,2017,8/3/17,krill,Krill,1,NA,Fourhorn,14.5,23,M,NA,2,0.5,0.7,NA
+FH87,2017,8/3/17,amphipod,Amphipod,2,NA,Fourhorn,14.5,23,M,NA,2,0.5,0.7,NA
+FH88,2017,8/3/17,krill,Krill,1,NA,Fourhorn,14.5,24.6,M,NA,2,0.7,0.3,NA
+FH88,2017,8/3/17,gammarus or onisimus,Amphipod,2,NA,Fourhorn,14.5,24.6,M,NA,2,0.7,0.3,NA
+FH88,2017,8/3/17,parasites,Undigestible,NA,NA,Fourhorn,14.5,24.6,M,NA,2,0.7,0.3,NA
+FH9,2017,7/23/17,too small,Empty,NA,NA,Fourhorn,6.2,14,I,NA,1,NA,NA,NA
+FH93,2017,8/5/17,gammarus or onisimus,Amphipod,1,NA,Fourhorn,9.4,5.9,NA,NA,3,0.2,NA,NA
+S1,2017,7/24/17,gammaracanthus sp.,Gammaracanthus sp.,1,NA,Slimy,14.2,42.4,M,NA,5,1.4,0.5,NA
+S1,2017,7/24/17,amphipods,Amphipod,13,NA,Slimy,14.2,42.4,M,NA,5,1.4,0.5,NA
+S1,2017,7/24/17,onisimus/apherusa/eusirus,Amphipod,12,NA,Slimy,14.2,42.4,M,NA,5,1.4,0.5,NA
+S1,2017,7/24/17,krill,Krill,5,NA,Slimy,14.2,42.4,M,NA,5,1.4,0.5,NA
+S12,2017,7/26/17,gammarus/onisimus,Amphipod,20,NA,Slimy,15.2,52.1,M,NA,3,2,1.1,NA
+S12,2017,7/26/17,krill,Krill,2,NA,Slimy,15.2,52.1,M,NA,3,2,1.1,NA
+S12,2017,7/26/17,gammaracanthus sp.,Gammaracanthus sp.,3,NA,Slimy,15.2,52.1,M,NA,3,2,1.1,NA
+S13,2017,7/26/17,gammarus/onisimus,Amphipod,35,NA,Slimy,16,59.2,F,NA,4,2.7,1.9,NA
+S13,2017,7/26/17,krill,Krill,1,NA,Slimy,16,59.2,F,NA,4,2.7,1.9,NA
+S13,2017,7/26/17,gammaracanthus sp.,Gammaracanthus sp.,1,NA,Slimy,16,59.2,F,NA,4,2.7,1.9,NA
+S2,2017,7/24/17,onisimus,Onisimus sp.,9,NA,Slimy,13.2,33.3,F,NA,4,1.4,0.5,NA
+S2,2017,7/24/17,gammarus,Gammarus sp.,31,NA,Slimy,13.2,33.3,F,NA,4,1.4,0.5,NA
+S2,2017,7/24/17,gammaracanthus sp.,Gammaracanthus sp.,1,NA,Slimy,13.2,33.3,F,NA,4,1.4,0.5,NA
+S22,2017,8/2/17,gammarus/onisimus,Amphipod,3,NA,Slimy,14,18.3,F,NA,4,0.6,0.3,NA
+S22,2017,8/2/17,grit,Digested,NA,NA,Slimy,14,18.3,F,NA,4,0.6,0.3,NA
+S23,2017,8/2/17,krill,Krill,3,NA,Slimy,11.4,6.7,M,NA,3,0.3,NA,NA
+S23,2017,8/2/17,gammarus/onisimus,Amphipod,3,NA,Slimy,11.4,6.7,M,NA,3,0.3,NA,NA
+S23,2017,8/2/17,grit,Digested,NA,NA,Slimy,11.4,6.7,M,NA,3,0.3,NA,NA
+S24,2017,8/3/17,gammarus/onisimus,Amphipod,16,NA,Slimy,17.7,69.7,F,NA,3,3.5,2.3,NA
+S24,2017,8/3/17,many parasites in gut,Undigestible,NA,NA,Slimy,17.7,69.7,F,NA,3,3.5,2.3,NA
+S25,2017,8/3/17,gammaracanthus sp.,Gammaracanthus sp.,1,NA,Slimy,17.7,73.7,F,NA,4,3.8,3.7,NA
+S25,2017,8/3/17,amphipods,Amphipod,11,NA,Slimy,17.7,73.7,F,NA,4,3.8,3.7,NA
+S26,2017,8/3/17,gammarus/onisimus,Amphipod,1,NA,Slimy,16,59.7,F,NA,1,3.3,1.9,NA
+S27,2017,8/3/17,gammaracanthus sp.,Gammaracanthus sp.,1,NA,Slimy,17.7,80,F,NA,3,3.6,3.1,NA
+S27,2017,8/3/17,gammarus/onisimus,Amphipod,2,NA,Slimy,17.7,80,F,NA,3,3.6,3.1,NA
+S27,2017,8/3/17,digested,Digested,NA,NA,Slimy,17.7,80,F,NA,3,3.6,3.1,NA
+S28,2017,8/3/17,jelly fish,Jellyfish,1,NA,Slimy,18,73.4,F,NA,3,3,3.8,NA
+S28,2017,8/3/17,amphipods,Amphipod,4,NA,Slimy,18,73.4,F,NA,3,3,3.8,NA
+S28,2017,8/3/17,gammaracanthus sp.,Gammaracanthus sp.,1,NA,Slimy,18,73.4,F,NA,3,3,3.8,NA
+S28,2017,8/3/17,parasites in gut,Undigestible,NA,NA,Slimy,18,73.4,F,NA,3,3,3.8,NA
+S29,2017,8/3/17,amphipod,Amphipod,7,NA,Slimy,17.6,72.2,F,NA,4,3.5,2.2,NA
+S29,2017,8/3/17,gammaracanthus sp.,Gammaracanthus sp.,1,NA,Slimy,17.6,72.2,F,NA,4,3.5,2.2,NA
+S29,2017,8/3/17,krill,Krill,3,NA,Slimy,17.6,72.2,F,NA,4,3.5,2.2,NA
+S29,2017,8/3/17,parasites in gut,Undigestible,NA,NA,Slimy,17.6,72.2,F,NA,4,3.5,2.2,NA
+S3,2017,7/24/17,onisimus,Onisimus sp.,3,NA,Slimy,4.2,0.8,I,NA,3,NA,NA,NA
+S30,2017,8/3/17,krill,Krill,5,NA,Slimy,15.4,49.3,F,NA,4,2.3,1.3,NA
+S30,2017,8/3/17,grit,Digested,NA,NA,Slimy,15.4,49.3,F,NA,4,2.3,1.3,NA
+S30,2017,8/3/17,gammarus/onisimus,Amphipod,5,NA,Slimy,15.4,49.3,F,NA,4,2.3,1.3,NA
+S31,2017,8/3/17,gammarus/onisimus,Amphipod,3,NA,Slimy,15.6,45.4,F,NA,4,1.9,1.3,NA
+S31,2017,8/3/17,giant chironomid,Chironomid,3,NA,Slimy,15.6,45.4,F,NA,4,1.9,1.3,NA
+S32,2017,8/6/17,krill,Krill,10,NA,Fourhorn,17.9,78.6,M,NA,5,4.2,0.1,NA
+S32,2017,8/6/17,amphipods,Amphipod,20,NA,Fourhorn,17.9,78.6,M,NA,5,4.2,0.1,NA
+S32,2017,8/6/17,gammaracanthus sp.,Gammaracanthus sp.,1,NA,Fourhorn,17.9,78.6,M,NA,5,4.2,0.1,NA
+S32,2017,8/6/17,onisimus or eusirus,Amphipod,10,NA,Fourhorn,17.9,78.6,M,NA,5,4.2,0.1,NA
+S33,2017,8/6/17,copepods,Copepod,10,NA,Fourhorn,16,50.5,M,NA,5,1.5,NA,NA
+S33,2017,8/6/17,krill,Krill,10,NA,Fourhorn,16,50.5,M,NA,5,1.5,NA,NA
+S33,2017,8/6/17,onisimus or eusirus,Amphipod,15,NA,Fourhorn,16,50.5,M,NA,5,1.5,NA,NA
+S33,2017,8/6/17,gammarus,Gammarus sp.,15,NA,Fourhorn,16,50.5,M,NA,5,1.5,NA,NA
+S34,2017,8/9/17,unidentified digesta,Digested,NA,NA,Slimy,17,62.5,M,NA,4,3.1,1.7,NA
+S37,2017,8/10/17,krill,Krill,25,NA,Slimy,14.5,34.2,M,NA,4,1,0.6,NA
+S37,2017,8/10/17,red shrimp,Mysid,3,NA,Slimy,14.5,34.2,M,NA,4,1,0.6,NA
+S38,2017,8/12/17,sea lice,Copepod,2,NA,Slimy,12.5,21.8,M,NA,3,0.7,NA,NA
+S38,2017,8/12/17,chironomid,Chironomid,1,NA,Slimy,12.5,21.8,M,NA,3,0.7,NA,NA
+S38,2017,8/12/17,copepods,Copepod,13,NA,Slimy,12.5,21.8,M,NA,3,0.7,NA,NA
+S38,2017,8/12/17,onisimus sp.,Onisimus sp.,2,NA,Slimy,12.5,21.8,M,NA,3,0.7,NA,NA
+S38,2017,8/12/17,gammarids,Gammarus sp.,2,NA,Slimy,12.5,21.8,M,NA,3,0.7,NA,NA
+S39,2017,8/12/17,caprellid amphipod,Amphipod,1,NA,Slimy,15.2,39.8,M,NA,3,0.9,0.2,NA
+S39,2017,8/12/17,copepod,Copepod,1,NA,Slimy,15.2,39.8,M,NA,3,0.9,0.2,NA
+S39,2017,8/12/17,fish eyes,Fish,NA,NA,Slimy,15.2,39.8,M,NA,3,0.9,0.2,NA
+S39,2017,8/12/17,nematode parasite,Undigestible,1,NA,Slimy,15.2,39.8,M,NA,3,0.9,0.2,NA
+S4,2017,8/25/17,gammaracanthus sp.,Gammaracanthus sp.,3,NA,Slimy,15.8,55.5,F,NA,3,1.9,1.9,NA
+S4,2017,8/25/17,gammarus,Gammarus sp.,23,NA,Slimy,15.8,55.5,F,NA,3,1.9,1.9,NA
+S40,2017,8/12/17,gammaracanthus sp.,Gammaracanthus sp.,1,NA,Slimy,14.4,35.2,F,NA,3,0.8,0.7,NA
+S40,2017,8/12/17,giant chironomid,Chironomid,1,NA,Slimy,14.4,35.2,F,NA,3,0.8,0.7,NA
+S40,2017,8/12/17,sea lice,Copepod,19,NA,Slimy,14.4,35.2,F,NA,3,0.8,0.7,NA
+S41,2017,8/12/17,krill,Krill,5,NA,Slimy,14.8,43,F,NA,4,1.3,0.9,NA
+S41,2017,8/12/17,sea lice,Copepod,7,NA,Slimy,14.8,43,F,NA,4,1.3,0.9,NA
+S42,2017,8/12/17,krill,Krill,23,NA,Slimy,12.9,27.7,M,NA,3,0.5,0.7,NA
+S43,2017,8/13/17,gammaracanthus sp.,Gammaracanthus sp.,1,NA,Slimy,12,18.5,M,NA,4,0.3,NA,NA
+S43,2017,8/13/17,gammarids,Gammarus sp.,3,NA,Slimy,12,18.5,M,NA,4,0.3,NA,NA
+S44,2017,8/13/17,onisimus so.,Onisimus sp.,2,NA,Slimy,9.8,11.9,M,NA,2,0.4,0.1,NA
+S46,2017,8/13/17,krill,Krill,28,NA,Slimy,11.2,20.6,M,NA,5,0.4,0.2,NA
+S46,2017,8/13/17,fish larvae,Fish,9,NA,Slimy,11.2,20.6,M,NA,5,0.4,0.2,NA
+S46,2017,8/13/17,amphipod,Amphipod,1,NA,Slimy,11.2,20.6,M,NA,5,0.4,0.2,NA
+S47,2017,8/13/17,gammarid,Gammarus sp.,2,NA,Slimy,15.9,65.8,F,NA,5,2.7,1.7,NA
+S47,2017,8/13/17,krill,Krill,180,NA,Slimy,15.9,65.8,F,NA,5,2.7,1.7,NA
+S47,2017,8/13/17,sea fleas,Amphipod,6,NA,Slimy,15.9,65.8,F,NA,5,2.7,1.7,NA
+S47,2017,8/13/17,sea angel,Sea Angel,1,NA,Slimy,15.9,65.8,F,NA,5,2.7,1.7,NA
+S47,2017,8/13/17,onisimus litoralis,Onisimus sp.,NA,NA,Slimy,15.9,65.8,F,NA,5,2.7,1.7,NA
+S48,2017,8/13/17,sea flea,Amphipod,1,NA,Slimy,22.1,126.3,F,NA,2,2.3,2.2,NA
+S48,2017,8/13/17,krill,Krill,14,NA,Slimy,22.1,126.3,F,NA,2,2.3,2.2,NA
+S48,2017,8/13/17,sea angel,Sea Angel,1,NA,Slimy,22.1,126.3,F,NA,2,2.3,2.2,NA
+S48,2017,8/13/17,fish larvae,Fish,5,NA,Slimy,22.1,126.3,F,NA,2,2.3,2.2,NA
+S48,2017,8/13/17,piece plastic,Undigestible,1,NA,Slimy,22.1,126.3,F,NA,2,2.3,2.2,NA
+S49,2017,8/14/17,gammarids,Gammarus sp.,90,NA,Slimy,17.5,68.5,F,NA,5,2.7,1.9,NA
+S5,2017,8/25/17,gammarus/onisimus,Amphipod,40,NA,Slimy,14.5,43.7,M,NA,4,1.1,0.4,NA
+S5,2017,8/25/17,gammaracanthus sp.,Gammaracanthus sp.,3,NA,Slimy,14.5,43.7,M,NA,4,1.1,0.4,NA
+S5,2017,8/25/17,eusirus or apherusa,Amphipod,1,NA,Slimy,14.5,43.7,M,NA,4,1.1,0.4,NA
+S50,2017,8/15/17,gammarids,Gammarus sp.,50,NA,Slimy,17.4,78.7,F,NA,5,2.4,2,NA
+S50,2017,8/15/17,sand fleas,Amphipod,3,NA,Slimy,17.4,78.7,F,NA,5,2.4,2,NA
+S50,2017,8/15/17,krill,Krill,4,NA,Slimy,17.4,78.7,F,NA,5,2.4,2,NA
+S50,2017,8/15/17,sea angel,Sea Angel,1,NA,Slimy,17.4,78.7,F,NA,5,2.4,2,NA
+S50,2017,8/15/17,fish fry,Fish,57,NA,Slimy,17.4,78.7,F,NA,5,2.4,2,NA
+S50,2017,8/15/17,char,Fish,NA,NA,Slimy,17.4,78.7,F,NA,5,2.4,2,NA
+S59,2017,8/16/17,gammarids,Gammarus sp.,NA,NA,Slimy,14,37.7,F,NA,5,0.4,0.5,NA
+S59,2017,8/16/17,onisimus sp,Onisimus sp.,NA,NA,Slimy,14,37.7,F,NA,5,0.4,0.5,NA
+S59,2017,8/16/17,krill,Krill,NA,NA,Slimy,14,37.7,F,NA,5,0.4,0.5,NA
+S59,2017,8/16/17,digested,Digested,NA,3.6,Slimy,14,37.7,F,NA,5,0.4,0.5,NA
+S6,2017,8/25/17,grit,Digested,1,NA,Slimy,14.6,42,F,NA,2,1.3,0.9,NA
+S6,2017,8/25/17,gammarus,Gammarus sp.,5,NA,Slimy,14.6,42,F,NA,2,1.3,0.9,NA
+S6,2017,8/25/17,digested,Digested,NA,NA,Slimy,14.6,42,F,NA,2,1.3,0.9,NA
+S62,2017,8/17/17,gammarids,Gammarus sp.,5,NA,Slimy,12.9,30.2,M,NA,3,1.2,0.2,NA
+S62,2017,8/17/17,red amphipod,Amphipod,3,NA,Slimy,12.9,30.2,M,NA,3,1.2,0.2,NA
+S62,2017,8/17/17,gammaracanthus sp,Gammaracanthus sp.,1,NA,Slimy,12.9,30.2,M,NA,3,1.2,0.2,NA
+S63,2017,8/18/17,unidentified amphipods,Amphipod,NA,NA,Slimy,16.5,58.2,M,NA,5,0.8,0.1,NA
+S63,2017,8/18/17,fish fry,Fish,36,NA,Slimy,16.5,58.2,M,NA,5,0.8,0.1,NA
+S64,2017,8/18/17,unidentified digesta,Digested,NA,NA,Slimy,13.5,31.4,M,NA,4,0.7,0.1,NA
+S64,2017,8/18/17,gammarid,Gammarus sp.,1,NA,Slimy,13.5,31.4,M,NA,4,0.7,0.1,NA
+S64,2017,8/18/17,fish fry,Fish,3,NA,Slimy,13.5,31.4,M,NA,4,0.7,0.1,NA
+S65,2017,8/18/17,copepods,Copepod,NA,0.2,Slimy,14,29.8,M,NA,5,0.6,1,NA
+S65,2017,8/18/17,fish fry,Fish,3,NA,Slimy,14,29.8,M,NA,5,0.6,1,NA
+S65,2017,8/18/17,amphipods,Amphipod,NA,0.9,Slimy,14,29.8,M,NA,5,0.6,1,NA
+S66,2017,8/18/17,gammarid,Gammarus sp.,1,NA,Slimy,14.4,35.9,F,NA,4,1.6,0.8,NA
+S66,2017,8/18/17,gammaracanthus,Gammaracanthus sp.,1,NA,Slimy,14.4,35.9,F,NA,4,1.6,0.8,NA
+S66,2017,8/18/17,amphipods,Amphipod,NA,NA,Slimy,14.4,35.9,F,NA,4,1.6,0.8,NA
+S66,2017,8/18/17,copepods,Copepod,NA,NA,Slimy,14.4,35.9,F,NA,4,1.6,0.8,NA
+S66,2017,8/18/17,fish fry,Fish,1,NA,Slimy,14.4,35.9,F,NA,4,1.6,0.8,NA
+S7,2017,7/25/17,gammarus,Gammarus sp.,14,NA,Slimy,12.2,23.8,M,NA,3,0.9,0.1,NA
+S7,2017,7/25/17,gammaracanthus sp.,Gammaracanthus sp.,1,NA,Slimy,12.2,23.8,M,NA,3,0.9,0.1,NA
+S74,2017,8/21/17,cnidarian jelly,Jellyfish,NA,NA,Slimy,17.2,59.7,M,NA,2,1.1,1.6,NA
+S74,2017,8/21/17,fish larvae,Fish,1,NA,Slimy,17.2,59.7,M,NA,2,1.1,1.6,NA
+S74,2017,8/21/17,mysid,Mysid,1,NA,Slimy,17.2,59.7,M,NA,2,1.1,1.6,NA
+S74,2017,8/21/17,unidentified digesta,Digested,NA,NA,Slimy,17.2,59.7,M,NA,2,1.1,1.6,NA
+S84,2017,8/22/17,krill,Krill,3,NA,Slimy,15.5,52.8,F,NA,3,2.3,1.6,NA
+S84,2017,8/22/17,sea angel,Sea Angel,2,NA,Slimy,15.5,52.8,F,NA,3,2.3,1.6,NA
+S84,2017,8/22/17,onisimata,Onisimus sp.,2,NA,Slimy,15.5,52.8,F,NA,3,2.3,1.6,NA
+S84,2017,8/22/17,fish bits,Fish,NA,NA,Slimy,15.5,52.8,F,NA,3,2.3,1.6,NA
+S85,2017,8/22/17,krill,Krill,1,NA,Slimy,16,50.5,F,NA,1,1.7,1.1,NA
+S85,2017,8/22/17,sea angel,Sea Angel,1,NA,Slimy,16,50.5,F,NA,1,1.7,1.1,NA
+S86,2017,8/22/17,fish larvae,Fish,20,NA,Slimy,21.5,107.3,F,NA,4,2.1,1,NA
+S86,2017,8/22/17,snails,Miscellaneous Invert,6,NA,Slimy,21.5,107.3,F,NA,4,2.1,1,NA
+S86,2017,8/22/17,isopod,Miscellaneous Invert,1,NA,Slimy,21.5,107.3,F,NA,4,2.1,1,NA
+S86,2017,8/22/17,preserved,Digested,NA,NA,Slimy,21.5,107.3,F,NA,4,2.1,1,NA
+S87,2017,8/23/17,larvae,Fish,1,NA,Slimy,19.9,116.3,F,NA,4,6.5,8,NA
+S87,2017,8/23/17,sand fleas,Amphipod,2,NA,Slimy,19.9,116.3,F,NA,4,6.5,8,NA
+S87,2017,8/23/17,lots of fish eyes,Fish,NA,NA,Slimy,19.9,116.3,F,NA,4,6.5,8,NA
+S87,2017,8/23/17,red amphipods,Amphipod,10,NA,Slimy,19.9,116.3,F,NA,4,6.5,8,NA
+S89,2017,8/27/17,krill,Krill,15,NA,Slimy,13.5,35,M,NA,5,0.8,0.5,NA
+S89,2017,8/27/17,copepod,Copepod,1,NA,Slimy,13.5,35,M,NA,5,0.8,0.5,NA
+S89,2017,8/27/17,fish larvae,Fish,18,NA,Slimy,13.5,35,M,NA,5,0.8,0.5,NA
+S89,2017,8/27/17,sea lice,Copepod,3,NA,Slimy,13.5,35,M,NA,5,0.8,0.5,NA
+S90,2017,8/27/17,krill,Krill,5,NA,Slimy,14.5,43,M,NA,3,1.3,0.2,NA
+S90,2017,8/27/17,copepods,Copepod,6,NA,Slimy,14.5,43,M,NA,3,1.3,0.2,NA
+S90,2017,8/27/17,sea lice,Copepod,1,NA,Slimy,14.5,43,M,NA,3,1.3,0.2,NA
+S90,2017,8/27/17,fish larvae,Fish,17,NA,Slimy,14.5,43,M,NA,3,1.3,0.2,NA
+SSM001,2018,7/31/18,Empty,Empty,NA,NA,Slimy,16.9,50,F,0,1,0.9,0.8,NA
+SSM002,2018,7/31/18,unidentified,Digested,NA,3.468,Fourhorn,26.1,100,F,3.468,3,6.9,7.1,0.2
+SSM003,2018,7/31/18,Empty,Empty,NA,NA,Fourhorn,27.1,200,F,0,1,9.7,8.7,0.5
+SSM004,2018,7/31/18,onisimus littoralis,Onisimus sp.,10,1.629,Fourhorn,27.5,150,F,5.187,3,7.7,6.7,0.2
+SSM004,2018,7/31/18,algae,Algae,NA,3.558,Fourhorn,27.5,150,F,5.187,3,7.7,6.7,0.2
+SSM005a,2018,8/1/18,gammarus,Gammarus sp.,1,0.041,Slimy,22,70,F,0.041,2,2.1,2.7,NA
+SSM005b,2018,8/2/18,onisimus littoralis,Onisimus sp.,1,0.019,Fourhorn,24,130,F,0.094,2,2.6,4.4,0.3
+SSM005b,2018,8/2/18,amphipod,Amphipod,NA,0.075,Fourhorn,24,130,F,0.094,2,2.6,4.4,0.3
+SSM006,2018,8/3/18,onisimus littoralis,Onisimus sp.,2,0.052,Fourhorn,18.8,50,F,0.751,2,1.6,2.7,0
+SSM006,2018,8/3/18,krill,Krill,1,0,Fourhorn,18.8,50,F,0.751,2,1.6,2.7,0
+SSM006,2018,8/3/18,amphipod,Amphipod,NA,0.699,Fourhorn,18.8,50,F,0.751,2,1.6,2.7,0
+SSM007,2018,8/4/18,onisimus littoralis,Onisimus sp.,5,0.213,Fourhorn,25.6,220,F,19.563,5,11.6,9.7,0.4
+SSM007,2018,8/4/18,onisimus sp.,Onisimus sp.,NA,18.914,Fourhorn,25.6,220,F,19.563,5,11.6,9.7,0.4
+SSM007,2018,8/4/18,amphipod,Amphipod,NA,0.436,Fourhorn,25.6,220,F,19.563,5,11.6,9.7,0.4
+SSM008,2018,8/7/18,Unidentified,Unidentified,NA,NA,Fourhorn,24.4,150,F,0.846,2,7,6.4,0.3
+SSM009,2018,8/7/18,unidentified,Digested,NA,1.105,Fourhorn,21.2,110,F,1.107,3,7.3,5,0.2
+SSM010,2018,8/7/18,Empty,Empty,NA,NA,Slimy,12.2,12.8,F,0,1,0.3,0.1,0
+SSM011,2018,8/7/18,Empty,Empty,NA,NA,Fourhorn,14,31.3,F,0,1,0.7,0.9,0
+SSM012,2018,8/8/18,unidentified,Digested,NA,0.54,Slimy,NA,NA,F,0.054,2,1,0.4,0
+SSM013,2018,8/8/18,unidentified,Digested,NA,0.471,Fourhorn,30,35.1,F,0.471,3,0.7,1.1,0
+SSM014,2018,8/8/18,krill pieces,Krill,1,0.152,Fourhorn,28,51.3,F,0.738,2,5.5,4.3,0.4
+SSM014,2018,8/8/18,unidentified,Digested,NA,0.031,Fourhorn,28,51.3,F,0.738,2,5.5,4.3,0.4
+SSM015,2018,8/8/18,Unidentified,Unidentified,NA,NA,Fourhorn,26,100,F,2.838,3,4.8,4.6,0.3
+SSM016,2018,8/8/18,unidentified,Digested,NA,0.165,Fourhorn,19.4,29.9,M,0.285,2,0.4,0.4,0
+SSM016,2018,8/8/18,copepod,Copepod,NA,0.13,Fourhorn,19.4,29.9,M,0.285,2,0.4,0.4,0
+SSM016,2018,8/8/18,unidentified,Digested,NA,2.833,Fourhorn,19.4,29.9,M,0.285,2,0.4,0.4,0
+SSM016,2018,8/8/18,unidentified,Digested,NA,0.005,Fourhorn,19.4,29.9,M,0.285,2,0.4,0.4,0
+SSM017,2018,8/8/18,unidentified,Digested,NA,2.336,Fourhorn,25,100,F,2.336,3,3.4,4.1,0.4
+SSM018,2018,8/9/18,unidentified,Digested,NA,1.475,Fourhorn,25.6,167.6,F,1.475,2,8.3,9.3,0.3
+SSM019,2018,8/9/18,krill,Krill,NA,1.822,Fourhorn,14,23.1,F,1.822,3,0.9,0.2,0
+SSM020,2018,8/9/18,unidentified,Digested,NA,0.306,Fourhorn,16,47.7,M,0.306,2,0.6,1.3,0
+SSM021,2018,8/9/18,krill,Krill,1,0.085,Fourhorn,17,38.2,F,1.813,4,0.8,1,0
+SSM021,2018,8/9/18,unidentified,Digested,NA,1.673,Fourhorn,17,38.2,F,1.813,4,0.8,1,0
+SSM022,2018,8/9/18,onisimus littoralis,Onisimus sp.,2,0.059,Fourhorn,16.4,36.4,M,2.58,5,0.7,1.3,0
+SSM022,2018,8/9/18,unidentified,Digested,NA,2.359,Fourhorn,16.4,36.4,M,2.58,5,0.7,1.3,0
+SSM023,2018,8/9/18,krill,Krill,2,0,Fourhorn,14.8,25.6,M,0.315,3,0.3,0.1,0
+SSM023,2018,8/9/18,unidentified,Digested,NA,0.315,Fourhorn,14.8,25.6,M,0.315,3,0.3,0.1,0
+SSM024a,2018,8/9/18,unidentified,Digested,NA,1.296,Fourhorn,11.8,13.9,M,1.296,5,0.4,0.6,0
+SSM024b,2018,8/10/18,sea angel,Sea Angel,1,0.053,Fourhorn,24.8,92.8,M,1.783,3,4.2,4,0.4
+SSM024b,2018,8/10/18,unidentified,Digested,NA,1.73,Fourhorn,24.8,92.8,M,1.783,3,4.2,4,0.4
+SSM025,2018,8/10/18,unidentified,Digested,NA,0.839,Fourhorn,20.1,58.3,M,0.84,3,1.2,3.6,0.1
+SSM026,2018,8/10/18,unidentified,Digested,NA,3.266,Fourhorn,28.8,212.5,F,3.267,3,12.9,12.7,0.4
+SSM027,2018,8/10/18,onisimus littoralis,Onisimus sp.,2,0.089,Fourhorn,18,54.7,F,2.98,4,1.6,2.4,0
+SSM027,2018,8/10/18,gammarus,Gammarus sp.,4,0.258,Fourhorn,18,54.7,F,2.98,4,1.6,2.4,0
+SSM027,2018,8/10/18,mysid shrimp,Mysid,2,0.046,Fourhorn,18,54.7,F,2.98,4,1.6,2.4,0
+SSM027,2018,8/10/18,unidentified,Digested,NA,2.587,Fourhorn,18,54.7,F,2.98,4,1.6,2.4,0
+SSM028,2018,8/11/18,Empty,Empty,NA,NA,Fourhorn,5.5,2,Unknown,0,1,0,NA,0
+SSM029,2018,8/14/18,Empty,Empty,NA,NA,Fourhorn,26,172.7,F,0,1,11.1,10.6,0.6
+SSM030,2018,8/14/18,onisimus littoralis,Onisimus sp.,1,0.024,Fourhorn,16,32.5,F,0.087,2,0.8,0.5,0
+SSM030,2018,8/14/18,amphipod,Amphipod,NA,0.063,Fourhorn,16,32.5,F,0.087,2,0.8,0.5,0
+SSM031,2018,8/20/18,larval fish,Fish,7,0.145,Fourhorn,20.2,90.3,M,5.507,5,3.2,2.8,0.2
+SSM031,2018,8/20/18,onisimus littoralis,Onisimus sp.,5,0.18,Fourhorn,20.2,90.3,M,5.507,5,3.2,2.8,0.2
+SSM031,2018,8/20/18,gammarus,Gammarus sp.,1,0.125,Fourhorn,20.2,90.3,M,5.507,5,3.2,2.8,0.2
+SSM031,2018,8/20/18,unidentified,Digested,NA,4.702,Fourhorn,20.2,90.3,M,5.507,5,3.2,2.8,0.2
+SSM032,2018,8/20/18,unidentified,Digested,NA,11.838,Fourhorn,25.2,197.1,M,12.521,5,6.8,8.9,0.4
+SSM032,2018,8/20/18,onisimus littoralis,Onisimus sp.,4,0.418,Fourhorn,25.2,197.1,M,12.521,5,6.8,8.9,0.4
+SSM032,2018,8/20/18,larval fish,Fish,1,0.151,Fourhorn,25.2,197.1,M,12.521,5,6.8,8.9,0.4
+SSM032,2018,8/20/18,krill,Krill,2,0.114,Fourhorn,25.2,197.1,M,12.521,5,6.8,8.9,0.4
+SSM033,2018,8/20/18,krill,Krill,4,3.182,Fourhorn,20.4,65.7,F,4.391,4,1.9,1.3,0.1
+SSM033,2018,8/20/18,larval fish,Fish,7,0.275,Fourhorn,20.4,65.7,F,4.391,4,1.9,1.3,0.1
+SSM033,2018,8/20/18,amphipod,Amphipod,NA,0.934,Fourhorn,20.4,65.7,F,4.391,4,1.9,1.3,0.1
+SSM034,2018,8/20/18,gammarus,Gammarus sp.,1,0.115,Fourhorn,25.9,177.8,M,4.514,4,8.4,8.2,0.6
+SSM034,2018,8/20/18,larval fish,Fish,1,0.012,Fourhorn,25.9,177.8,M,4.514,4,8.4,8.2,0.6
+SSM034,2018,8/20/18,unidentified,Digested,NA,2.384,Fourhorn,25.9,177.8,M,4.514,4,8.4,8.2,0.6
+SSM034,2018,8/20/18,unidentified,Digested,NA,1.813,Fourhorn,25.9,177.8,M,4.514,4,8.4,8.2,0.6
+SSM035,2018,8/20/18,onisimus littoralis,Onisimus sp.,4,0.116,Fourhorn,19.5,66,M,6.645,5,2.2,2.1,0.1
+SSM035,2018,8/20/18,krill,Krill,3,0.006,Fourhorn,19.5,66,M,6.645,5,2.2,2.1,0.1
+SSM035,2018,8/20/18,larval fish,Fish,5,0.274,Fourhorn,19.5,66,M,6.645,5,2.2,2.1,0.1
+SSM035,2018,8/20/18,amphipod,Amphipod,NA,0.49,Fourhorn,19.5,66,M,6.645,5,2.2,2.1,0.1
+SSM035,2018,8/20/18,unidentified,Digested,NA,5.401,Fourhorn,19.5,66,M,6.645,5,2.2,2.1,0.1
+SSM036,2018,8/20/18,krill,Krill,7,3.03,Fourhorn,15.4,29.6,F,3.117,4,0.9,0.3,0
+SSM036,2018,8/20/18,onisimus littoralis,Onisimus sp.,NA,0.087,Fourhorn,15.4,29.6,F,3.117,4,0.9,0.3,0
+SSM037,2018,8/21/18,onisimus littoralis,Onisimus sp.,5,0.36,Fourhorn,26.2,181.5,M,6.771,4,3.9,3.2,0.6
+SSM037,2018,8/21/18,larval fish,Fish,7,0.633,Fourhorn,26.2,181.5,M,6.771,4,3.9,3.2,0.6
+SSM037,2018,8/21/18,unidentified,Digested,NA,5.778,Fourhorn,26.2,181.5,M,6.771,4,3.9,3.2,0.6
+SSM038,2018,8/21/18,unidentified,Digested,NA,0.833,Slimy,13.8,20.7,M,0.833,4,0.5,0.3,0
+SSM039,2018,8/21/18,onisimus littoralis,Onisimus sp.,3,0.171,Slimy,15.4,56.2,F,2.751,4,2.3,2.6,0
+SSM039,2018,8/21/18,larval fish,Fish,1,0.031,Slimy,15.4,56.2,F,2.751,4,2.3,2.6,0
+SSM039,2018,8/21/18,unidentified,Digested,NA,2.549,Slimy,15.4,56.2,F,2.751,4,2.3,2.6,0
+SSM040,2018,8/21/18,krill,Krill,2,0.122,Fourhorn,20.8,80.3,F,1.937,3,3.5,3.6,0
+SSM040,2018,8/21/18,unidentified,Digested,NA,1.815,Fourhorn,20.8,80.3,F,1.937,3,3.5,3.6,0
+SSM041,2018,8/26/18,unidentified,Digested,NA,2.557,Fourhorn,20.8,94.9,M,4.041,4,4.3,5.4,0.2
+SSM041,2018,8/26/18,gammarus,Gammarus sp.,1,0.12,Fourhorn,20.8,94.9,M,4.041,4,4.3,5.4,0.2
+SSM041,2018,8/26/18,onisimus littoralis,Onisimus sp.,2,0.166,Fourhorn,20.8,94.9,M,4.041,4,4.3,5.4,0.2
+SSM041,2018,8/26/18,larval fish,Fish,5,0.177,Fourhorn,20.8,94.9,M,4.041,4,4.3,5.4,0.2
+SSM042,2018,8/26/18,Empty,Empty,NA,NA,Fourhorn,22.2,104.4,M,0,1,3.3,5.5,0.2
+SSM043,2018,8/26/18,krill,Krill,2,0.072,Slimy,17.9,82.3,F,0.325,2,4.7,4.5,0
+SSM043,2018,8/26/18,unidentified,Digested,NA,0.253,Slimy,17.9,82.3,F,0.325,2,4.7,4.5,0
+SSM044,2018,8/26/18,onisimus littoralis,Onisimus sp.,1,0.045,Slimy,11.4,20.3,F,0.19,2,0.6,0.2,0
+SSM044,2018,8/26/18,unidentified,Digested,NA,0.114,Slimy,11.4,20.3,F,0.19,2,0.6,0.2,0
+SSM045,2018,8/26/18,krill,Krill,1,0.084,Fourhorn,27.1,224.4,F,0.664,2,16.2,21,0.6
+SSM045,2018,8/26/18,unidentified,Digested,NA,0.587,Fourhorn,27.1,224.4,F,0.664,2,16.2,21,0.6
+SSM046,2018,8/28/18,onisimus littoralis,Onisimus sp.,3,0.147,Fourhorn,27,237.5,F,15.738,5,15.7,16.6,1
+SSM046,2018,8/28/18,large black amphipod,Amphipod,1,0.247,Fourhorn,27,237.5,F,15.738,5,15.7,16.6,1
+SSM046,2018,8/28/18,unidentified,Digested,NA,15.344,Fourhorn,27,237.5,F,15.738,5,15.7,16.6,1
+SSM047,2018,8/30/18,unidentified,Digested,1,0.121,Fourhorn,25.9,163.2,F,0.857,2,11.5,16.4,0.3
+SSM047,2018,8/30/18,unidentified,Digested,NA,0.736,Fourhorn,25.9,163.2,F,0.857,2,11.5,16.4,0.3
+SSM048,2018,8/30/18,unidentified,Digested,NA,0.965,Fourhorn,24.5,126.8,M,0.965,2,4.7,4.4,0.2
+SSM051,2018,9/2/18,Empty,Empty,NA,NA,Fourhorn,22,102.5,F,0,1,6.9,10.4,0.2
+SSM052,2018,9/2/18,unidentified,Digested,NA,0.345,Fourhorn,18.8,47.5,M,0.386,2,1,2.9,0.1
+SSM053,2018,9/3/18,onisimus littoralis,Onisimus sp.,2,0.14,Fourhorn,23.8,133.4,M,1.811,3,7.6,7.3,0.2
+SSM053,2018,9/3/18,gammarus,Gammarus sp.,1,0.038,Fourhorn,23.8,133.4,M,1.811,3,7.6,7.3,0.2
+SSM053,2018,9/3/18,unidentified,Digested,NA,1.478,Fourhorn,23.8,133.4,M,1.811,3,7.6,7.3,0.2
+SSM054,2018,9/3/18,amphipod,Amphipod,NA,0.892,Fourhorn,18.7,57.3,F,1.257,3,1.9,1.3,0
+SSM054,2018,9/3/18,gammarus,Gammarus sp.,3,0.189,Fourhorn,18.7,57.3,F,1.257,3,1.9,1.3,0
+SSM054,2018,9/3/18,onisimus littoralis,Onisimus sp.,3,0.177,Fourhorn,18.7,57.3,F,1.257,3,1.9,1.3,0
+SSM055,2018,9/4/18,onisimus bits,Onisimus sp.,15,0.737,Fourhorn,28.2,282.2,F,13.219,4,18,25.9,0.7
+SSM055,2018,9/4/18,unidentified,Digested,NA,12.482,Fourhorn,28.2,282.2,F,13.219,4,18,25.9,0.7
+SSM056,2018,9/4/18,onisimus littoralis,Onisimus sp.,5,0.183,Fourhorn,25.8,196.2,F,2.453,3,11,14.7,0.4
+SSM056,2018,9/4/18,unidentified,Digested,NA,2.27,Fourhorn,25.8,196.2,F,2.453,3,11,14.7,0.4
+SSM057,2018,9/4/18,larval fish,Fish,4,0.316,Fourhorn,19,74.6,F,4.28,5,4.3,5.7,0.2
+SSM057,2018,9/4/18,onisimus littoralis,Onisimus sp.,5,0.274,Fourhorn,19,74.6,F,4.28,5,4.3,5.7,0.2
+SSM057,2018,9/4/18,gammarus,Gammarus sp.,2,0.226,Fourhorn,19,74.6,F,4.28,5,4.3,5.7,0.2
+SSM057,2018,9/4/18,unidentified,Digested,NA,3.464,Fourhorn,19,74.6,F,4.28,5,4.3,5.7,0.2
+SSM058,2018,9/6/18,onisimus littoralis,Onisimus sp.,9,0.515,Fourhorn,24.8,184.8,F,4.402,3,14.9,23.5,0.4
+SSM058,2018,9/6/18,unidentified,Digested,NA,3.887,Fourhorn,24.8,184.8,F,4.402,3,14.9,23.5,0.4
+SSM059,2018,9/6/18,unidentified,Digested,NA,2.242,Fourhorn,24.6,139.9,F,2.486,3,8.5,11.5,0.3
+SSM059,2018,9/6/18,onisimus littoralis,Onisimus sp.,2,0.085,Fourhorn,24.6,139.9,F,2.486,3,8.5,11.5,0.3
+SSM059,2018,9/6/18,krill,Krill,2,0.1,Fourhorn,24.6,139.9,F,2.486,3,8.5,11.5,0.3
+SSM060,2019,8/12/19,amphipod,Amphipod,1,0.002,Fourhorn,13.32,16.9,M,0.1,NA,0.1,0.9,0
+SSM060,2019,8/12/19,onisimus sp.,Onisimus sp.,1,0.016,Fourhorn,13.32,16.9,M,0.1,NA,0.1,0.9,0
+SSM060,2019,8/12/19,krill,Krill,1,0.016,Fourhorn,13.32,16.9,M,0.1,NA,0.1,0.9,0
+SSM061,2019,8/13/19,gammarus sp.,Gammarus sp.,1,0.024,Fourhorn,14.63,23,M,0.2,NA,0.3,0.2,0
+SSM062,2019,8/13/19,gammarus sp.,Gammarus sp.,2,0.075,Fourhorn,14.83,25.5,M,0.8,NA,0.3,1.4,0
+SSM062,2019,8/13/19,fish,Fish,4,0.272,Fourhorn,14.83,25.5,M,0.8,NA,0.3,1.4,0
+SSM063,2019,8/15/19,empty,Empty,0,0,Fourhorn,15.34,25.4,M,0,NA,0.3,0.3,0
+SSM064,2019,8/15/19,onisimus sp.,Onisimus sp.,2,0.006,Fourhorn,16.6,29.4,F,0.6,NA,0,0.5,0
+SSM064,2019,8/15/19,amphipod,Amphipod,1,0.007,Fourhorn,16.6,29.4,F,0.6,NA,0,0.5,0
+SSM064,2019,8/15/19,digested,Digested,NA,0.058,Fourhorn,16.6,29.4,F,0.6,NA,0,0.5,0
+SSM065,2019,8/16/19,amphipod,Amphipod,1,0,Fourhorn,16.4,29,F,0.2,NA,0.3,0.6,0
+SSM066,2019,8/16/19,krill,Krill,2,0.002,Fourhorn,13.24,18.2,F,1.4,NA,0.1,0.2,0
+SSM066,2019,8/16/19,onisimus sp.,Onisimus sp.,1,0.003,Fourhorn,13.24,18.2,F,1.4,NA,0.1,0.2,0
+SSM066,2019,8/16/19,sea angel,Sea Angel,7,0.413,Fourhorn,13.24,18.2,F,1.4,NA,0.1,0.2,0
+SSM067,2019,8/16/19,digested,Digested,NA,0.002,Fourhorn,15.2,26.2,M,0,NA,0.4,1.4,0
+SSM068,2019,8/18/19,fish,Fish,1,0.135,Fourhorn,13.9,21.8,F,1.4,NA,0.3,0.2,0
+SSM068,2019,8/18/19,krill,Krill,1,0.02,Fourhorn,13.9,21.8,F,1.4,NA,0.3,0.2,0
+SSM068,2019,8/18/19,gammarus sp.,Gammarus sp.,19,0.438,Fourhorn,13.9,21.8,F,1.4,NA,0.3,0.2,0
+SSM069,2019,8/18/19,fish,Fish,3,0.205,Fourhorn,15.02,27.5,F,0.8,NA,0.3,0.3,0
+SSM070,2019,8/18/19,digested,Digested,NA,0.001,Fourhorn,13.42,17,M,0.4,NA,0.3,0.5,0
+SSM070,2019,8/18/19,amphipod,Amphipod,1,0.002,Fourhorn,13.42,17,M,0.4,NA,0.3,0.5,0
+SSM070,2019,8/18/19,fish,Fish,1,0.103,Fourhorn,13.42,17,M,0.4,NA,0.3,0.5,0
+SSM071,2019,8/18/19,gammarus sp.,Gammarus sp.,1,0.034,Fourhorn,12.59,16.8,F,1.4,NA,0.3,0.2,0
+SSM071,2019,8/18/19,amphipod,Amphipod,1,0.023,Fourhorn,12.59,16.8,F,1.4,NA,0.3,0.2,0
+SSM071,2019,8/18/19,fish,Fish,4,0.469,Fourhorn,12.59,16.8,F,1.4,NA,0.3,0.2,0
+SSM072,2019,8/18/19,fish,Fish,3,0.374,Fourhorn,14.55,22.4,F,0.8,NA,0.2,0.2,0
+SSM072,2019,8/18/19,amphipod,Amphipod,1,0.008,Fourhorn,14.55,22.4,F,0.8,NA,0.2,0.2,0
+SSM073,2019,8/19/19,amphipod,Amphipod,1,0.003,Fourhorn,14.98,27.1,F,1.2,NA,0.2,0.3,0
+SSM073,2019,8/19/19,gammarus sp.,Gammarus sp.,2,0.048,Fourhorn,14.98,27.1,F,1.2,NA,0.2,0.3,0
+SSM073,2019,8/19/19,krill,Krill,2,0.058,Fourhorn,14.98,27.1,F,1.2,NA,0.2,0.3,0
+SSM073,2019,8/19/19,fish,Fish,1,0.148,Fourhorn,14.98,27.1,F,1.2,NA,0.2,0.3,0
+SSM073,2019,8/19/19,digested,Digested,NA,0.217,Fourhorn,14.98,27.1,F,1.2,NA,0.2,0.3,0
+SSM074,2019,8/19/19,digested,Digested,NA,0.001,Fourhorn,13.6,16.8,F,0,NA,0.1,0.2,0
+SSM075,2019,8/19/19,amphipod,Amphipod,1,0.005,Fourhorn,13.04,16.1,M,0.2,NA,0.2,0,0
+SSM075,2019,8/19/19,digested,Digested,NA,0.005,Fourhorn,13.04,16.1,M,0.2,NA,0.2,0,0
+SSM076,2019,8/21/19,krill,Krill,87,1.038,Slimy,12.09,23.2,M,2.3,NA,0.7,0,0
+SSS001,2018,7/20/18,Copepod,Copepod,1305,74.944,Arctic char,90,6000,NA,89.785,NA,NA,NA,NA
+SSS001,2018,7/20/18,Gammarus,Gammarus sp.,103,3.387,Arctic char,90,6000,NA,89.785,NA,NA,NA,NA
+SSS002,2018,7/23/18,Unidentified,Digested,NA,2.834,Arctic char,62,1800,NA,2.834,NA,NA,NA,NA
+SSS003,2018,7/26/18,arctic cod,Arctic cod,1,48.11,Arctic char,NA,NA,NA,39.519,NA,NA,NA,NA
+SSS003,2018,7/26/18,amphipod,Amphipod,NA,36.917,Arctic char,NA,NA,NA,39.519,NA,NA,NA,NA
+SSS004,2018,7/29/18,Krill,Krill,1253,10.218,Arctic char,67,2350,NA,27.751,4,46,24.3,NA
+SSS004,2018,7/29/18,Onisimus littoralis,Onisimus sp.,141,3.715,Arctic char,67,2350,NA,27.751,4,46,24.3,NA
+SSS004,2018,7/29/18,Sandlance,Sand lance,2,1.251,Arctic char,67,2350,NA,27.751,4,46,24.3,NA
+SSS005,2018,7/30/18,copepod,Copepod,NA,1.017,Arctic char,73.2,2700,M,1.017,2,52.8,8.5,NA
+SSS006,2018,7/30/18,Gammaracanthus,Gammaracanthus sp.,3,0.333,Arctic char,86,4550,M,1.271,2,101.9,11.1,NA
+SSS006,2018,7/30/18,Onisimus littoralis,Onisimus sp.,4,0.122,Arctic char,86,4550,M,1.271,2,101.9,11.1,NA
+SSS006,2018,7/30/18,Gammarus,Gammarus sp.,4,0.051,Arctic char,86,4550,M,1.271,2,101.9,11.1,NA
+SSS006,2018,7/30/18,Pink Bell,Jellyfish,1,0.07,Arctic char,86,4550,M,1.271,2,101.9,11.1,NA
+SSS006,2018,7/30/18,Unidentified,Digested,NA,0.774,Arctic char,86,4550,M,1.271,2,101.9,11.1,NA
+SSS007,2018,7/30/18,Onisimus littoralis,Onisimus sp.,32,0.875,Arctic char,85,5600,M,9.342,2,115.6,9.6,10.7
+SSS007,2018,7/30/18,Unidentified,Digested,NA,7.101,Arctic char,85,5600,M,9.342,2,115.6,9.6,10.7
+SSS008,2018,7/30/18,Copepod,Copepod,NA,1.945,Arctic char,63.2,1750,F,2.101,2,32.1,15.6,2.5
+SSS009,2018,8/1/18,Onisimus littoralis,Onisimus sp.,93,3.473,Arctic char,72.4,2400,M,11.869,3,40.1,6.6,4
+SSS009,2018,8/1/18,Unidentified,Digested,NA,5.704,Arctic char,72.4,2400,M,11.869,3,40.1,6.6,4
+SSS010,2018,8/2/18,Gammarus,Gammarus sp.,1,0.287,Arctic char,65.4,2020,M,1.784,2,30.4,4.3,4.6
+SSS010,2018,8/2/18,Krill,Krill,12,0.367,Arctic char,65.4,2020,M,1.784,2,30.4,4.3,4.6
+SSS010,2018,8/2/18,Onisimus littoralis,Onisimus sp.,22,0.666,Arctic char,65.4,2020,M,1.784,2,30.4,4.3,4.6
+SSS011,2018,8/2/18,Onisimus littoralis,Onisimus sp.,1,0.032,Arctic char,66.8,1800,F,1.225,2,35,19.6,3.9
+SSS011,2018,8/2/18,Larval Fish,Fish,8,0.028,Arctic char,66.8,1800,F,1.225,2,35,19.6,3.9
+SSS012,2018,8/4/18,Onisimus littoralis,Onisimus sp.,6,0.143,Arctic char,67,NA,M,1.759,2,34.3,5.7,5.1
+SSS012,2018,8/4/18,Onisimus sp.,Onisimus sp.,1,0.052,Arctic char,67,NA,M,1.759,2,34.3,5.7,5.1
+SSS012,2018,8/4/18,Krill,Krill,2,0.074,Arctic char,67,NA,M,1.759,2,34.3,5.7,5.1
+SSS013,2018,8/4/18,Onisimus littoralis,Onisimus sp.,1,0.014,Arctic char,59,1940,F,0.655,2,40.7,11.4,4.1
+SSS013,2018,8/4/18,Unidentified,Digested,NA,0.629,Arctic char,59,1940,F,0.655,2,40.7,11.4,4.1
+SSS014,2018,8/4/18,Krill,Krill,2,0.034,Arctic char,63.2,2250,F,6.582,2,45.2,17.3,4.2
+SSS014,2018,8/4/18,Onisimus littoralis,Onisimus sp.,6,0.16,Arctic char,63.2,2250,F,6.582,2,45.2,17.3,4.2
+SSS014,2018,8/4/18,Krill Paste,Krill,NA,5.342,Arctic char,63.2,2250,F,6.582,2,45.2,17.3,4.2
+SSS015,2018,8/6/18,Sandlance,Sand lance,3,6.021,Arctic char,79,4000,M,56.1,3,65.6,10,NA
+SSS015,2018,8/6/18,Gammarus,Gammarus sp.,1,0.121,Arctic char,79,4000,M,7.087,3,65.6,10,NA
+SSS015,2018,8/6/18,Larval Fish,Fish,3,0.048,Arctic char,79,4000,M,7.087,3,65.6,10,NA
+SSS015,2018,8/6/18,Onisimus littoralis,Onisimus sp.,2,0.041,Arctic char,79,4000,M,7.087,3,65.6,10,NA
+SSS016,2018,8/6/18,Onisimus littoralis,Onisimus sp.,3,0.057,Arctic char,75,3720,M,1.983,2,51.8,7.5,5.5
+SSS016,2018,8/6/18,Sea Angel,Sea Angel,8,1.538,Arctic char,75,3720,M,1.983,2,51.8,7.5,5.5
+SSS017A,2018,8/6/18,Krill,Krill,2,0.097,Arctic char,90.8,5550,M,0.318,2,89.8,11.7,18
+SSS017A,2018,8/6/18,Onisimus littoralis,Onisimus sp.,1,0,Arctic char,90.8,5550,M,0.318,2,89.8,11.7,18
+SSS017A,2018,8/6/18,Unidentified,Digested,NA,0.237,Arctic char,90.8,5550,M,0.318,2,89.8,11.7,18
+SSS017B,2018,8/8/18,Onisimus littoralis,Onisimus sp.,45,0.715,Arctic char,76,3150,F,2.501,3,64.5,43.2,10
+SSS017B,2018,8/8/18,Unidentified,Digested,NA,1.014,Arctic char,76,3150,F,2.501,3,64.5,43.2,10
+SSS017B,2018,8/8/18,Gammaracanthus,Gammaracanthus sp.,1,0.148,Arctic char,76,3150,F,2.501,3,64.5,43.2,10
+SSS018,2018,8/8/18,Krill,Krill,1,0.006,Arctic char,41.4,620,F,6.047,3,11,1.1,1
+SSS018,2018,8/8/18,Copepod,Copepod,NA,3.909,Arctic char,41.4,620,F,6.047,3,11,1.1,1
+SSS018,2018,8/8/18,Unidentified,Digested,NA,0.663,Arctic char,41.4,620,F,6.047,3,11,1.1,1
+SSS018,2018,8/8/18,Larval Fish,Fish,NA,0.372,Arctic char,41.4,620,F,6.047,3,11,1.1,1
+SSS019,2018,8/14/18,Gammarus,Gammarus sp.,2,0.122,Arctic char,82,4350,F,3.282,2,80.6,45.6,9.9
+SSS019,2018,8/14/18,Onisimus littoralis,Onisimus sp.,7,0.103,Arctic char,82,4350,F,3.282,2,80.6,45.6,9.9
+SSS019,2018,8/14/18,Digested material,Digested,NA,1,Arctic char,82,4350,F,3.282,2,80.6,45.6,9.9
+SSS020,2018,8/19/18,Onisimus littoralis,Onisimus sp.,1122,62.181,Arctic char,83,6600,M,67.465,5,145.3,11.2,12.2
+SSS020,2018,8/19/18,Larval Fish,Fish,12,1.672,Arctic char,83,6600,M,67.465,5,145.3,11.2,12.2
+SSS022,2018,8/28/18,Sandlance,Sand lance,8,19.37,Arctic char,77.6,3900,M,25.572,4,82.9,52.6,18.3
+SSS53,2019,8/14/19,Themisto,Themisto sp.,NA,5.191,Arctic char,42.4,700,M,9.3,NA,14.6,1,1.5
+SSS23,2019,8/8/19,Themisto,Themisto sp.,312,21.876,Arctic char,64,2350,F,40.2,NA,51.1,14.3,3.5
+SSS23,2019,8/8/19,Copepod,Copepod,52,0.357,Arctic char,64,2350,F,40.2,NA,51.1,14.3,3.5
+SSS23,2019,8/8/19,Onisimus,Onisimus sp.,8,0.127,Arctic char,64,2350,F,40.2,NA,51.1,14.3,3.5
+SSS23,2019,8/8/19,Krill,Krill,15,0.054,Arctic char,64,2350,F,40.2,NA,51.1,14.3,3.5
+SSS23,2019,8/8/19,Fish,Fish,28,2.743,Arctic char,64,2350,F,40.2,NA,51.1,14.3,3.5
+SSS24,2019,8/8/19,Sculpin,Fish,1,0.782,Arctic char,66.2,3400,M,63.8,NA,77.7,2.9,4.7
+SSS24,2019,8/8/19,Fish,Fish,80,6.556,Arctic char,66.2,3400,M,63.8,NA,77.7,2.9,4.7
+SSS24,2019,8/8/19,Onisimus,Onisimus sp.,4,0.087,Arctic char,66.2,3400,M,63.8,NA,77.7,2.9,4.7
+SSS24,2019,8/8/19,Themisto,Themisto sp.,389,28.742,Arctic char,66.2,3400,M,63.8,NA,77.7,2.9,4.7
+SSS24,2019,8/8/19,Copepod,Copepod,16,0.09,Arctic char,66.2,3400,M,63.8,NA,77.7,2.9,4.7
+SSS25,2019,8/8/19,Onisimus,Onisimus sp.,4,0.115,Arctic char,61.8,2700,F,51.6,NA,57.2,20.7,3.8
+SSS25,2019,8/8/19,Themisto,Themisto sp.,265,24.151,Arctic char,61.8,2700,F,51.6,NA,57.2,20.7,3.8
+SSS25,2019,8/8/19,Copepod,Copepod,17,0.144,Arctic char,61.8,2700,F,51.6,NA,57.2,20.7,3.8
+SSS25,2019,8/8/19,Fish,Fish,56,4.477,Arctic char,61.8,2700,F,51.6,NA,57.2,20.7,3.8
+SSS26,2019,8/8/19,Fish,Fish,4,2.718,Arctic char,68,3100,M,28,NA,65.1,7.2,5.3
+SSS26,2019,8/8/19,Onisimus,Onisimus sp.,2,0.077,Arctic char,68,3100,M,28,NA,65.1,7.2,5.3
+SSS26,2019,8/8/19,Themisto,Themisto sp.,17,0.722,Arctic char,68,3100,M,28,NA,65.1,7.2,5.3
+SSS27,2019,8/10/19,Fish,Fish,NA,5.073,Arctic char,65.4,2950,M,113.1,NA,63.1,1.1,5.4
+SSS27,2019,8/10/19,Themisto,Themisto sp.,1241,83.623,Arctic char,65.4,2950,M,113.1,NA,63.1,1.1,5.4
+SSS27,2019,8/10/19,Copepod,Copepod,40,0.746,Arctic char,65.4,2950,M,113.1,NA,63.1,1.1,5.4
+SSS28,2019,8/10/19,Fish,Fish,38,1.772,Arctic char,67,3200,F,116.1,NA,83.8,30.5,7.3
+SSS28,2019,8/10/19,Onisimus,Onisimus sp.,4,0.092,Arctic char,67,3200,F,116.1,NA,83.8,30.5,7.3
+SSS28,2019,8/10/19,Copepod,Copepod,9,0.113,Arctic char,67,3200,F,116.1,NA,83.8,30.5,7.3
+SSS28,2019,8/10/19,Themisto,Themisto sp.,1397,93.578,Arctic char,67,3200,F,116.1,NA,83.8,30.5,7.3
+SSS29,2019,8/10/19,Themisto,Themisto sp.,1888,139.31,Arctic char,67.2,3800,F,176,NA,107,28.5,7.2
+SSS29,2019,8/10/19,Onisimus,Onisimus sp.,1,0.016,Arctic char,67.2,3800,F,176,NA,107,28.5,7.2
+SSS29,2019,8/10/19,Copepod,Copepod,3,0.027,Arctic char,67.2,3800,F,176,NA,107,28.5,7.2
+SSS29,2019,8/10/19,Fish,Fish,7,0.242,Arctic char,67.2,3800,F,176,NA,107,28.5,7.2
+SSS30,2019,8/10/19,Themisto,Themisto sp.,1358,97.78,Arctic char,64.6,2850,F,108.6,NA,57.5,18.5,4.3
+SSS30,2019,8/10/19,Fish,Fish,2,0.037,Arctic char,64.6,2850,F,108.6,NA,57.5,18.5,4.3
+SSS30,2019,8/10/19,Onisimus,Onisimus sp.,2,0.047,Arctic char,64.6,2850,F,108.6,NA,57.5,18.5,4.3
+SSS30,2019,8/10/19,Copepod,Copepod,2,0.003,Arctic char,64.6,2850,F,108.6,NA,57.5,18.5,4.3
+SSS30,2019,8/10/19,Unidentified,Digested,1,0.109,Arctic char,64.6,2850,F,108.6,NA,57.5,18.5,4.3
+SSS31,2019,8/10/19,Krill,Krill,2,0.329,Arctic char,64,2950,M,120.3,NA,56.8,6.3,6.2
+SSS31,2019,8/10/19,Copepod,Copepod,2,0.021,Arctic char,64,2950,M,120.3,NA,56.8,6.3,6.2
+SSS31,2019,8/10/19,Arctic Cod,Arctic cod,1,1.47,Arctic char,64,2950,M,120.3,NA,56.8,6.3,6.2
+SSS31,2019,8/10/19,Themisto,Themisto sp.,1448,104.989,Arctic char,64,2950,M,120.3,NA,56.8,6.3,6.2
+SSS32,2019,8/10/19,Themisto,Themisto sp.,1510,110.149,Arctic char,62.8,2800,M,129.6,NA,59.9,1.8,4.8
+SSS32,2019,8/10/19,Copepod,Copepod,1,0.007,Arctic char,62.8,2800,M,129.6,NA,59.9,1.8,4.8
+SSS32,2019,8/10/19,Onisimus,Onisimus sp.,3,0.074,Arctic char,62.8,2800,M,129.6,NA,59.9,1.8,4.8
+SSS33,2019,8/10/19,Themisto,Themisto sp.,1523,81.132,Arctic char,61.2,2500,M,98.5,NA,51.1,2.3,4
+SSS33,2019,8/10/19,Onisimus,Onisimus sp.,5,0.15,Arctic char,61.2,2500,M,98.5,NA,51.1,2.3,4
+SSS33,2019,8/10/19,Copepod,Copepod,10,0.057,Arctic char,61.2,2500,M,98.5,NA,51.1,2.3,4
+SSS33,2019,8/10/19,Fish,Fish,24,0.548,Arctic char,61.2,2500,M,98.5,NA,51.1,2.3,4
+SSS34,2019,8/10/19,Fish,Fish,9,0.376,Arctic char,71,3650,M,54.3,NA,67.8,3.7,7.3
+SSS34,2019,8/10/19,Onisimus,Onisimus sp.,1,0.02,Arctic char,71,3650,M,54.3,NA,67.8,3.7,7.3
+SSS34,2019,8/10/19,Krill,Krill,1,0.073,Arctic char,71,3650,M,54.3,NA,67.8,3.7,7.3
+SSS34,2019,8/10/19,Themisto,Themisto sp.,580,41.351,Arctic char,71,3650,M,54.3,NA,67.8,3.7,7.3
+SSS35,2019,8/11/19,Themisto,Themisto sp.,173,11.931,Arctic char,66.4,3250,F,15.5,NA,67.4,34.5,6.6
+SSS35,2019,8/11/19,Fish,Fish,2,0.028,Arctic char,66.4,3250,F,15.5,NA,67.4,34.5,6.6
+SSS35,2019,8/11/19,Copepod,Copepod,13,0.15,Arctic char,66.4,3250,F,15.5,NA,67.4,34.5,6.6
+SSS36,2019,8/11/19,Themisto,Themisto sp.,NA,10.071,Arctic char,79.2,5100,F,16.3,NA,114.5,58.5,9.8
+SSS36,2019,8/11/19,Unidentified,Digested,1,0.136,Arctic char,79.2,5100,F,16.3,NA,114.5,58.5,9.8
+SSS36,2019,8/11/19,Eggs,Miscellaneous,3,0.015,Arctic char,79.2,5100,F,16.3,NA,114.5,58.5,9.8
+SSS37,2019,8/11/19,Themisto,Themisto sp.,680,46.147,Arctic char,71.4,4450,M,61.6,NA,95.6,4.1,9
+SSS37,2019,8/11/19,Fish,Fish,12,2.796,Arctic char,71.4,4450,M,61.6,NA,95.6,4.1,9
+SSS38,2019,8/11/19,Themisto,Themisto sp.,695,58.862,Arctic char,64.4,2700,M,72.6,NA,50.6,1.8,4
+SSS38,2019,8/11/19,Fish,Fish,1,0.039,Arctic char,64.4,2700,M,72.6,NA,50.6,1.8,4
+SSS38,2019,8/11/19,Onisimus,Onisimus sp.,1,0.096,Arctic char,64.4,2700,M,72.6,NA,50.6,1.8,4
+SSS39,2019,8/11/19,Fish,Fish,201,7.257,Arctic char,44.6,900,J,36.5,NA,18.9,0.2,2
+SSS39,2019,8/11/19,Themisto,Themisto sp.,195,14.276,Arctic char,44.6,900,J,36.5,NA,18.9,0.2,2
+SSS39,2019,8/11/19,Copepod,Copepod,10,0.132,Arctic char,44.6,900,J,36.5,NA,18.9,0.2,2
+SSS39,2019,8/11/19,Onisimus,Onisimus sp.,2,0.092,Arctic char,44.6,900,J,36.5,NA,18.9,0.2,2
+SSS39,2019,8/11/19,Krill,Krill,19,0.387,Arctic char,44.6,900,J,36.5,NA,18.9,0.2,2
+SSS40,2019,8/11/19,Themisto,Themisto sp.,958,105.455,Arctic char,70,3300,F,131.8,NA,84.8,21.7,6.7
+SSS40,2019,8/11/19,Onisimus,Onisimus sp.,2,0.059,Arctic char,70,3300,F,131.8,NA,84.8,21.7,6.7
+SSS40,2019,8/11/19,Sea Angel,Sea Angel,2,0.11,Arctic char,70,3300,F,131.8,NA,84.8,21.7,6.7
+SSS40,2019,8/11/19,Copepod,Copepod,4,0.035,Arctic char,70,3300,F,131.8,NA,84.8,21.7,6.7
+SSS40,2019,8/11/19,Fish,Fish,38,1.278,Arctic char,70,3300,F,131.8,NA,84.8,21.7,6.7
+SSS41,2019,8/12/19,Arctic Cod,Arctic cod,2,3.504,Arctic char,73,3850,F,113.6,NA,90.9,16.8,7.8
+SSS41,2019,8/12/19,Onisimus,Onisimus sp.,7,0.365,Arctic char,73,3850,F,113.6,NA,90.9,16.8,7.8
+SSS41,2019,8/12/19,Themisto,Themisto sp.,8,0.645,Arctic char,73,3850,F,113.6,NA,90.9,16.8,7.8
+SSS41,2019,8/12/19,Fish,Fish,365,57.072,Arctic char,73,3850,F,113.6,NA,90.9,16.8,7.8
+SSS42,2019,8/12/19,Fish,Fish,748,42.825,Arctic char,64.6,3250,F,84,NA,83.2,18.7,6.2
+SSS42,2019,8/12/19,Arctic Cod,Arctic cod,1,1.144,Arctic char,64.6,3250,F,84,NA,83.2,18.7,6.2
+SSS42,2019,8/12/19,Themisto,Themisto sp.,4,0.277,Arctic char,64.6,3250,F,84,NA,83.2,18.7,6.2
+SSS42,2019,8/12/19,Onisimus,Onisimus sp.,2,0.162,Arctic char,64.6,3250,F,84,NA,83.2,18.7,6.2
+SSS42,2019,8/12/19,Krill,Krill,12,0.924,Arctic char,64.6,3250,F,84,NA,83.2,18.7,6.2
+SSS43,2019,8/13/19,Arctic Cod,Arctic cod,1,11.16,Arctic char,75.2,4300,M,71.2,NA,75.5,6.6,3
+SSS43,2019,8/13/19,Ocean Pout,Fish,2,27.847,Arctic char,75.2,4300,M,71.2,NA,75.5,6.6,3
+SSS43,2019,8/13/19,Krill,Krill,NA,5.938,Arctic char,75.2,4300,M,71.2,NA,75.5,6.6,3
+SSS44,2019,8/13/19,Arctic Cod,Arctic cod,3,5.117,Arctic char,48.6,1300,M,35.7,NA,23.6,0.4,2.5
+SSS44,2019,8/13/19,Krill,Krill,5,0.357,Arctic char,48.6,1300,M,35.7,NA,23.6,0.4,2.5
+SSS44,2019,8/13/19,Onisimus,Onisimus sp.,2,0.082,Arctic char,48.6,1300,M,35.7,NA,23.6,0.4,2.5
+SSS44,2019,8/13/19,Themisto,Themisto sp.,11,0.905,Arctic char,48.6,1300,M,35.7,NA,23.6,0.4,2.5
+SSS45,2019,8/13/19,Fish,Fish,25,4.455,Arctic char,72.8,4050,M,44.9,NA,101.5,2,7.1
+SSS45,2019,8/13/19,Themisto,Themisto sp.,171,13.357,Arctic char,72.8,4050,M,44.9,NA,101.5,2,7.1
+SSS45,2019,8/13/19,Onisimus,Onisimus sp.,4,0.102,Arctic char,72.8,4050,M,44.9,NA,101.5,2,7.1
+SSS45,2019,8/13/19,Copepod,Copepod,1,0.025,Arctic char,72.8,4050,M,44.9,NA,101.5,2,7.1
+SSS45,2019,8/13/19,Krill,Krill,4,0.14,Arctic char,72.8,4050,M,44.9,NA,101.5,2,7.1
+SSS46,2019,8/13/19,Arctic Cod,Arctic cod,2,2.999,Arctic char,63,2650,F,56.8,NA,70.1,19,7.5
+SSS46,2019,8/13/19,Fish,Fish,210,19.034,Arctic char,63,2650,F,56.8,NA,70.1,19,7.5
+SSS46,2019,8/13/19,Themisto,Themisto sp.,3,0.362,Arctic char,63,2650,F,56.8,NA,70.1,19,7.5
+SSS46,2019,8/13/19,Krill,Krill,4,0.422,Arctic char,63,2650,F,56.8,NA,70.1,19,7.5
+SSS47,2019,8/13/19,Empty,Empty,NA,NA,Arctic char,66,2750,F,0,NA,89.3,23.4,5.6
+SSS48,2019,8/13/19,Fish,Fish,7,1.846,Arctic char,80.2,4950,M,12.9,NA,126.4,7.3,9.3
+SSS48,2019,8/13/19,Themisto,Themisto sp.,10,0.655,Arctic char,80.2,4950,M,12.9,NA,126.4,7.3,9.3
+SSS49,2019,8/13/19,Onisimus,Onisimus sp.,3,0.111,Arctic char,68.6,3400,F,90.6,NA,97,34,6.3
+SSS49,2019,8/13/19,Krill,Krill,2,0.102,Arctic char,68.6,3400,F,90.6,NA,97,34,6.3
+SSS49,2019,8/13/19,Fish,Fish,10,0.914,Arctic char,68.6,3400,F,90.6,NA,97,34,6.3
+SSS49,2019,8/13/19,Themisto,Themisto sp.,757,64.723,Arctic char,68.6,3400,F,90.6,NA,97,34,6.3
+SSS50,2019,8/13/19,Arctic Cod,Arctic cod,1,2.945,Arctic char,46,1050,F?,21.6,NA,23.1,NA,1.4
+SSS50,2019,8/13/19,Fish,Fish,32,1.182,Arctic char,46,1050,F?,21.6,NA,23.1,NA,1.4
+SSS50,2019,8/13/19,Onisimus,Onisimus sp.,4,0.182,Arctic char,46,1050,F?,21.6,NA,23.1,NA,1.4
+SSS51,2019,8/13/19,Fish,Fish,5,0.415,Arctic char,61.2,2550,M,78.7,NA,51,1.9,4.1
+SSS51,2019,8/13/19,Onisimus,Onisimus sp.,4,0.07,Arctic char,61.2,2550,M,78.7,NA,51,1.9,4.1
+SSS51,2019,8/13/19,Themisto,Themisto sp.,877,73.629,Arctic char,61.2,2550,M,78.7,NA,51,1.9,4.1
+SSS52,2019,8/14/19,Copepod,Copepod,4,0.04,Arctic char,50.6,1350,J,41.2,NA,21.4,NA,1
+SSS52,2019,8/14/19,Fish,Fish,10,0.759,Arctic char,50.6,1350,J,41.2,NA,21.4,NA,1
+SSS52,2019,8/14/19,Themisto,Themisto sp.,420,39.434,Arctic char,50.6,1350,J,41.2,NA,21.4,NA,1
+TCH01,2017,7/19/17,digested,Digested,NA,NA,Arctic char,72,3000,F,NA,NA,NA,NA,NA
+TCH02,2017,7/19/17,amphipods,Amphipod,NA,NA,Arctic char,64,2100,F,NA,NA,NA,NA,NA
+TCH03,2017,7/19/17,digested,Digested,NA,NA,Arctic char,70,2700,M,NA,NA,NA,NA,NA
+TCH04,2017,7/19/17,digested,Digested,NA,NA,Arctic char,80,5600,M,NA,5,NA,NA,NA
+TCH05,2017,7/19/17,digested,Digested,NA,NA,Arctic char,54,1400,F,NA,NA,NA,NA,NA
+TCH06,2017,7/19/17,digested,Digested,NA,NA,Arctic char,69,2700,M,NA,2,NA,NA,NA
+TCH07,2017,7/19/17,amphipods,Amphipod,NA,NA,Arctic char,68,3100,M,NA,5,NA,NA,NA
