@@ -355,7 +355,7 @@ table(filter(summaries,!is.na(Diet_Mass_g)&!is.na(Mass_g))$Species,
 # Actual data ---------------------------------------------------
 set.seed(42)
 
-setwd("../../Hammer_Hermann/Data/") #Nate's file structure
+setwd("UNH Research/Hammer_Hermann/Data/") #Nate's file structure
 setwd("/Users/larshammer/Hammer_Hermann/") #Lars' file structure
 
 library(tidyverse)
@@ -371,6 +371,9 @@ library(lubridate)
 library(reshape2)
 library(vegan)
 library(MuMIn)
+library(BiodiversityR)
+library(rphylopic)
+library(png)
 
 
 
@@ -382,9 +385,9 @@ theme_set(theme_bw(base_size=25))
 
 '%notin%'<-Negate('%in%')
 
-details<-read_csv("Data/all_dietcontents_final_v2.csv")
-summaries<-read_csv("Data/all_dietsummaries_final.csv")
-dietMat<-read_csv("Data/all_diet_PAdietMat_final_v2.csv")
+details<-read_csv("all_dietcontents_final_v2.csv")
+summaries<-read_csv("all_dietsummaries_final.csv")
+dietMat<-read_csv("all_diet_PAdietMat_final_v2.csv")
 
 
 
@@ -426,9 +429,15 @@ fooYears<-left_join(presenceYears,totalYears)%>%
          prey=gsub("\\.([A-z])"," \\1",prey),
          foo=noo/N,
          Year=as.character(Year))
+#Ordering the prey items so like are by like
+fooYears$preyF<-factor(fooYears$prey,levels=c("Arctic cod","Sand lance","Fish",
+                                              "Gammarus sp.","Gammaracanthus sp.","Onisimus sp.","Themisto sp.","Amphipod",
+                                              "Krill","Mysid","Copepod","Chironomid","Jellyfish","Sea Angel","Miscellaneous Invert",
+                                              "Miscellaneous","Algae","Undigestible","Digested"))
+
 
 #Emphasizing species differences
-ggplot(fooYears,aes(prey,foo,fill=Year))+
+ggplot(fooYears,aes(preyF,foo,fill=Year))+
   geom_col(position="dodge",color="black")+
   scale_fill_viridis_d(name="Species")+
   scale_y_continuous(name="Frequency of Occurrence",limits=c(0,1),expand=expansion(add=0))+
@@ -437,12 +446,36 @@ ggplot(fooYears,aes(prey,foo,fill=Year))+
         axis.title.x=element_text(vjust=5))+
   facet_wrap(~species,nrow=2)
 
+
+
+amphipod<-image_data("fd6af059-2365-4a6e-806a-ce22bb537103",size="512")[[1]]
+sandlance<-image_data("31124fe7-c960-40dd-943b-dbecd53650db",size="512")[[1]]
+cod<-image_data("bba1800a-dd86-451d-a79b-c5944cfe5231",size="512")[[1]]
+krill<-image_data("44a3628d-aafd-45cc-97a6-1cb74bd43dec",size="512")[[1]]
+mysid<-image_data("9efe5b7d-35a1-4044-92af-dfe792200a09",size="512")[[1]]
+copepod<-image_data("c5dbd85a-c4be-4990-a369-c830ad23cb22",size="512")[[1]]
+chironomid<-image_data("834f9ef5-c5bf-4e9e-94c8-3ecb8fb14838",size="128")[[1]]
+jellyfish<-image_data("839b9df7-c97f-444a-a611-95609e950960",size="512")[[1]]
+seaAngel<-rasterGrob(readPNG("sea_angel.png"))
 #Emphasizing inter-annual variation
-ggplot(fooYears,aes(prey,foo,fill=species))+
+ggplot(fooYears,aes(preyF,foo,fill=species))+
   geom_col(position="dodge",color="black")+
+  add_phylopic(cod,alpha=1,x=1,y=0.9,ysize=0.2)+
+  add_phylopic(sandlance,alpha=1,x=2,y=0.9,ysize=0.1)+
+  add_phylopic(amphipod,alpha=1,x=6,y=0.9,ysize=0.5)+
+  add_phylopic(krill,alpha=1,x=9,y=0.9,ysize=0.3)+
+  add_phylopic(mysid,alpha=1,x=10,y=0.9,ysize=0.3)+
+  add_phylopic(copepod,alpha=1,x=11,y=0.9,ysize=0.5)+
+  add_phylopic(chironomid,alpha=1,x=12,y=0.9,ysize=0.25)+
+  add_phylopic(jellyfish,alpha=1,x=13.1,y=0.9,ysize=0.45)+
+  annotation_custom(seaAngel,xmin=13.5,xmax=14.5,ymin=0.8,ymax=1)+
+  geom_vline(aes(xintercept=3.5),lty=3)+
+  geom_vline(aes(xintercept=8.5),lty=3)+
+  geom_vline(aes(xintercept=15.5),lty=3)+
   scale_fill_viridis_d(name="Species")+
   scale_y_continuous(name="Frequency of Occurrence",limits=c(0,1),expand=expansion(add=0))+
   scale_x_discrete(name="Diet Item")+
+  #coord_flip()+
   theme(axis.text.x=element_text(angle=20,hjust=1,vjust=1.12),
         axis.title.x=element_text(vjust=5))+
   facet_wrap(~Year,nrow=3)
