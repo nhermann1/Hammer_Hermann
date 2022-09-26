@@ -458,8 +458,9 @@ chironomid<-image_data("834f9ef5-c5bf-4e9e-94c8-3ecb8fb14838",size="128")[[1]]
 jellyfish<-image_data("839b9df7-c97f-444a-a611-95609e950960",size="512")[[1]]
 seaAngel<-rasterGrob(readPNG("sea_angel.png"))
 #Emphasizing inter-annual variation
-ggplot(fooYears,aes(preyF,foo,fill=species))+
-  geom_col(position="dodge",color="black")+
+ggplot(data=fooYears)+
+  geom_col(aes(preyF,foo,fill=species),
+           position="dodge",color="black",width=0.5)+
   add_phylopic(cod,alpha=1,x=1,y=0.9,ysize=0.2)+
   add_phylopic(sandlance,alpha=1,x=2,y=0.9,ysize=0.1)+
   add_phylopic(amphipod,alpha=1,x=6,y=0.9,ysize=0.5)+
@@ -469,15 +470,18 @@ ggplot(fooYears,aes(preyF,foo,fill=species))+
   add_phylopic(chironomid,alpha=1,x=12,y=0.9,ysize=0.25)+
   add_phylopic(jellyfish,alpha=1,x=13.1,y=0.9,ysize=0.45)+
   annotation_custom(seaAngel,xmin=13.5,xmax=14.5,ymin=0.8,ymax=1)+
-  geom_vline(aes(xintercept=3.5),lty=3)+
-  geom_vline(aes(xintercept=8.5),lty=3)+
-  geom_vline(aes(xintercept=15.5),lty=3)+
+  geom_vline(aes(xintercept=3.5),lty=3,color="black",size=1)+
+  geom_vline(aes(xintercept=8.5),lty=3,color="black",size=1)+
+  geom_vline(aes(xintercept=15.5),lty=3,color="black",size=1)+
   scale_fill_viridis_d(name="Species")+
-  scale_y_continuous(name="Frequency of Occurrence",limits=c(0,1),expand=expansion(add=0))+
+  scale_y_continuous(name="Frequency of Occurrence",
+                     limits=c(0,1),expand=expansion(add=0),
+                     labels=scales::percent_format())+
   scale_x_discrete(name="Diet Item")+
   #coord_flip()+
   theme(axis.text.x=element_text(angle=20,hjust=1,vjust=1.12),
-        axis.title.x=element_text(vjust=5))+
+        axis.title.x=element_text(vjust=5),strip.text=element_text(size=30),
+        panel.grid.major.x=element_line(size=20))+
   facet_wrap(~Year,nrow=3)
 
 
@@ -549,7 +553,7 @@ allEnv.Mat<-allEnv.Mat%>%
                            Year==2019~yearPal[3]))
 
 
-gg_ordiplot <- function(ord, groups, scaling = 1, choices = c(1,2), kind = c("sd", "se", "ehull"), conf=NULL, show.groups="all", ellipse = TRUE, label = FALSE, hull = FALSE, spiders = FALSE, pt.size = 3, plot=TRUE) {
+dgg_ordiplot <- function(ord, groups, scaling = 1, choices = c(1,2), kind = c("sd", "se", "ehull"), conf=NULL, show.groups="all", ellipse = TRUE, label = FALSE, hull = FALSE, spiders = FALSE, pt.size = 3, plot=TRUE) {
   groups <- as.factor(groups)
   if (show.groups[1]=="all") {
     show.groups <- as.vector(levels(groups))
@@ -728,6 +732,165 @@ play3d(spin3d())
 
 
 
+
+# Indicator Species Analysis ----------------------------------------------
+
+
+library(indicspecies)
+
+
+#ISA to see what diet items might be associated with the different years that make them different from each other
+ISA_year = multipatt(as.data.frame(allCount.Mat), allEnv.Mat$Year,
+                     func = "IndVal.g", duleg=TRUE, control = how(nperm=4999))
+
+#What species?
+summary(ISA_year, indvalcomp = T) 
+ISA_year$str
+
+#Extract them, with the year they're significant for
+ISA_year_df<-dplyr::select(subset(ISA_year$sign, p.value<0.05),index,stat,p.value)
+ISA_year_df$Species<-rownames(ISA_year_df)
+ISA_year_df$group<-colnames(ISA_year$B)[ISA_year_df$index]
+ISA_year_df
+
+fullISA_year<-as.data.frame(ISA_year$str)%>%
+  mutate(Species=rownames(ISA_year$str))%>%
+  pivot_longer(cols=colnames(ISA_year$str),names_to="group",values_to="stat")
+
+
+#ISA to see what diet items might be associated with the different time periods
+ISA_species = multipatt(as.data.frame(allCount.Mat), allEnv.Mat$family,
+                        func = "IndVal.g", duleg=TRUE, control = how(nperm=4999))
+
+#What species?
+summary(ISA_species,indvalcomp = T) 
+ISA_species$str
+
+#Extract them, with the year they're significant for
+ISA_species_df<-dplyr::select(subset(ISA_species$sign, p.value<0.05),index,stat,p.value)
+ISA_species_df$Species<-rownames(ISA_species_df)
+ISA_species_df$group<-colnames(ISA_species$B)[ISA_species_df$index]
+ISA_species_df
+
+fullISA_species<-as.data.frame(ISA_species$str)%>%
+  mutate(Species=rownames(ISA_species$str))%>%
+  pivot_longer(cols=colnames(ISA_species$str),names_to="group",values_to="stat")
+
+
+#ISA to see what diet items might be associated with the different time periods
+ISA_spyr = multipatt(as.data.frame(allCount.Mat), paste(allEnv.Mat$family,allEnv.Mat$Year),
+                     func = "IndVal.g", duleg=TRUE, control = how(nperm=4999))
+
+#What species?
+summary(ISA_spyr,indvalcomp = T) 
+ISA_spyr$str
+
+#Extract them, with the year they're significant for
+ISA_spyr_df<-dplyr::select(subset(ISA_spyr$sign, p.value<0.05),index,stat,p.value)
+ISA_spyr_df$Species<-rownames(ISA_spyr_df)
+ISA_spyr_df$group<-colnames(ISA_spyr$B)[ISA_spyr_df$index]
+ISA_spyr_df
+
+fullISA_spyr<-as.data.frame(ISA_spyr$str)%>%
+  mutate(Species=rownames(ISA_spyr$str))%>%
+  pivot_longer(cols=colnames(ISA_spyr$str),names_to="group",values_to="stat")
+
+
+fullISA<-bind_rows(fullISA_species,fullISA_year,fullISA_spyr)%>%
+  mutate(Species=gsub("prey_","",Species),
+         Species=gsub("\\.([A-z])"," \\1",Species),
+         Species=factor(Species,levels=c("Arctic cod","Sand lance","Fish",
+                                         "Gammarus sp.","Gammaracanthus sp.","Onisimus sp.","Themisto sp.","Amphipod",
+                                         "Krill","Mysid","Copepod","Chironomid","Jellyfish","Sea Angel","Miscellaneous Invert",
+                                         "Miscellaneous","Algae","Undigestible","Digested")),
+         group=factor(group,levels=c("Arctic char","Arctic char 2017","Arctic char 2018","Arctic char 2019",
+                                     "Sculpin","Sculpin 2017","Sculpin 2018","Sculpin 2019","2017","2018","2019")))
+
+significantISA<-bind_rows(ISA_species_df,ISA_year_df,ISA_spyr_df)%>%
+  mutate(Species=gsub("prey_","",Species),
+         Species=gsub("\\.([A-z])"," \\1",Species),
+         Species=factor(Species,levels=c("Arctic cod","Sand lance","Fish",
+                                         "Gammarus sp.","Gammaracanthus sp.","Onisimus sp.","Themisto sp.","Amphipod",
+                                         "Krill","Mysid","Copepod","Chironomid","Jellyfish","Sea Angel","Miscellaneous Invert",
+                                         "Miscellaneous","Algae","Undigestible","Digested")),
+         group=factor(group,levels=c("Arctic char","Arctic char 2017","Arctic char 2018","Arctic char 2019",
+                                     "Sculpin","Sculpin 2017","Sculpin 2018","Sculpin 2019","2017","2018","2019")))
+fullISA<-left_join(fullISA,significantISA)%>%
+  mutate(p.value=ifelse(is.na(p.value),"","*"))
+
+legendMap<-data.frame(group=unique(fullISA$group),
+                      xpos=c(1,2,0,0,0,1,1,1,2,2,2),
+                      ypos=c(0,0,1,2,3,1,2,3,1,2,3))
+legendGrob<-ggplotGrob(ggplot(legendMap)+
+  geom_point(aes(xpos,ypos,fill=group),shape=22,size=15,show.legend=F)+
+  geom_text(aes(0.5,-1.6,label="Arctic char",angle=45),size=7)+
+  geom_text(aes(1.75,-1.25,label="Sculpin",angle=45),size=7)+
+  geom_text(aes(-1,1.1,label="2017"),size=7)+
+  geom_text(aes(-1,2.1,label="2018"),size=7)+
+  geom_text(aes(-1,3.1,label="2019"),size=7)+
+  scale_fill_manual(values=c(hcl(h=0,c=200,l=33),hcl(h=0,c=100,l=10),hcl(h=0,c=100,l=50),hcl(h=0,c=100,l=100),
+                             hcl(h=256,c=200,l=33),hcl(h=256,c=100,l=10),hcl(h=256,c=100,l=50),hcl(h=256,c=100,l=100),
+                             hcl(h=0,c=0,l=10),hcl(h=0,c=0,l=50),hcl(h=0,c=0,l=100)))+
+  ylim(-5,5)+xlim(-5,5)+
+  theme_void())
+  
+
+ggplot(fullISA)+
+  geom_col(aes(x=Species,y=stat,fill=group),size=0.05,color="black",position=position_dodge(width=1),show.legend=F)+
+  geom_text(aes(x=Species,y=stat+0.02,label=p.value,group=group),color="black",position=position_dodge(width=1),vjust=0.6)+
+  #scale_fill_brewer(palette="Paired",name="Association")+
+  scale_fill_manual(values=c(hcl(h=0,c=200,l=33),hcl(h=0,c=100,l=10),hcl(h=0,c=100,l=50),hcl(h=0,c=100,l=100),
+                             hcl(h=256,c=200,l=33),hcl(h=256,c=100,l=10),hcl(h=256,c=100,l=50),hcl(h=256,c=100,l=100),
+                             hcl(h=0,c=0,l=10),hcl(h=0,c=0,l=50),hcl(h=0,c=0,l=100)))+
+  scale_x_discrete(name="Diet Item")+
+  scale_y_continuous(name="ISA Stat (A*B)",limits=c(0,1),expand=expansion(0))+
+  coord_flip()+
+  theme(legend.position=c(0.8,0.75),legend.background=element_rect(color="black"),
+        plot.margin=margin(15,20,15,15,unit="pt"),panel.grid.major.y=element_blank())+
+  annotation_custom(legendGrob,xmin=7.5,xmax=20,ymin=-0.15,ymax=1.4)
+
+
+#Making it as a pretty table
+tableISA<-fullISA%>%
+  mutate(stat=ifelse(stat==0,"",round(stat,4)))%>%
+  pivot_wider(id_cols="Species",names_from="group",values_from="stat")%>%
+  arrange(Species)
+
+library(reactable)
+reactable(tableISA,
+          defaultColDef = colDef(
+            cell = function(value) {
+              if (value %in% round(significantISA$stat,4)) {
+                paste0(value,"*")
+              } else {value}
+            },
+            header = function(value) gsub("Arctic char", "",
+                                          gsub("Sculpin","", value, fixed = TRUE)), 
+            style = function(value) {
+             if (value %in% round(significantISA$stat,4)) {
+                 color <- "black"
+                 weight <- 600
+             } else {
+                 color <- "grey50"
+                 weight <- 300
+             }
+               list(color = color, fontWeight = weight)
+             },
+            minWidth = 90,align="center"),
+          columns = list(
+            Species = colDef(minWidth=155,align="left")),
+          columnGroups = list(
+            colGroup(name = "Arctic char", align="left",
+                     columns = colnames(tableISA)[(grepl("Arctic char",colnames(tableISA)))]),
+            colGroup(name = "Sculpin", align="left",
+                     columns = colnames(tableISA)[(grepl("Sculpin", colnames(tableISA)))]),
+            colGroup(name="Combined",align="left",
+                     columns=c("2017","2018","2019"))
+          ),
+          defaultPageSize = 20,highlight = T,striped=T)
+
+
+
 # Ignore for now ----------------------------------------------------------
 
 #PERMANOVA for the interaction of Year and fortnight 
@@ -787,37 +950,6 @@ centroidDists%>%
   theme(panel.border = element_blank(),axis.text.x=element_text(angle=90,vjust=0.5,hjust=1))
 #Note that the centroids between char are further apart on average (0.55) than the sculpin are (0.36) 
   #or the two species are from each other in the same year (0.36) or even generally (0.44)
-
-
-library(indicspecies)
-
-
-#ISA to see what diet items might be associated with the different years that make them different from each other
-countYear_ISA = multipatt(as.data.frame(allCount.Mat), allEnv.Mat$Year,
-                          func = "IndVal.g", duleg=TRUE, control = how(nperm=4999))
-
-#What species?
-summary(countYear_ISA) #2017 had amphipod and gammaracanthus IS, but 2018 had Onisimus
-countYear_ISA$str
-
-#Extract them, with the year they're significant for
-yIndSp<-dplyr::select(subset(countYear_ISA$sign, p.value<0.05),index,stat,p.value)
-yIndSp$Species<-rownames(yIndSp)
-yIndSp$time<-colnames(countYear_ISA$B)[yIndSp$index]
-
-
-#ISA to see what diet items might be associated with the different time periods
-countSP_ISA = multipatt(as.data.frame(allCount.Mat), allEnv.Mat$family,
-                          func = "IndVal.g", duleg=TRUE, control = how(nperm=4999))
-
-#What species?
-summary(countSP_ISA) #Early has Amphipod and Gammaracanthus, Middle has Mysid, Late has Onisimus and Fish
-countSP_ISA$str
-
-#Extract them, with the year they're significant for
-sIndSp<-dplyr::select(subset(countSP_ISA$sign, p.value<0.05),index,stat,p.value)
-sIndSp$Species<-rownames(sIndSp)
-sIndSp$time<-colnames(countSP_ISA$B)[sIndSp$index]
 
 
 #Need new axes R2 scores (from PC-ORD)
