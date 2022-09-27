@@ -356,7 +356,7 @@ table(filter(summaries,!is.na(Diet_Mass_g)&!is.na(Mass_g))$Species,
 set.seed(42)
 
 setwd("UNH Research/Hammer_Hermann/Data/") #Nate's file structure
-setwd("/Users/larshammer/Hammer_Hermann/") #Lars' file structure
+setwd("/Users/larshammer/Hammer_Hermann/Data/") #Lars' file structure
 
 library(tidyverse)
 library(ggplot2)
@@ -1000,6 +1000,14 @@ Accum.sculp
 accum.longsculp <- accumcomp.long(Accum.sculp, ci = NA, label.freq = 5)
 head(accum.longsculp)
 
+##test for sculpin
+sculpenv2 <- sculpenv
+sculpenv2$test <- 1
+Accum.sculp2 <- accumcomp(sculpcom, y = sculpenv2, factor = 'test', method = 'exact', conditioned = F, plotit = F)
+
+accum.longsculp2 <- accumcomp.long(Accum.sculp2, ci = NA, label.freq = 5)
+accum.longsculp2$Species <- 'Sculpin'
+
 ##char
 Accum.char <- accumcomp(charcom, y=charenv, factor = 'Year',
                          method ='exact', conditioned = F, plotit = F)
@@ -1007,11 +1015,21 @@ Accum.char
 accum.longchar <- accumcomp.long(Accum.char, ci = NA, label.freq = 5)
 head(accum.longchar)
 
+##test for char
+charenv2 <- charenv
+charenv2$test <- 1
+Accum.char2 <- accumcomp(charcom, y = charenv2, factor = 'test', method = 'exact', conditioned = F, plotit = F)
+
+accum.longchar2 <- accumcomp.long(Accum.char2, ci = NA, label.freq = 5)
+accum.longchar2$Species <- 'Arctic char'
+
+
 accum.longchar$Species <- 'Arctic char' ##creating a column for species so we can bind together
 accum.longsculp$Species <- 'Sculpin'
 
 
 accum.long <- rbind(accum.longchar, accum.longsculp)
+accum.long2 <- rbind(accum.longchar2, accum.longsculp2)
 
 ##plot
 PAAplot <- ggplot(data = accum.long, aes(x = Sites, y = Richness,ymax = UPR, ymin = LWR))+
@@ -1020,11 +1038,12 @@ PAAplot <- ggplot(data = accum.long, aes(x = Sites, y = Richness,ymax = UPR, ymi
   geom_point(data=subset(accum.long, labelit==TRUE),
              aes(colour=Grouping),size = 5)+
   scale_color_manual(values = c('black', 'grey50', 'grey80'))+
+  geom_line(data = accum.long2, aes(x = Sites, y = Richness, ymax = UPR, ymin = LWR), lty = 2)+
   # geom_ribbon(aes(color=Grouping), alpha = 0.2, show.legend = F)+
   labs(x = 'Number of Samples', y = 'Species Richness', color = 'Year')+theme_bw()
 
 ##only do this once
-# tiff('Figures/PreyAccumulationCurve.tiff', width = 6.5, height = 5.5, res = 300, units = 'in')
+# tiff('/Users/larshammer/Hammer_Hermann/Figures/PreyAccumulationCurve.tiff', width = 6.5, height = 5.5, res = 300, units = 'in')
 
 PAAplot
 
@@ -1058,19 +1077,35 @@ relcon %>%
 relcon %>% group_by(species2) %>% 
   summarize(min = min(relative_consumption), max = max(relative_consumption))
 
-##no vif problems with variables by themselves
-bingelm1 <- glm(relative_consumption~species2 + Year + month + Mass_g, data = relcon, na.action = 'na.fail', family = 'gaussian')
-vif(bingelm1)
-dredge(bingelm1)
+##running a hurdle model
 
-relconplot <- ggplot(relcon)+
+##first we need to determine factors affecting whether we feed or not
+relcon$feed <- ifelse(relcon$relative_consumption > 0, 1, 0)
+
+table(relcon$feed, relcon$species2) ##looks right at least for char
+
+##don't bother with mass because species are so different in weight already
+bingelm1 <- glm(feed~species2 + Year + month, data = relcon, na.action = 'na.fail', family = 'binomial')
+vif(bingelm1)
+dredge(bingelm1) ##species is the only thing that comes out might be best as a table
+
+##now removing those who didn't feed
+relcon2 <- subset(relcon, feed == 1)
+
+bingelm2 <- glm(relative_consumption ~ species2 + Year + month, data = relcon2, 
+                na.action = 'na.fail', family = 'Gamma')
+vif(bingelm2)
+dredge(bingelm2)
+
+
+relconplot <- ggplot(relcon2)+
   geom_boxplot(aes(x = Year, y = relative_consumption), outlier.shape = NA)+
   geom_point(aes(x = Year, y = relative_consumption), position = position_jitter(width = .2))+
   facet_grid(~species2)+
   labs(y = 'Relative Consumption (%)')
 
 ##only do this once
-# tiff('Figures/RelativeConsumption_year.tiff', width = 6.5, height = 5.5, res = 300, units = 'in')
+# tiff('/users/larshammer/Hammer_Hermann/Figures/RelativeConsumption_year.tiff', width = 6.5, height = 5.5, res = 300, units = 'in')
 
 relconplot
 
