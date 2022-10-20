@@ -392,6 +392,25 @@ dietMat<-read_csv("all_diet_PAdietMat_final_v2.csv")
 
 
 
+# Data Summaries ----------------------------------------------------------
+
+dataSummaries<-summaries%>%
+  mutate(family=ifelse(Species=="Char","Arctic char","Sculpin"))%>%
+  group_by(family)%>%
+  summarise(N=n(),
+            Mass=mean(Mass_g,na.rm=T),
+            Mass_SE=sd(Mass_g,na.rm=T)/sqrt(N),
+            TL=mean(TL_mm,na.rm=T),
+            TL_SE=sd(TL_mm,na.rm=T)/sqrt(N),
+            HSI=mean(100*(Liver_Mass_g/(Mass_g-Liver_Mass_g)),na.rm=T),
+            HSI_SE=sd(100*(Liver_Mass_g/(Mass_g-Liver_Mass_g)),na.rm=T)/sqrt(N),
+            GSI=mean(100*(Gonad_Mass_g/(Mass_g-Gonad_Mass_g)),na.rm=T),
+            GSI_SE=sd(100*(Gonad_Mass_g/(Mass_g-Gonad_Mass_g)),na.rm=T)/sqrt(N),
+            fultonK=mean(10^5*Mass_g/TL_mm^3,na.rm=T),
+            fultonK_SE=sd(10^5*Mass_g/TL_mm^3,na.rm=T)/sqrt(N))
+
+
+
 # Analyses--Nate ----------------------------------------------------------
 
 #### Frequency of Occurrence
@@ -470,9 +489,13 @@ ggplot(data=fooYears)+
   add_phylopic(chironomid,alpha=1,x=12,y=0.9,ysize=0.25)+
   add_phylopic(jellyfish,alpha=1,x=13.1,y=0.9,ysize=0.45)+
   annotation_custom(seaAngel,xmin=13.5,xmax=14.5,ymin=0.8,ymax=1)+
-  geom_vline(aes(xintercept=3.5),lty=3,color="black",size=1)+
-  geom_vline(aes(xintercept=8.5),lty=3,color="black",size=1)+
-  geom_vline(aes(xintercept=15.5),lty=3,color="black",size=1)+
+  geom_vline(aes(xintercept=3.5),lty=3,color="black",size=1.5)+
+  geom_vline(aes(xintercept=8.5),lty=3,color="black",size=1.5)+
+  geom_vline(aes(xintercept=15.5),lty=3,color="black",size=1.5)+
+  geom_segment(aes(x=3.62,xend=3.62,y=0.88,yend=0.95),size=1.5)+
+  geom_segment(aes(x=8.38,xend=8.38,y=0.88,yend=0.95),size=1.5)+
+  geom_segment(aes(x=3.6,xend=5.7,y=0.95,yend=0.95),size=1.5)+
+  geom_segment(aes(x=6.3,xend=8.4,y=0.95,yend=0.95),size=1.5)+
   scale_fill_viridis_d(name="Species")+
   scale_y_continuous(name="Frequency of Occurrence",
                      limits=c(0,1),expand=expansion(add=0),
@@ -776,7 +799,7 @@ fullISA_species<-as.data.frame(ISA_species$str)%>%
   mutate(Species=rownames(ISA_species$str))%>%
   pivot_longer(cols=colnames(ISA_species$str),names_to="group",values_to="stat")
 
-
+## Skipping ##
 #ISA to see what diet items might be associated with the different time periods
 ISA_spyr = multipatt(as.data.frame(allCount.Mat), paste(allEnv.Mat$family,allEnv.Mat$Year),
                      func = "IndVal.g", duleg=TRUE, control = how(nperm=4999))
@@ -796,27 +819,27 @@ fullISA_spyr<-as.data.frame(ISA_spyr$str)%>%
   pivot_longer(cols=colnames(ISA_spyr$str),names_to="group",values_to="stat")
 
 
-fullISA<-bind_rows(fullISA_species,fullISA_year,fullISA_spyr)%>%
+fullISA<-bind_rows(fullISA_species,fullISA_year)%>% #ADD IN spyr IF NEEDED
   mutate(Species=gsub("prey_","",Species),
          Species=gsub("\\.([A-z])"," \\1",Species),
          Species=factor(Species,levels=c("Arctic cod","Sand lance","Fish",
                                          "Gammarus sp.","Gammaracanthus sp.","Onisimus sp.","Themisto sp.","Amphipod",
                                          "Krill","Mysid","Copepod","Chironomid","Jellyfish","Sea Angel","Miscellaneous Invert",
                                          "Miscellaneous","Algae","Undigestible","Digested")),
-         group=factor(group,levels=c("Arctic char","Arctic char 2017","Arctic char 2018","Arctic char 2019",
-                                     "Sculpin","Sculpin 2017","Sculpin 2018","Sculpin 2019","2017","2018","2019")))
+         group=factor(group,levels=c("Arctic char","Sculpin","2017","2018","2019")))
 
-significantISA<-bind_rows(ISA_species_df,ISA_year_df,ISA_spyr_df)%>%
+significantISA<-bind_rows(ISA_species_df,ISA_year_df)%>%
   mutate(Species=gsub("prey_","",Species),
          Species=gsub("\\.([A-z])"," \\1",Species),
          Species=factor(Species,levels=c("Arctic cod","Sand lance","Fish",
                                          "Gammarus sp.","Gammaracanthus sp.","Onisimus sp.","Themisto sp.","Amphipod",
                                          "Krill","Mysid","Copepod","Chironomid","Jellyfish","Sea Angel","Miscellaneous Invert",
                                          "Miscellaneous","Algae","Undigestible","Digested")),
-         group=factor(group,levels=c("Arctic char","Arctic char 2017","Arctic char 2018","Arctic char 2019",
-                                     "Sculpin","Sculpin 2017","Sculpin 2018","Sculpin 2019","2017","2018","2019")))
+         group=factor(group,levels=c("Arctic char","Sculpin","2017","2018","2019")))
 fullISA<-left_join(fullISA,significantISA)%>%
-  mutate(p.value=ifelse(is.na(p.value),"","*"))
+  mutate(p.value.sig=case_when(p.value<0.001~"***",
+                               p.value<0.01 & p.value>=0.001~"**",
+                               p.value<=0.05 & p.value>=0.01~"*"))
 
 legendMap<-data.frame(group=unique(fullISA$group),
                       xpos=c(1,2,0,0,0,1,1,1,2,2,2),
@@ -852,22 +875,16 @@ ggplot(fullISA)+
 
 #Making it as a pretty table
 tableISA<-fullISA%>%
-  mutate(stat=ifelse(stat==0,"",round(stat,4)))%>%
-  pivot_wider(id_cols="Species",names_from="group",values_from="stat")%>%
+  mutate(stat=ifelse(stat==0,"",round(stat,4)),
+         stat.sig=gsub("NA","",paste0(stat,p.value.sig)))%>%
+  pivot_wider(id_cols="Species",names_from="group",values_from="stat.sig")%>%
   arrange(Species)
 
 library(reactable)
 reactable(tableISA,
           defaultColDef = colDef(
-            cell = function(value) {
-              if (value %in% round(significantISA$stat,4)) {
-                paste0(value,"*")
-              } else {value}
-            },
-            header = function(value) gsub("Arctic char", "",
-                                          gsub("Sculpin","", value, fixed = TRUE)), 
             style = function(value) {
-             if (value %in% round(significantISA$stat,4)) {
+             if (grepl("\\*",value)) {
                  color <- "black"
                  weight <- 600
              } else {
@@ -879,14 +896,7 @@ reactable(tableISA,
             minWidth = 90,align="center"),
           columns = list(
             Species = colDef(minWidth=155,align="left")),
-          columnGroups = list(
-            colGroup(name = "Arctic char", align="left",
-                     columns = colnames(tableISA)[(grepl("Arctic char",colnames(tableISA)))]),
-            colGroup(name = "Sculpin", align="left",
-                     columns = colnames(tableISA)[(grepl("Sculpin", colnames(tableISA)))]),
-            colGroup(name="Combined",align="left",
-                     columns=c("2017","2018","2019"))
-          ),
+          
           defaultPageSize = 20,highlight = T,striped=T)
 
 
