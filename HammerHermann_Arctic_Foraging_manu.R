@@ -1066,6 +1066,7 @@ library(MuMIn)
 library(lme4)
 library(lmerTest)
 ##removing unneccesary columns and unusable data
+
 relcon <- summaries[,1:9] ## unneccessary columns
 relcon <- subset(relcon, !is.na(Diet_Mass_g)) ## removing fish with unknown diet masses
 relcon <- subset(relcon, !is.na(Mass_g)) ## removing fish with unknown masses
@@ -1090,7 +1091,7 @@ relcon %>% group_by(species2) %>%
 ##running a hurdle model
 
 ##first we need to determine factors affecting whether we feed or not
-relcon$feed <- ifelse(relcon$relative_consumption > 0, 1, 0)
+relcon$feed <- factor(ifelse(relcon$relative_consumption > 0, 1, 0))
 
 table(relcon$feed, relcon$species2) ##looks right at least for char
 
@@ -1108,11 +1109,13 @@ vif(bingelm2)
 dredge(bingelm2)
 
 
-relconplot <- ggplot(relcon2)+
+relconplot <- ggplot(relcon)+
   geom_boxplot(aes(x = Year, y = relative_consumption), outlier.shape = NA)+
-  geom_point(aes(x = Year, y = relative_consumption), position = position_jitter(width = .2))+
+  geom_point(aes(x = Year, y = relative_consumption, shape = feed), position = position_jitter(width = .2), show.legend = F)+
+  scale_shape_manual(values = c(21, 19))+
   facet_grid(~species2)+
-  labs(y = 'Relative Consumption (%)')
+  labs(y = 'Relative Consumption (%)')+
+  theme_bw()
 
 ##only do this once
 # tiff('/users/larshammer/Hammer_Hermann/Figures/RelativeConsumption_year.tiff', width = 6.5, height = 5.5, res = 300, units = 'in')
