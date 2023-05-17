@@ -1086,7 +1086,15 @@ relcon %>%
   summarize(mean = mean(relative_consumption))
 
 relcon %>% group_by(species2) %>% 
-  summarize(min = min(relative_consumption), max = max(relative_consumption))
+  summarize(min = min(relative_consumption), max = max(relative_consumption), mean = mean(relative_consumption))
+
+## wilcoxon test looking at species
+wilcox.test(relcon$relative_consumption~relcon$species2)
+
+## looking at years
+wilcox.test(relcon$relative_consumption~relcon$Year)
+
+summary(lm(relcon$relative_consumption~relcon$species2*relcon$Year))
 
 ##running a hurdle model
 
