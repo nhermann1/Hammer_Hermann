@@ -355,7 +355,7 @@ table(filter(summaries,!is.na(Diet_Mass_g)&!is.na(Mass_g))$Species,
 # Actual data ---------------------------------------------------
 set.seed(42)
 
-setwd("UNH Research/Hammer_Hermann/Data/") #Nate's file structure
+setwd("~/UNH Research/Hammer_Hermann/Data/") #Nate's file structure
 setwd("/Users/larshammer/Hammer_Hermann/Data/") #Lars' file structure
 
 library(tidyverse)
@@ -369,11 +369,17 @@ library(readr)
 library(gridExtra)
 library(lubridate)
 library(reshape2)
-library(vegan)
 library(MuMIn)
 library(BiodiversityR)
 library(rphylopic)
 library(png)
+library(vegan)
+library(RVAideMemoire)
+library(usedist)
+library(indicspecies)
+library(ggpubr)
+library(rgl)
+
 
 
 
@@ -399,21 +405,29 @@ dataSummaries<-summaries%>%
   group_by(family)%>%
   summarise(N=n(),
             Mass=mean(Mass_g,na.rm=T),
-            Mass_SE=sd(Mass_g,na.rm=T)/sqrt(N),
+            Mass_SD=sd(Mass_g,na.rm=T),
             TL=mean(TL_mm,na.rm=T),
-            TL_SE=sd(TL_mm,na.rm=T)/sqrt(N),
+            TL_SD=sd(TL_mm,na.rm=T),
             HSI=mean(100*(Liver_Mass_g/(Mass_g-Liver_Mass_g)),na.rm=T),
-            HSI_SE=sd(100*(Liver_Mass_g/(Mass_g-Liver_Mass_g)),na.rm=T)/sqrt(N),
+            HSI_SD=sd(100*(Liver_Mass_g/(Mass_g-Liver_Mass_g)),na.rm=T),
             GSI=mean(100*(Gonad_Mass_g/(Mass_g-Gonad_Mass_g)),na.rm=T),
-            GSI_SE=sd(100*(Gonad_Mass_g/(Mass_g-Gonad_Mass_g)),na.rm=T)/sqrt(N),
+            GSI_SD=sd(100*(Gonad_Mass_g/(Mass_g-Gonad_Mass_g)),na.rm=T),
             fultonK=mean(10^5*Mass_g/TL_mm^3,na.rm=T),
-            fultonK_SE=sd(10^5*Mass_g/TL_mm^3,na.rm=T)/sqrt(N))
+            fultonK_SD=sd(10^5*Mass_g/TL_mm^3,na.rm=T))
 
 
 
 # Analyses--Nate ----------------------------------------------------------
 
 #### Frequency of Occurrence
+
+sumFOO<-filter(dietMat)%>%
+  dplyr::select(matches("^prey"))%>%
+  t()%>%as.data.frame()%>%
+  summarise(foo=rowSums(.)/nrow(dietMat),
+            N=rowSums(.),
+            prey=substr(row.names(.),6,100))
+
 
 #Cumulative across years
 SculpinFOO<-filter(dietMat,Species %in% c("Slimy","Fourhorn"))%>%
@@ -426,7 +440,9 @@ CharFOO<-filter(dietMat,Species=="Arctic char")%>%
 
 foo<-bind_rows(data.frame(foo=CharFOO,species="Arctic char",prey=gsub("prey_","",colnames(dplyr::select(dietMat,matches("^prey"))))),
                data.frame(foo=SculpinFOO,species="Sculpin",prey=gsub("prey_","",colnames(dplyr::select(dietMat,matches("^prey"))))))%>%
-  mutate(prey=gsub("\\.","\n",prey))
+  mutate(prey=gsub("\\.","\n",prey))%>%
+  group_by(prey)%>%
+  mutate(diff=max(foo)-min(foo))
 
 ggplot(foo,aes(prey,foo,fill=species))+
   geom_col(position="dodge")
@@ -466,16 +482,16 @@ ggplot(fooYears,aes(preyF,foo,fill=Year))+
   facet_wrap(~species,nrow=2)
 
 
-
+#Pulling from RPhylopic but they have been lost, need to update
 amphipod<-image_data("fd6af059-2365-4a6e-806a-ce22bb537103",size="512")[[1]]
-sandlance<-image_data("31124fe7-c960-40dd-943b-dbecd53650db",size="512")[[1]]
-cod<-image_data("bba1800a-dd86-451d-a79b-c5944cfe5231",size="512")[[1]]
-krill<-image_data("44a3628d-aafd-45cc-97a6-1cb74bd43dec",size="512")[[1]]
-mysid<-image_data("9efe5b7d-35a1-4044-92af-dfe792200a09",size="512")[[1]]
-copepod<-image_data("c5dbd85a-c4be-4990-a369-c830ad23cb22",size="512")[[1]]
-chironomid<-image_data("834f9ef5-c5bf-4e9e-94c8-3ecb8fb14838",size="128")[[1]]
-jellyfish<-image_data("839b9df7-c97f-444a-a611-95609e950960",size="512")[[1]]
-seaAngel<-rasterGrob(readPNG("sea_angel.png"))
+sandlance<-image_data("silhouettes/31124fe7-c960-40dd-943b-dbecd53650db",size="512")[[1]]
+cod<-image_data("silhouettes/bba1800a-dd86-451d-a79b-c5944cfe5231",size="512")[[1]]
+krill<-image_data("silhouettes/44a3628d-aafd-45cc-97a6-1cb74bd43dec",size="512")[[1]]
+mysid<-image_data("silhouettes/9efe5b7d-35a1-4044-92af-dfe792200a09",size="512")[[1]]
+copepod<-image_data("silhouettes/c5dbd85a-c4be-4990-a369-c830ad23cb22",size="512")[[1]]
+chironomid<-image_data("silhouettes/834f9ef5-c5bf-4e9e-94c8-3ecb8fb14838",size="128")[[1]]
+jellyfish<-image_data("silhouettes/839b9df7-c97f-444a-a611-95609e950960",size="512")[[1]]
+seaAngel<-rasterGrob(readPNG("silhouettes/sea_angel.png"))
 #Emphasizing inter-annual variation
 ggplot(data=fooYears)+
   geom_col(aes(preyF,foo,fill=species),
@@ -510,12 +526,6 @@ ggplot(data=fooYears)+
 
 
 #### NMDS
-
-library(vegan)
-library(RVAideMemoire)
-library(usedist)
-library(indicspecies)
-
 
 #Duplicating with ALL the counts
 allCount.Mat<-as.matrix(dplyr::select(dietMat,matches("^prey")))
@@ -733,11 +743,9 @@ axes23<-ggplot()+
              color="red",size=3,alpha=0.7,show.legend=F)+
   xlab("Axis 2")+ylab("Axis 3")
 
-library(ggpubr)
 ggarrange(axes12,axes13,axes23,common.legend = T,legend="top",ncol=1)
 
 
-library(rgl)
 interleave <- function(v1, v2) as.vector(rbind(v1,v2))
 
 plot3d(NMDS_scores$MDS1,NMDS_scores$MDS2,NMDS_scores$MDS3,
@@ -759,7 +767,6 @@ play3d(spin3d())
 # Indicator Species Analysis ----------------------------------------------
 
 
-library(indicspecies)
 
 
 #ISA to see what diet items might be associated with the different years that make them different from each other
@@ -840,6 +847,12 @@ fullISA<-left_join(fullISA,significantISA)%>%
   mutate(p.value.sig=case_when(p.value<0.001~"***",
                                p.value<0.01 & p.value>=0.001~"**",
                                p.value<=0.05 & p.value>=0.01~"*"))
+fullISA%>%
+  group_by(group)%>%
+  summarise(meanISA=mean(stat),
+            medianISA=median(stat),
+            seISA=sd(stat)/n_distinct(Species),
+            minISA=min(stat),max=max(stat))
 
 legendMap<-data.frame(group=unique(fullISA$group),
                       xpos=c(1,2,0,0,0,1,1,1,2,2,2),
@@ -901,7 +914,7 @@ reactable(tableISA,
 
 
 
-# Ignore for now ----------------------------------------------------------
+# PerMANOVA and post-hocs ----------------------------------------------------------
 
 #PERMANOVA for the interaction of Year and fortnight 
 set.seed(42)
@@ -909,7 +922,7 @@ adonis(original.dist~as.character(Year)*family,
        data=allEnv.Mat,permutations=1000,method="bray")
 
 #significant pairwise test of the time period
-pairwise.perm.manova(original.dist,allEnv.Mat$Year,nperm=1000)
+pairwise.perm.manova(original.dist,paste(allEnv.Mat$Year,allEnv.Mat$family),nperm=1000)
 
 fdisp<-betadisper(original.dist,allEnv.Mat$Year)
 fdisp
@@ -926,11 +939,12 @@ dist_multi_centroids(original.dist,allEnv.Mat$family)
 
 
 
-sydisp<-betadisper(original.dist,paste(allEnv.Mat$family,allEnv.Mat$Year))
+sydisp<-betadisper(original.dist,paste(allEnv.Mat$family,allEnv.Mat$Year,sep="."))
 sydisp
-permutest(ydisp)
+permutest(sydisp)
 centroidDists<-dist_multi_centroids(original.dist,paste(allEnv.Mat$family,allEnv.Mat$Year))
-labels(centroidDists)
+centroidDists
+permutest(centroidDists)
 
 charCentroids<-c(0.5168236,0.6386732,0.4974933)
 sculpCentroids<-c(0.4926337,0.2285743,0.3625625)
@@ -938,6 +952,7 @@ sameYearCentroids<-c(0.2207148,0.3005605,0.5710684)
 interSpeciesCentroids<-c(sameYearCentroids,0.4323695,0.6286381,0.5417022,0.6648193,0.3000332,0.3775107)
 mean(charCentroids)
 mean(sculpCentroids)
+mean(c(charCentroids,sculpCentroids))
 mean(sameYearCentroids)
 mean(interSpeciesCentroids)
 
@@ -954,6 +969,9 @@ centroidDists%>%
   geom_rect(aes(xmin=3.5,ymin=0.5,xmax=4.5,ymax=1.5),fill="transparent",color="red",size=2)+
   geom_rect(aes(xmin=4.5,ymin=1.5,xmax=5.5,ymax=2.5),fill="transparent",color="red",size=2)+
   geom_rect(aes(xmin=5.5,ymin=2.5,xmax=6.5,ymax=3.5),fill="transparent",color="red",size=2)+
+  geom_rect(aes(xmin=0.5,ymin=3.5,xmax=1.5,ymax=4.5),fill="transparent",color="red",size=2)+
+  geom_rect(aes(xmin=1.5,ymin=4.5,xmax=2.5,ymax=5.5),fill="transparent",color="red",size=2)+
+  geom_rect(aes(xmin=2.5,ymin=5.5,xmax=3.5,ymax=6.5),fill="transparent",color="red",size=2)+
   scale_fill_viridis_c(option="B",name="Centroid\ndistance",na.value="white")+
   scale_x_discrete(name="",expand=expansion(0))+
   scale_y_discrete(name="",expand=expansion(0))+
@@ -961,6 +979,19 @@ centroidDists%>%
 #Note that the centroids between char are further apart on average (0.55) than the sculpin are (0.36) 
   #or the two species are from each other in the same year (0.36) or even generally (0.44)
 
+bind_cols(group=sydisp[["group"]],distance=sydisp[["distances"]])%>%
+  separate(group,into=c("Species","Year"),sep="\\.")%>%
+  ggplot()+
+  geom_boxplot(aes(x=Year,y=distance,fill=Species),outlier.shape=NA,size=1.5,show.legend = F)+
+  geom_point(aes(x=Year,y=distance,fill=Species,color=Species),
+             shape=21,size=5,position=position_jitterdodge(jitter.width=0.1,seed=42))+
+  scale_fill_viridis_d(option="E",name="Family")+
+  scale_color_manual(values=c("white","black"),guide="none")+
+  scale_y_continuous(name="Distance to Centroid")
+  
+check<-bind_cols(group=sydisp[["group"]],distance=sydisp[["distances"]])%>%
+  separate(group,into=c("Species","Year"),sep="\\.")
+summary(lm(distance~Species*Year,data=check))
 
 #Need new axes R2 scores (from PC-ORD)
 #Probably want to do the years on a plot and then a split 2017-2018 two panel plot (so 3 total)
@@ -1085,7 +1116,8 @@ relcon %>%
   summarize(mean = mean(relative_consumption))
 
 relcon %>% group_by(species2) %>% 
-  summarize(min = min(relative_consumption), max = max(relative_consumption))
+  summarize(min = min(relative_consumption), max = max(relative_consumption),
+            mean = mean(relative_consumption), se = sd(relative_consumption)/sqrt(n()))
 
 ##running a hurdle model
 
@@ -1135,3 +1167,72 @@ ggplot(relcon)+
   labs(y = 'Relative Consumption (%)')
 
 
+
+
+# Binge-feeding -----------------------------------------------------------
+
+#Model formulas for calculating mass and temperature dependent Cmax
+Cmax<-function(df,W) {
+  Cmax=df$CA*W^df$CB
+}
+Ft<-function(df,T) {
+  G1=(1/(df$CTO-df$CQ))*log((0.98*(1-df$CK1))/(df$CK1*0.02))
+  G2=(1/(df$CTL-df$CTM))*log((0.98*(1-df$CK4))/(df$CK4*0.02))
+  L1=exp(G1*(T-df$CQ))
+  L2=exp(G2*(df$CTL-T))
+  Ka=(df$CK1*L1)/(1+df$CK1*(L1-1))
+  Kb=(df$CK4*L2)/(1+df$CK4*(L2-1))
+  F=Ka*Kb
+}
+#Data (Deslauriers et al. 2017 provide the dataframe but the values from Mesa and Moss)
+bioenerg<-read_csv("Parameters_official.csv")
+
+
+#Size range for Arctic char and Sculpins
+summaries%>%
+  mutate(family=ifelse(Species=="Char","Arctic char","Sculpin"))%>%
+  group_by(family)%>%
+  summarise(Mass=range(Mass_g,na.rm=T),
+            mean=mean(Mass_g,na.rm=T))
+
+#Estimated Cmax for those max and min sizes
+print(100*Ft(filter(bioenerg,Sci_Name=="Salvelinus confluentus"),c(-2.5,-2.5,11,11))*Cmax(filter(bioenerg,Sci_Name=="Salvelinus confluentus"),c(8.2,6600)))
+
+print(100*Ft(filter(bioenerg,Sci_Name=="Cottus asper"),c(-2.5,-2.5,11,11))*Cmax(filter(bioenerg,Sci_Name=="Cottus asper"),c(0.8,400)))
+
+
+#For the mean size at a maximum temperature
+print(100*Ft(filter(bioenerg,Sci_Name=="Salvelinus confluentus"),11)*Cmax(filter(bioenerg,Sci_Name=="Salvelinus confluentus"),2609))
+
+print(100*Ft(filter(bioenerg,Sci_Name=="Cottus asper"),11)*Cmax(filter(bioenerg,Sci_Name=="Cottus asper"),78.9))
+
+#All individual values
+print(100*Ft(filter(bioenerg,Sci_Name=="Salvelinus confluentus"),11)*Cmax(filter(bioenerg,Sci_Name=="Salvelinus confluentus"),
+                                                                          filter(summaries,Species=="Char")$Mass_g))
+print(100*Ft(filter(bioenerg,Sci_Name=="Cottus asper"),11)*Cmax(filter(bioenerg,Sci_Name=="Cottus asper"),
+                                                                filter(summaries,Species!="Char")$Mass_g))
+
+
+#Comparing with the actual relcon for each individual
+relcon%>%
+  mutate(Cmax=ifelse(species2=="Sculpin",
+                     100*Ft(filter(bioenerg,Sci_Name=="Cottus asper"),11)*Cmax(filter(bioenerg,Sci_Name=="Cottus asper"),Mass_g),
+                     100*Ft(filter(bioenerg,Sci_Name=="Salvelinus confluentus"),11)*Cmax(filter(bioenerg,Sci_Name=="Salvelinus confluentus"),Mass_g)))%>%
+  ggplot()+
+  geom_point(aes(x=relative_consumption,y=Cmax,fill=species2),shape=21,size=5)+
+  geom_abline(aes(slope=1,intercept=0))+
+  scale_x_continuous(limits=c(0,11))+
+  scale_y_continuous(limits=c(0,11))+
+  scale_fill_viridis_d(option="E")+
+  theme(legend.position = c(0.5,0.8))
+  
+relcon%>%
+  mutate(Cmax=ifelse(species2=="Sculpin",
+                     100*Ft(filter(bioenerg,Sci_Name=="Cottus asper"),11)*Cmax(filter(bioenerg,Sci_Name=="Cottus asper"),Mass_g),
+                     100*Ft(filter(bioenerg,Sci_Name=="Salvelinus confluentus"),11)*Cmax(filter(bioenerg,Sci_Name=="Salvelinus confluentus"),Mass_g)),
+         exceed=ifelse(Cmax<=relative_consumption,"y","n"))%>%
+  group_by(species2)%>%
+  summarise(N=n(),
+            N_exceed=sum(exceed=="y"),
+            p_exceed=N_exceed/N)
+(8+39)/(52+75)
