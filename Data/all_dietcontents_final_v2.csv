@@ -520,11 +520,11 @@ SSM074,2019,8/19/19,digested,Digested,NA,0.001,Fourhorn,13.6,16.8,F,0,NA,0.1,0.2
 SSM075,2019,8/19/19,amphipod,Amphipod,1,0.005,Fourhorn,13.04,16.1,M,0.2,NA,0.2,0,0
 SSM075,2019,8/19/19,digested,Digested,NA,0.005,Fourhorn,13.04,16.1,M,0.2,NA,0.2,0,0
 SSM076,2019,8/21/19,krill,Krill,87,1.038,Slimy,12.09,23.2,M,2.3,NA,0.7,0,0
-SSS001,2018,7/20/18,Copepod,Copepod,1305,74.944,Arctic char,90,6000,NA,78.331,NA,NA,NA,NA
-SSS001,2018,7/20/18,Gammarus,Gammarus sp.,103,3.387,Arctic char,90,6000,NA,78.331,NA,NA,NA,NA
+SSS001,2018,7/20/18,Copepod,Copepod,1305,74.944,Arctic char,90,6000,NA,89.785,NA,NA,NA,NA
+SSS001,2018,7/20/18,Gammarus,Gammarus sp.,103,3.387,Arctic char,90,6000,NA,89.785,NA,NA,NA,NA
 SSS002,2018,7/23/18,Unidentified,Digested,NA,2.834,Arctic char,62,1800,NA,2.834,NA,NA,NA,NA
-SSS003,2018,7/26/18,arctic cod,Arctic cod,1,48.11,Arctic char,NA,NA,NA,85.027,NA,NA,NA,NA
-SSS003,2018,7/26/18,amphipod,Amphipod,NA,36.917,Arctic char,NA,NA,NA,85.027,NA,NA,NA,NA
+SSS003,2018,7/26/18,arctic cod,Arctic cod,1,48.11,Arctic char,NA,NA,NA,39.519,NA,NA,NA,NA
+SSS003,2018,7/26/18,amphipod,Amphipod,NA,36.917,Arctic char,NA,NA,NA,39.519,NA,NA,NA,NA
 SSS004,2018,7/29/18,Krill,Krill,1253,10.218,Arctic char,67,2350,NA,42.963,4,46,24.3,NA
 SSS004,2018,7/29/18,Onisimus littoralis,Onisimus sp.,141,3.715,Arctic char,67,2350,NA,42.963,4,46,24.3,NA
 SSS004,2018,7/29/18,Sandlance,Sand lance,2,1.251,Arctic char,67,2350,NA,42.963,4,46,24.3,NA

@@ -69,6 +69,9 @@ cat5<-function (a,b) { #a is category 4 with 8 and b is category 5 with 6
 
 
 
+
+
+
 #Niche breadth
 B<-function(p) {
   a<-apply(p,2,sum)/sum(p)
