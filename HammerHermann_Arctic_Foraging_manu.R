@@ -418,7 +418,33 @@ dataSummaries<-summaries%>%
             fultonK=mean(10^5*Mass_g/TL_mm^3,na.rm=T),
             fultonK_SD=sd(10^5*Mass_g/TL_mm^3,na.rm=T))
 
+yearSummaries<-summaries%>%
+  mutate(family=ifelse(Species=="Char","Arctic char","Sculpin"))%>%
+  group_by(family,Year)%>%
+  summarise(N=n(),
+            Mass=mean(Mass_g,na.rm=T),
+            Mass_SD=sd(Mass_g,na.rm=T),
+            TL=mean(TL_mm,na.rm=T),
+            TL_SD=sd(TL_mm,na.rm=T),
+            HSI=mean(100*(Liver_Mass_g/(Mass_g-Liver_Mass_g)),na.rm=T),
+            HSI_SD=sd(100*(Liver_Mass_g/(Mass_g-Liver_Mass_g)),na.rm=T),
+            GSI=mean(100*(Gonad_Mass_g/(Mass_g-Gonad_Mass_g)),na.rm=T),
+            GSI_SD=sd(100*(Gonad_Mass_g/(Mass_g-Gonad_Mass_g)),na.rm=T),
+            fultonK=mean(10^5*Mass_g/TL_mm^3,na.rm=T),
+            fultonK_SD=sd(10^5*Mass_g/TL_mm^3,na.rm=T))
 
+empty<-left_join(details,summaries)%>%
+  mutate(species2=ifelse(Species=="Arctic char","Arctic char","Sculpin"))%>%
+  group_by(species2)%>%
+  mutate(N=n_distinct(Fish_ID))%>%
+  group_by(species2,Year)%>%
+  mutate(N_year=n_distinct(Fish_ID))%>%
+  filter(Category=="Empty" | Diet_Mass_g ==0)%>%
+  group_by(species2)%>%
+  mutate(p=n_distinct(Fish_ID)/N*100)%>%
+  group_by(species2,Year)%>%
+  mutate(p_year=n_distinct(Fish_ID)/N_year*100)%>%
+  dplyr::select(species2,Year,N,N_year,p,p_year)%>%distinct()
 
 # Analyses--Nate ----------------------------------------------------------
 
@@ -965,7 +991,7 @@ centroidDists%>%
   pivot_longer(cols=labels(centroidDists),names_to = "species2", values_to = "dist")%>%
   ggplot()+
   geom_tile(aes(species1,species2,fill=dist))+
-  geom_text(aes(species1,species2,label=round(dist,digits=2)),size=4)+
+  geom_text(aes(species1,species2,label=round(dist,digits=2)),size=8)+
   geom_rect(aes(xmin=0.5,ymin=0.5,xmax=3.5,ymax=3.5),fill="transparent",color="black",size=2)+
   geom_rect(aes(xmin=3.5,ymin=0.5,xmax=6.5,ymax=3.5),fill="transparent",color="black",size=2)+
   geom_rect(aes(xmin=3.5,ymin=3.5,xmax=6.5,ymax=6.5),fill="transparent",color="black",size=2)+
@@ -1116,11 +1142,13 @@ relcon$species2 <- factor(ifelse(relcon$Species == 'Slimy' | relcon$Species == '
 
 relcon %>% 
   group_by(species2, Year) %>% 
-  summarize(mean = mean(relative_consumption))
+  summarize(mean = mean(relative_consumption),
+            sd = sd(relative_consumption))
 
 relcon %>% group_by(species2) %>% 
   summarize(min = min(relative_consumption), max = max(relative_consumption),
-            mean = mean(relative_consumption), se = sd(relative_consumption)/sqrt(n()))
+            mean = mean(relative_consumption), se = sd(relative_consumption)/sqrt(n()),
+            sd = sd(relative_consumption))
 
 ##running a hurdle model
 
@@ -1128,6 +1156,7 @@ relcon %>% group_by(species2) %>%
 relcon$feed <- ifelse(relcon$relative_consumption > 0, 1, 0)
 
 table(relcon$feed, relcon$species2) ##looks right at least for char
+relcon%>%ungroup()%>%group_by(species2)%>%mutate(N=n())%>%group_by(species2,feed)%>%reframe(p=n()/N*100)%>%distinct()
 
 ##don't bother with mass because species are so different in weight already
 bingelm1 <- glm(feed~species2 + Year + month, data = relcon, na.action = 'na.fail', family = 'binomial')
