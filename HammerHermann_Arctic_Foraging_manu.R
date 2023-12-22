@@ -373,10 +373,10 @@ library(gridExtra)
 library(lubridate)
 library(reshape2)
 library(MuMIn)
+library(vegan)
 library(BiodiversityR)
 library(rphylopic)
 library(png)
-library(vegan)
 library(RVAideMemoire)
 library(usedist)
 library(indicspecies)
@@ -384,11 +384,6 @@ library(ggpubr)
 library(rgl)
 
 
-
-
-#Colorblind friendly palette
-cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
-#To use, add command for scale_fill_manual(values=cbPalette)
 
 theme_set(theme_bw(base_size=25))
 
@@ -452,8 +447,10 @@ empty<-left_join(details,summaries)%>%
 
 sumFOO<-filter(dietMat)%>%
   dplyr::select(matches("^prey"))%>%
+  mutate(prey_totalFish=ifelse(prey_Fish==1 | prey_Sand.lance==1 | prey_Arctic.cod==1,1,0),
+         prey_totalAmph=ifelse(prey_Amphipod==1 | prey_Gammaracanthus.sp.==1 | prey_Gammarus.sp.==1 | prey_Onisimus.sp.==1 | prey_Themisto.sp.==1,1,0))%>%
   t()%>%as.data.frame()%>%
-  summarise(foo=rowSums(.)/nrow(dietMat),
+  reframe(foo=rowSums(.)/nrow(dietMat),
             N=rowSums(.),
             prey=substr(row.names(.),6,100))
 
@@ -461,14 +458,20 @@ sumFOO<-filter(dietMat)%>%
 #Cumulative across years
 SculpinFOO<-filter(dietMat,Species %in% c("Slimy","Fourhorn"))%>%
   dplyr::select(matches("^prey"))%>%
+  mutate(prey_totalFish=ifelse(prey_Fish==1 | prey_Sand.lance==1 | prey_Arctic.cod==1,1,0),
+         prey_totalAmph=ifelse(prey_Amphipod==1 | prey_Gammaracanthus.sp.==1 | prey_Gammarus.sp.==1 | prey_Onisimus.sp.==1 | prey_Themisto.sp.==1,1,0))%>%
   colSums()/nrow(dietMat%>%filter(Species %in% c("Slimy","Fourhorn")))
 
 CharFOO<-filter(dietMat,Species=="Arctic char")%>%
   dplyr::select(matches("^prey"))%>%
+  mutate(prey_totalFish=ifelse(prey_Fish==1 | prey_Sand.lance==1 | prey_Arctic.cod==1,1,0),
+         prey_totalAmph=ifelse(prey_Amphipod==1 | prey_Gammaracanthus.sp.==1 | prey_Gammarus.sp.==1 | prey_Onisimus.sp.==1 | prey_Themisto.sp.==1,1,0))%>%
   colSums()/nrow(dietMat%>%filter(Species=="Arctic char"))
 
-foo<-bind_rows(data.frame(foo=CharFOO,species="Arctic char",prey=gsub("prey_","",colnames(dplyr::select(dietMat,matches("^prey"))))),
-               data.frame(foo=SculpinFOO,species="Sculpin",prey=gsub("prey_","",colnames(dplyr::select(dietMat,matches("^prey"))))))%>%
+foo<-bind_rows(data.frame(foo=CharFOO,species="Arctic char",
+                          prey=c(gsub("prey_","",colnames(dplyr::select(dietMat,matches("^prey")))),"total.Fish","total.Amphipod")),
+               data.frame(foo=SculpinFOO,species="Sculpin",
+                          prey=c(gsub("prey_","",colnames(dplyr::select(dietMat,matches("^prey")))),"total.Fish","total.Amphipod")))%>%
   mutate(prey=gsub("\\.","\n",prey))%>%
   group_by(prey)%>%
   mutate(diff=max(foo)-min(foo))
@@ -480,6 +483,8 @@ ggplot(foo,aes(prey,foo,fill=species))+
 presenceYears<-dietMat%>%
   mutate(species=ifelse(Species=="Arctic char","Arctic char","Sculpin"))%>%
   dplyr::select(species,Year,matches("^prey"))%>%
+  mutate(prey_totalFish=ifelse(prey_Fish==1 | prey_Sand.lance==1 | prey_Arctic.cod==1,1,0),
+         prey_totalAmphipod=ifelse(prey_Amphipod==1 | prey_Gammaracanthus.sp.==1 | prey_Gammarus.sp.==1 | prey_Onisimus.sp.==1 | prey_Themisto.sp.==1,1,0))%>%
   group_by(species,Year)%>%
   summarise_each(funs=sum)
 totalYears<-dietMat%>%
@@ -491,11 +496,15 @@ fooYears<-left_join(presenceYears,totalYears)%>%
   ungroup()%>%
   mutate(prey=gsub("^prey_","",prey),
          prey=gsub("\\.([A-z])"," \\1",prey),
+         prey=case_when(prey=="Fish"~"Unid. Fish",
+                        prey=="Amphipod"~"Unid. Amphipod",
+                        grepl("total",prey)~gsub("total","Total ",prey),
+                        TRUE~prey),
          foo=noo/N,
          Year=as.character(Year))
 #Ordering the prey items so like are by like
-fooYears$preyF<-factor(fooYears$prey,levels=c("Arctic cod","Sand lance","Fish",
-                                              "Gammarus sp.","Gammaracanthus sp.","Onisimus sp.","Themisto sp.","Amphipod",
+fooYears$preyF<-factor(fooYears$prey,levels=c("Total Fish","Arctic cod","Sand lance","Unid. Fish",
+                                              "Total Amphipod","Gammarus sp.","Gammaracanthus sp.","Onisimus sp.","Themisto sp.","Unid. Amphipod",
                                               "Krill","Mysid","Copepod","Chironomid","Jellyfish","Sea Angel","Miscellaneous Invert",
                                               "Miscellaneous","Algae","Undigestible","Digested"))
 
@@ -512,36 +521,37 @@ ggplot(fooYears,aes(preyF,foo,fill=Year))+
 
 
 #Pulling from RPhylopic but they have been lost, need to update
-amphipod<-image_data("fd6af059-2365-4a6e-806a-ce22bb537103",size="512")[[1]]
-sandlance<-image_data("silhouettes/31124fe7-c960-40dd-943b-dbecd53650db",size="512")[[1]]
-cod<-image_data("silhouettes/bba1800a-dd86-451d-a79b-c5944cfe5231",size="512")[[1]]
-krill<-image_data("silhouettes/44a3628d-aafd-45cc-97a6-1cb74bd43dec",size="512")[[1]]
-mysid<-image_data("silhouettes/9efe5b7d-35a1-4044-92af-dfe792200a09",size="512")[[1]]
-copepod<-image_data("silhouettes/c5dbd85a-c4be-4990-a369-c830ad23cb22",size="512")[[1]]
-chironomid<-image_data("silhouettes/834f9ef5-c5bf-4e9e-94c8-3ecb8fb14838",size="128")[[1]]
-jellyfish<-image_data("silhouettes/839b9df7-c97f-444a-a611-95609e950960",size="512")[[1]]
-seaAngel<-rasterGrob(readPNG("silhouettes/sea_angel.png"))
+amphipod<-rasterGrob(readPNG("silhouettes/amphipod.png",native=T))
+chironomid<-rasterGrob(readPNG("silhouettes/chironomid.png",native=T))
+cod<-rasterGrob(readPNG("silhouettes/cod.png",native=T))
+copepod<-rasterGrob(readPNG("silhouettes/copepod.png",native=T))
+jellyfish<-rasterGrob(readPNG("silhouettes/jellyfish.png",native=T))
+krill<-rasterGrob(readPNG("silhouettes/krill.png",native=T))
+mysid<-rasterGrob(readPNG("silhouettes/mysid.png",native=T))
+sandlance<-rasterGrob(readPNG("silhouettes/sand_lance.png",native=T))
+seaAngel<-rasterGrob(readPNG("silhouettes/sea_angel.png",native=T))
+
 #Emphasizing inter-annual variation
 ggplot(data=fooYears)+
   geom_col(aes(preyF,foo,fill=species),
            position="dodge",color="black",width=0.5)+
-  add_phylopic(cod,alpha=1,x=1,y=0.9,ysize=0.2)+
-  add_phylopic(sandlance,alpha=1,x=2,y=0.9,ysize=0.1)+
-  add_phylopic(amphipod,alpha=1,x=6,y=0.9,ysize=0.5)+
-  add_phylopic(krill,alpha=1,x=9,y=0.9,ysize=0.3)+
-  add_phylopic(mysid,alpha=1,x=10,y=0.9,ysize=0.3)+
-  add_phylopic(copepod,alpha=1,x=11,y=0.9,ysize=0.5)+
-  add_phylopic(chironomid,alpha=1,x=12,y=0.9,ysize=0.25)+
-  add_phylopic(jellyfish,alpha=1,x=13.1,y=0.9,ysize=0.45)+
-  annotation_custom(seaAngel,xmin=13.5,xmax=14.5,ymin=0.8,ymax=1)+
-  geom_vline(aes(xintercept=3.5),lty=3,color="black",size=1.5)+
-  geom_vline(aes(xintercept=8.5),lty=3,color="black",size=1.5)+
-  geom_vline(aes(xintercept=15.5),lty=3,color="black",size=1.5)+
-  geom_segment(aes(x=3.62,xend=3.62,y=0.88,yend=0.95),size=1.5)+
-  geom_segment(aes(x=8.38,xend=8.38,y=0.88,yend=0.95),size=1.5)+
-  geom_segment(aes(x=3.6,xend=5.7,y=0.95,yend=0.95),size=1.5)+
-  geom_segment(aes(x=6.3,xend=8.4,y=0.95,yend=0.95),size=1.5)+
-  scale_fill_viridis_d(name="Species")+
+  annotation_custom(cod,xmin=1.5,xmax=2.5,ymin=0.8,ymax=1)+
+  annotation_custom(sandlance,xmin=2.5,xmax=3.5,ymin=0.8,ymax=1)+
+  annotation_custom(amphipod,xmin=7,xmax=8,ymin=0.8,ymax=1)+
+  annotation_custom(krill,xmin=10.5,xmax=11.5,ymin=0.8,ymax=1)+
+  annotation_custom(mysid,xmin=11.5,xmax=12.5,ymin=0.8,ymax=1)+
+  annotation_custom(copepod,xmin=12.5,xmax=13.5,ymin=0.8,ymax=1)+
+  annotation_custom(chironomid,xmin=13.5,xmax=14.5,ymin=0.8,ymax=1)+
+  annotation_custom(jellyfish,xmin=14.6,xmax=15.6,ymin=0.8,ymax=1)+
+  annotation_custom(seaAngel,xmin=15.5,xmax=16.5,ymin=0.8,ymax=1)+
+  geom_vline(aes(xintercept=4.5),lty=3,color="black",size=1.5)+
+  geom_vline(aes(xintercept=10.5),lty=3,color="black",size=1.5)+
+  geom_vline(aes(xintercept=17.5),lty=3,color="black",size=1.5)+
+  geom_segment(aes(x=4.62,xend=4.62,y=0.92,yend=0.98),size=1.5)+
+  geom_segment(aes(x=10.38,xend=10.38,y=0.92,yend=0.98),size=1.5)+
+  geom_segment(aes(x=4.6,xend=6.9,y=0.98,yend=0.98),size=1.5)+
+  geom_segment(aes(x=8.2,xend=10.4,y=0.98,yend=0.98),size=1.5)+
+  scale_fill_viridis_d(name="Predator")+
   scale_y_continuous(name="Frequency of Occurrence",
                      limits=c(0,1),expand=expansion(add=0),
                      labels=scales::percent_format())+
@@ -576,7 +586,7 @@ r2<-numeric(6)
 for (n in 1:6) {
   nmds.resu <- metaMDS(allCount.Mat, k=n, distance = "bray", try=250, autotransform=F)
   stress_values[n]<-nmds.resu$stress
-  nmds.scores<-vegan::scores(nmds.resu)
+  nmds.scores<-vegan::scores(nmds.resu)$sites
   nmds.dist<-dist(nmds.scores)
   r2[n]<-summary(lm(original.dist~nmds.dist))[[8]]
 }
@@ -585,9 +595,9 @@ abline(h=0.2,col="red")
 
 View(stress_values) 
 
-#Go back and create the output for the 2 dimensions NMDS
+#Go back and create the output for the 3 dimensions NMDS
 count_NMDS<-metaMDS(allCount.Mat, distance = "bray", k = 3, try=250, autotransform=F)
-r2<-summary(lm(original.dist~dist(vegan::scores(count_NMDS))))[[8]]
+r2<-summary(lm(original.dist~dist(vegan::scores(count_NMDS)$sites)))[[8]]
 actualStress<-count_NMDS$stress
 stressplot(count_NMDS) #This is the visual of stress, the divergence of observed and ordinated distance. It's random, that's good
 
@@ -719,8 +729,8 @@ axes12<-ggplot()+
   geom_point(data=NMDS_scores,aes(MDS1,MDS2,fill=allEnv.Mat$family,shape=as.character(allEnv.Mat$Year)),color="black",size=6)+
   geom_segment(data=NMDS_species,aes(x=0,xend=MDS1,y=0,yend=MDS2))+
   geom_text(data=NMDS_species,aes(x=MDS1,y=MDS2,label=gsub("prey_","",row.names(NMDS_species))))+
-  scale_fill_viridis_d(option="E",name="Family")+
-  scale_color_viridis_d(option="E",name="Family",guide="none")+
+  scale_fill_viridis_d(option="E",name="Predator")+
+  scale_color_viridis_d(option="E",name="Predator",guide="none")+
   scale_shape_manual(values=c(21,22,23),name="Year")+
   scale_linetype_manual(values=c(1,5,3))+
   guides(fill=guide_legend(override.aes = list(shape=21,size=20)),
@@ -739,8 +749,8 @@ axes13<-ggplot()+
   geom_point(data=NMDS_scores,aes(MDS1,MDS3,fill=allEnv.Mat$family,shape=as.character(allEnv.Mat$Year)),color="black",size=6)+
   geom_segment(data=NMDS_species,aes(x=0,xend=MDS1,y=0,yend=MDS3))+
   geom_text(data=NMDS_species,aes(x=MDS1,y=MDS3,label=gsub("prey_","",row.names(NMDS_species))))+
-  scale_fill_viridis_d(option="E",name="Family")+
-  scale_color_viridis_d(option="E",name="Family",guide="none")+
+  scale_fill_viridis_d(option="E",name="Predator")+
+  scale_color_viridis_d(option="E",name="Predator",guide="none")+
   scale_shape_manual(values=c(21,22,23),name="Year")+
   scale_linetype_manual(values=c(1,5,3))+
   guides(fill=guide_legend(override.aes = list(shape=21,size=20)),
@@ -758,8 +768,8 @@ axes23<-ggplot()+
   geom_point(data=NMDS_scores,aes(MDS2,MDS3,fill=allEnv.Mat$family,shape=as.character(allEnv.Mat$Year)),color="black",size=6)+
   geom_segment(data=NMDS_species,aes(x=0,xend=MDS2,y=0,yend=MDS3))+
   geom_text(data=NMDS_species,aes(x=MDS2,y=MDS3,label=gsub("prey_","",row.names(NMDS_species))))+
-  scale_fill_viridis_d(option="E",name="Family")+
-  scale_color_viridis_d(option="E",name="Family",guide="none")+
+  scale_fill_viridis_d(option="E",name="Predator")+
+  scale_color_viridis_d(option="E",name="Predator",guide="none")+
   scale_shape_manual(values=c(21,22,23),name="Year")+
   scale_linetype_manual(values=c(1,5,3))+
   scale_y_continuous(breaks=c(-1,0,1))+
@@ -1014,7 +1024,7 @@ bind_cols(group=sydisp[["group"]],distance=sydisp[["distances"]])%>%
   geom_boxplot(aes(x=Year,y=distance,fill=Species),outlier.shape=NA,size=1.5,show.legend = F)+
   geom_point(aes(x=Year,y=distance,fill=Species,color=Species),
              shape=21,size=5,position=position_jitterdodge(jitter.width=0.1,seed=42))+
-  scale_fill_viridis_d(option="E",name="Family")+
+  scale_fill_viridis_d(option="E",name="Predator")+
   scale_color_manual(values=c("white","black"),guide="none")+
   scale_y_continuous(name="Distance to Centroid")
   
