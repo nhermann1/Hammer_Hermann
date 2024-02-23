@@ -1044,7 +1044,7 @@ accum.long2 <- rbind(accum.longchar2, accum.longsculp2)
 ##plot
 PAAplot <- ggplot(data = accum.long, aes(x = Sites, y = Richness,ymax = UPR, ymin = LWR))+
   facet_wrap(~Species, ncol = 1)+
-  geom_line(aes(color = Grouping), size = 2)+
+  geom_line(aes(color = Grouping), size = 2, show.legend = F)+
   geom_point(data=subset(accum.long, labelit==TRUE),
              aes(colour=Grouping),size = 5)+
   scale_color_manual(values = c('black', 'grey50', 'grey80'))+
@@ -1070,7 +1070,7 @@ library(lmerTest)
 relcon <- summaries[,1:9] ## unneccessary columns
 relcon <- subset(relcon, !is.na(Diet_Mass_g)) ## removing fish with unknown diet masses
 relcon <- subset(relcon, !is.na(Mass_g)) ## removing fish with unknown masses
-n_distinct(relcon$Fish_ID) ##127 useable fish for relcon analysis
+relcon %>% group_by(Species) %>% summarise(n()) ##127 useable fish for relcon analysis
 
 ##relative consumption column
 relcon$relative_consumption <- (relcon$Diet_Mass_g/relcon$Mass_g)*100
@@ -1094,19 +1094,19 @@ wilcox.test(relcon$relative_consumption~relcon$species2)
 ## looking at years
 wilcox.test(relcon$relative_consumption~relcon$Year)
 
-summary(lm(relcon$relative_consumption~relcon$species2*relcon$Year))
 
 ##running a hurdle model
 
 ##first we need to determine factors affecting whether we feed or not
 relcon$feed <- factor(ifelse(relcon$relative_consumption > 0, 1, 0))
 
-table(relcon$feed, relcon$species2) ##looks right at least for char
+table(relcon$feed, relcon$species2, relcon$Year) ##looks right at least for char
 
 ##don't bother with mass because species are so different in weight already
 bingelm1 <- glm(feed~species2 + Year + month, data = relcon, na.action = 'na.fail', family = 'binomial')
 vif(bingelm1)
 dredge(bingelm1) ##species is the only thing that comes out might be best as a table
+
 
 ##now removing those who didn't feed
 relcon2 <- subset(relcon, feed == 1)
