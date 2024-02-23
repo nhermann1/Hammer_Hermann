@@ -1050,10 +1050,12 @@ PAAplot <- ggplot(data = accum.long, aes(x = Sites, y = Richness,ymax = UPR, ymi
   scale_color_manual(values = c('black', 'grey50', 'grey80'))+
   geom_line(data = accum.long2, aes(x = Sites, y = Richness, ymax = UPR, ymin = LWR), lty = 2)+
   # geom_ribbon(aes(color=Grouping), alpha = 0.2, show.legend = F)+
-  labs(x = 'Number of Samples', y = 'Species Richness', color = 'Year')+theme_bw()
+  labs(x = 'Number of Samples', y = 'Species Richness', color = 'Year')+theme_bw()+
+  theme(axis.text = element_text(size = 13), axis.title = element_text(size = 15),
+        strip.text = element_text(size = 13))
 
 ##only do this once
-# tiff('/Users/larshammer/Hammer_Hermann/Figures/PreyAccumulationCurve.tiff', width = 6.5, height = 5.5, res = 300, units = 'in')
+tiff('/Users/larshammer/Hammer_Hermann/Figures/PreyAccumulationCurve_new.tiff', width = 6.5, height = 5.5, res = 300, units = 'in')
 
 PAAplot
 
@@ -1086,7 +1088,7 @@ relcon %>%
   summarize(mean = mean(relative_consumption))
 
 relcon %>% group_by(species2) %>% 
-  summarize(min = min(relative_consumption), max = max(relative_consumption), mean = mean(relative_consumption))
+  summarize(min = min(relative_consumption), max = max(relative_consumption), mean = mean(relative_consumption), sd = sd(relative_consumption))
 
 ## wilcoxon test looking at species
 wilcox.test(relcon$relative_consumption~relcon$species2)
@@ -1123,10 +1125,12 @@ relconplot <- ggplot(relcon)+
   scale_shape_manual(values = c(21, 19))+
   facet_grid(~species2)+
   labs(y = 'Relative Consumption (%)')+
-  theme_bw()
+  theme_bw()+
+  theme(axis.text = element_text(size = 13), axis.title = element_text(size = 14),
+        strip.text = element_text(size = 13))
 
 ##only do this once
-# tiff('/users/larshammer/Hammer_Hermann/Figures/RelativeConsumption_year.tiff', width = 6.5, height = 5.5, res = 300, units = 'in')
+# tiff('/users/larshammer/Hammer_Hermann/Figures/RelativeConsumption_year_new.tiff', width = 6.5, height = 5.5, res = 300, units = 'in')
 
 relconplot
 
