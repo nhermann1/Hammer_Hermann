@@ -1,13 +1,6 @@
-
-
-
-
-
-
-# Top ---------------------------------------------------
 set.seed(42)
 
-setwd("") #identify location for data files
+setwd("") #set file structure
 
 library(tidyverse)
 library(ggplot2)
@@ -52,14 +45,20 @@ dataSummaries<-summaries%>%
   summarise(N=n(),
             Mass=mean(Mass_g,na.rm=T),
             Mass_SD=sd(Mass_g,na.rm=T),
+            Mass_min=min(Mass_g,na.rm=T),
+            Mass_max=max(Mass_g,na.rm=T),
             TL=mean(TL_mm,na.rm=T),
             TL_SD=sd(TL_mm,na.rm=T),
+            TL_min=min(TL_mm,na.rm=T),
+            TL_max=max(TL_mm,na.rm=T),
             HSI=mean(100*(Liver_Mass_g/(Mass_g-Liver_Mass_g)),na.rm=T),
             HSI_SD=sd(100*(Liver_Mass_g/(Mass_g-Liver_Mass_g)),na.rm=T),
             GSI=mean(100*(Gonad_Mass_g/(Mass_g-Gonad_Mass_g)),na.rm=T),
             GSI_SD=sd(100*(Gonad_Mass_g/(Mass_g-Gonad_Mass_g)),na.rm=T),
             fultonK=mean(10^5*Mass_g/TL_mm^3,na.rm=T),
-            fultonK_SD=sd(10^5*Mass_g/TL_mm^3,na.rm=T))
+            fultonK_SD=sd(10^5*Mass_g/TL_mm^3,na.rm=T),
+            fultonK_min=min(10^5*Mass_g/TL_mm^3,na.rm=T),
+            fultonK_max=max(10^5*Mass_g/TL_mm^3,na.rm=T))
 
 yearSummaries<-summaries%>%
   mutate(family=ifelse(Species=="Char","Arctic char","Sculpin"))%>%
@@ -67,14 +66,20 @@ yearSummaries<-summaries%>%
   summarise(N=n(),
             Mass=mean(Mass_g,na.rm=T),
             Mass_SD=sd(Mass_g,na.rm=T),
+            Mass_min=min(Mass_g,na.rm=T),
+            Mass_max=max(Mass_g,na.rm=T),
             TL=mean(TL_mm,na.rm=T),
             TL_SD=sd(TL_mm,na.rm=T),
+            TL_min=min(TL_mm,na.rm=T),
+            TL_max=max(TL_mm,na.rm=T),
             HSI=mean(100*(Liver_Mass_g/(Mass_g-Liver_Mass_g)),na.rm=T),
             HSI_SD=sd(100*(Liver_Mass_g/(Mass_g-Liver_Mass_g)),na.rm=T),
             GSI=mean(100*(Gonad_Mass_g/(Mass_g-Gonad_Mass_g)),na.rm=T),
             GSI_SD=sd(100*(Gonad_Mass_g/(Mass_g-Gonad_Mass_g)),na.rm=T),
             fultonK=mean(10^5*Mass_g/TL_mm^3,na.rm=T),
-            fultonK_SD=sd(10^5*Mass_g/TL_mm^3,na.rm=T))
+            fultonK_SD=sd(10^5*Mass_g/TL_mm^3,na.rm=T),
+            fultonK_min=min(10^5*Mass_g/TL_mm^3,na.rm=T),
+            fultonK_max=max(10^5*Mass_g/TL_mm^3,na.rm=T))
 
 empty<-left_join(details,summaries)%>%
   mutate(species2=ifelse(Species=="Arctic char","Arctic char","Sculpin"))%>%
@@ -89,7 +94,7 @@ empty<-left_join(details,summaries)%>%
   mutate(p_year=n_distinct(Fish_ID)/N_year*100)%>%
   dplyr::select(species2,Year,N,N_year,p,p_year)%>%distinct()
 
-# Analyses--frequency ----------------------------------------------------------
+# Analyses--Nate ----------------------------------------------------------
 
 #### Frequency of Occurrence
 
@@ -212,7 +217,7 @@ ggplot(data=fooYears)+
 
 
 
-# NMDS -------------------------------------------
+#### NMDS
 
 #Duplicating with ALL the counts
 allCount.Mat<-as.matrix(dplyr::select(dietMat,matches("^prey")))
@@ -262,8 +267,8 @@ stressplot(count_NMDS) #This is the visual of stress, the divergence of observed
 NMDS_species<-as.data.frame(count_NMDS$species)
 NMDS_scores<-as.data.frame(count_NMDS$points)
 
-speciesPal<-scales::viridis_pal(option="G",begin=0.05,end=0.95)(2)
-yearPal<-scales::viridis_pal(option="H",begin=0.05,end=0.95)(3)
+speciesPal<-scales::viridis_pal(option="G",begin=0.33,end=0.9)(2)
+yearPal<-scales::viridis_pal(option="H",begin=0.33,end=0.9)(3)
 
 allEnv.Mat<-allEnv.Mat%>%
   mutate(family=ifelse(Species=="Arctic char","Arctic char","Sculpin"),
@@ -376,9 +381,11 @@ axes12<-ggplot()+
                aes(x=MDS1,y=MDS2,group=paste(family,Year),color=family,lty=Year),alpha=0.1,lwd=1.5)+
   geom_point(data=NMDS_scores,aes(MDS1,MDS2,fill=allEnv.Mat$family,shape=as.character(allEnv.Mat$Year)),color="black",size=6)+
   geom_segment(data=NMDS_species,aes(x=0,xend=MDS1,y=0,yend=MDS2))+
-  geom_text(data=NMDS_species,aes(x=MDS1,y=MDS2,label=gsub(" sp"," spp",gsub("\\.([A-z])"," \\1",gsub("prey_","",row.names(NMDS_species))))),size=9)+
-  scale_fill_viridis_d(option="E",name="Consumer")+
-  scale_color_viridis_d(option="E",name="Consumer",guide="none")+
+  geom_text(data=NMDS_species,aes(x=MDS1,y=MDS2,
+                                  label=gsub(" sp"," spp",gsub("\\.([A-z])"," \\1",gsub("prey_","",row.names(NMDS_species))))),
+            size=9,hjust=0)+
+  scale_fill_viridis_d(option="E",name="Consumer",begin=0.33,end=0.9)+
+  scale_color_viridis_d(option="E",name="Consumer",guide="none",begin=0.33,end=0.9)+
   scale_shape_manual(values=c(21,22,23),name="Year")+
   scale_linetype_manual(values=c(1,5,3))+
   guides(fill=guide_legend(override.aes = list(shape=21,size=20)),
@@ -396,9 +403,11 @@ axes13<-ggplot()+
                aes(x=MDS1,y=MDS3,group=paste(family,Year),color=family,lty=Year),alpha=0.1,lwd=1.5)+
   geom_point(data=NMDS_scores,aes(MDS1,MDS3,fill=allEnv.Mat$family,shape=as.character(allEnv.Mat$Year)),color="black",size=6)+
   geom_segment(data=NMDS_species,aes(x=0,xend=MDS1,y=0,yend=MDS3))+
-  geom_text(data=NMDS_species,aes(x=MDS1,y=MDS3,label=gsub(" sp"," spp",gsub("\\.([A-z])"," \\1",gsub("prey_","",row.names(NMDS_species))))),size=9)+
-  scale_fill_viridis_d(option="E",name="Consumer")+
-  scale_color_viridis_d(option="E",name="Consumer",guide="none")+
+  geom_text(data=NMDS_species,aes(x=MDS1,y=MDS3,
+                                  label=gsub(" sp"," spp",gsub("\\.([A-z])"," \\1",gsub("prey_","",row.names(NMDS_species))))),
+            size=9,hjust=0)+
+  scale_fill_viridis_d(option="E",name="Consumer",begin=0.33,end=0.9)+
+  scale_color_viridis_d(option="E",name="Consumer",guide="none",begin=0.33,end=0.9)+
   scale_shape_manual(values=c(21,22,23),name="Year")+
   scale_linetype_manual(values=c(1,5,3))+
   guides(fill=guide_legend(override.aes = list(shape=21,size=20)),
@@ -415,15 +424,17 @@ axes23<-ggplot()+
                aes(x=MDS2,y=MDS3,group=paste(family,Year),color=family,lty=Year),alpha=0.1,lwd=1.5)+
   geom_point(data=NMDS_scores,aes(MDS2,MDS3,fill=allEnv.Mat$family,shape=as.character(allEnv.Mat$Year)),color="black",size=6)+
   geom_segment(data=NMDS_species,aes(x=0,xend=MDS2,y=0,yend=MDS3))+
-  geom_text(data=NMDS_species,aes(x=MDS2,y=MDS3,label=gsub(" sp"," spp",gsub("\\.([A-z])"," \\1",gsub("prey_","",row.names(NMDS_species))))),size=9)+
-  scale_fill_viridis_d(option="E",name="Consumer")+
-  scale_color_viridis_d(option="E",name="Consumer",guide="none")+
+  geom_text(data=NMDS_species,aes(x=MDS2,y=MDS3,
+                                  label=gsub(" sp"," spp",gsub("\\.([A-z])"," \\1",gsub("prey_","",row.names(NMDS_species))))),
+            size=9,hjust=0)+
+  scale_fill_viridis_d(option="E",name="Consumer",begin=0.33,end=0.9)+
+  scale_color_viridis_d(option="E",name="Consumer",guide="none",begin=0.33,end=0.9)+
   scale_shape_manual(values=c(21,22,23),name="Year")+
   scale_linetype_manual(values=c(1,5,3))+
   scale_y_continuous(breaks=c(-1,0,1))+
   guides(fill=guide_legend(override.aes = list(shape=21,size=20)),
          linetype=guide_legend(override.aes=list(color="black",size=20,fill="transparent")))+
-  geom_text(aes(x=-2.55,y=-1.2,label=paste0("Stress: ",round(actualStress*100,2))),size=15,hjust=0)+
+  geom_text(aes(x=-2.5,y=-1.1,label=paste0("Stress: ",round(actualStress*100,2))),size=15,hjust=0)+
   geom_point(data=spyrCentoids,aes(MDS2,MDS3,fill=Group.1,shape=as.character(Group.2)),
              color="red",size=16,stroke=2,alpha=0.7,show.legend=F)+
   geom_label(data=spyrCentoids,aes(MDS2,MDS3,label=lab),
@@ -638,30 +649,33 @@ sculpCentroids<-c(0.4926337,0.2285743,0.3625625)
 sameYearCentroids<-c(0.2207148,0.3005605,0.5710684)
 interSpeciesCentroids<-c(sameYearCentroids,0.4323695,0.6286381,0.5417022,0.6648193,0.3000332,0.3775107)
 mean(charCentroids)
+sd(charCentroids)
 mean(sculpCentroids)
+sd(sculpCentroids)
 mean(c(charCentroids,sculpCentroids))
 mean(sameYearCentroids)
+sd(sameYearCentroids)
 mean(interSpeciesCentroids)
+sd(interSpeciesCentroids)
 
 centroidDists%>%
   as.matrix()%>%as.data.frame()%>%
   mutate(species1=labels(centroidDists))%>%
   pivot_longer(cols=labels(centroidDists),names_to = "species2", values_to = "dist")%>%
   ggplot()+
-  geom_tile(aes(species1,species2,fill=dist))+
-  geom_text(aes(species1,species2,label=round(dist,digits=2)),size=8)+
-  geom_rect(aes(xmin=0.5,ymin=0.5,xmax=3.5,ymax=3.5),fill="transparent",color="black",size=2)+
-  geom_rect(aes(xmin=3.5,ymin=0.5,xmax=6.5,ymax=3.5),fill="transparent",color="black",size=2)+
-  geom_rect(aes(xmin=3.5,ymin=3.5,xmax=6.5,ymax=6.5),fill="transparent",color="black",size=2)+
-  geom_rect(aes(xmin=3.5,ymin=0.5,xmax=4.5,ymax=1.5),fill="transparent",color="red",size=2)+
-  geom_rect(aes(xmin=4.5,ymin=1.5,xmax=5.5,ymax=2.5),fill="transparent",color="red",size=2)+
-  geom_rect(aes(xmin=5.5,ymin=2.5,xmax=6.5,ymax=3.5),fill="transparent",color="red",size=2)+
-  geom_rect(aes(xmin=0.5,ymin=3.5,xmax=1.5,ymax=4.5),fill="transparent",color="red",size=2)+
-  geom_rect(aes(xmin=1.5,ymin=4.5,xmax=2.5,ymax=5.5),fill="transparent",color="red",size=2)+
-  geom_rect(aes(xmin=2.5,ymin=5.5,xmax=3.5,ymax=6.5),fill="transparent",color="red",size=2)+
+  geom_tile(aes(species1,rev(species2),fill=dist))+
+  geom_text(aes(species1,rev(species2),label=round(dist,digits=2)),size=8,fontface="bold")+
+  geom_rect(aes(xmin=1.5,ymin=5.5,xmax=6.5,ymax=6.5),fill="white",color="transparent",size=2)+
+  geom_rect(aes(xmin=2.5,ymin=4.5,xmax=6.5,ymax=5.5),fill="white",color="transparent",size=2)+
+  geom_rect(aes(xmin=3.5,ymin=3.5,xmax=6.5,ymax=4.5),fill="white",color="transparent",size=2)+
+  geom_rect(aes(xmin=4.5,ymin=2.5,xmax=6.5,ymax=3.5),fill="white",color="transparent",size=2)+
+  geom_rect(aes(xmin=5.5,ymin=1.5,xmax=6.5,ymax=2.5),fill="white",color="transparent",size=2)+
+  geom_rect(aes(xmin=0.525,ymin=2.525,xmax=1.475,ymax=3.475),fill="transparent",color="firebrick2",size=3)+
+  geom_rect(aes(xmin=1.525,ymin=1.525,xmax=2.475,ymax=2.475),fill="transparent",color="firebrick2",size=3)+
+  geom_rect(aes(xmin=2.525,ymin=0.525,xmax=3.475,ymax=1.475),fill="transparent",color="firebrick2",size=3)+
   scale_fill_viridis_c(option="B",name="Centroid\ndistance",na.value="white")+
   scale_x_discrete(name="",expand=expansion(0))+
-  scale_y_discrete(name="",expand=expansion(0))+
+  scale_y_discrete(name="",expand=expansion(0),labels=rev(attr(centroidDists,"Labels")))+
   theme(panel.border = element_blank(),axis.text.x=element_text(angle=90,vjust=0.5,hjust=1))
 #Note that the centroids between char are further apart on average (0.55) than the sculpin are (0.36) 
   #or the two species are from each other in the same year (0.36) or even generally (0.44)
@@ -672,13 +686,13 @@ bind_cols(group=sydisp[["group"]],distance=sydisp[["distances"]])%>%
   geom_boxplot(aes(x=Year,y=distance,fill=Species),outlier.shape=NA,size=1.5,show.legend = F)+
   geom_point(aes(x=Year,y=distance,fill=Species,color=Species),
              shape=21,size=5,position=position_jitterdodge(jitter.width=0.1,seed=42))+
-  scale_fill_viridis_d(option="E",name="Consumer")+
+  scale_fill_viridis_d(option="E",name="Consumer",begin=0.33,end=0.9)+
   scale_color_manual(values=c("white","black"),guide="none")+
   scale_y_continuous(name="Distance to Centroid")
   
 
 
-# Analyses accumulation -----------------------------------------------------------
+# Analyses Lars -----------------------------------------------------------
 
 ##prey accumulation curves using dietmat dataset
 
@@ -764,7 +778,7 @@ PAAplot
 
 dev.off()
 
-# relative consumption GLM work using summaries dataset ---------------------------------
+## relative consumption GLM work using summaries dataset
 
 library(car)
 library(MuMIn)
@@ -788,7 +802,9 @@ relcon$species2 <- factor(ifelse(relcon$Species == 'Slimy' | relcon$Species == '
 relcon %>% 
   group_by(species2, Year) %>% 
   summarize(mean = mean(relative_consumption),
-            sd = sd(relative_consumption))
+            sd = sd(relative_consumption),
+            min=min(relative_consumption),
+            max=max(relative_consumption))
 
 relcon %>% group_by(species2) %>% 
   summarize(min = min(relative_consumption), max = max(relative_consumption),
@@ -804,17 +820,19 @@ table(relcon$feed, relcon$species2) ##looks right at least for char
 relcon%>%ungroup()%>%group_by(species2)%>%mutate(N=n())%>%group_by(species2,feed)%>%reframe(p=n()/N*100)%>%distinct()
 
 ##don't bother with mass because species are so different in weight already
-bingelm1 <- glm(feed~species2 + Year + month, data = relcon, na.action = 'na.fail', family = 'binomial')
+bingelm1 <- glm(feed~species2+Year+month, data = relcon, na.action = 'na.fail', family = 'binomial')
+summary(bingelm1)
 vif(bingelm1)
-dredge(bingelm1) ##species is the only thing that comes out might be best as a table
+dredge(bingelm1,extra="R^2") ##species is the only thing that comes out might be best as a table
 
 ##now removing those who didn't feed
 relcon2 <- subset(relcon, feed == 1)
 
-bingelm2 <- glm(relative_consumption ~ species2 + Year + month, data = relcon2, 
+bingelm2 <- glm(relative_consumption ~ species2+Year+month , data = relcon2, 
                 na.action = 'na.fail', family = 'Gamma')
+summary(bingelm2)
 vif(bingelm2)
-dredge(bingelm2)
+dredge(bingelm2,extra="R^2")
 
 
 relconplot <- ggplot(relcon2)+
@@ -846,7 +864,7 @@ ggplot(relcon)+
 
 
 
-# Binge-feeding, just a simple assessment from other species -----------------------------------------------------------
+# Binge-feeding -----------------------------------------------------------
 
 #Model formulas for calculating mass and temperature dependent Cmax
 Cmax<-function(df,W) {
